@@ -409,6 +409,14 @@
       "fileLocks": [
         {
           "assetId": "wj2qAuEBWxMEsUxpANdi1b",
+<<<<<<< HEAD
+=======
+          "type": "projectCss",
+          "checksum": "ee5982550f3a8efe9434dd432f849716"
+        },
+        {
+          "assetId": "wj2qAuEBWxMEsUxpANdi1b",
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
           "checksum": "529272ec35de8445dbe81bec2b8008cf",
           "type": "globalContexts"
         },
@@ -576,11 +584,14 @@
           "type": "icon",
           "assetId": "CZIZU1CMvwGn",
           "checksum": "ed4708928fdabba4847decce28df13cb"
+<<<<<<< HEAD
         },
         {
           "assetId": "wj2qAuEBWxMEsUxpANdi1b",
           "type": "projectCss",
           "checksum": "ee5982550f3a8efe9434dd432f849716"
+=======
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
         }
       ],
       "codegenVersion": "0.0.1"

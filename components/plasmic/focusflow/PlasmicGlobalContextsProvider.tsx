@@ -14,7 +14,10 @@ export interface GlobalContextsProviderProps {
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
   cmsCredentialsProviderProps?: Partial<
     Omit<React.ComponentProps<typeof CmsCredentialsProvider>, "children">
   >;

@@ -7,7 +7,11 @@
   },
   "style": {
     "scheme": "css-modules",
+<<<<<<< HEAD
     "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
+=======
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
   },
   "images": {
     "scheme": "public-files",
@@ -41,8 +45,12 @@
           "componentImportPath": "@plasmicpkgs/react-awesome-reveal"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "szjgMQpPpxhmkjnaBvZQJG",
@@ -64,8 +72,12 @@
           "componentImportPath": "@plasmicpkgs/react-parallax-tilt"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "caTPwKxj5ZrD9LQ7DMdK4Z",
@@ -123,8 +135,12 @@
           "componentImportPath": "@plasmicpkgs/plasmic-basic-components"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "77tPPMY1MAED1Fqwv1T1ig",
@@ -139,8 +155,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "m9f2sdCsBvUkgw2ruM3pjM",
@@ -155,8 +175,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "k6BnBuAUepzRX8Qs2WvkKs",
@@ -171,8 +195,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "cAAqA2dcbTMWwuLSmjs7ss",
@@ -187,8 +215,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "t8YkhWMcnmjNxpEvnBYxFF",
@@ -203,8 +235,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "vWtWgPPF1YuRD8hUh8BgQm",
@@ -219,8 +255,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "9UibdRruyX43DxnB8Q1QXF",
@@ -235,8 +275,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "cq9NPWVMXvHe5bhLAYLfT1",
@@ -251,8 +295,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "kb3Kya2pMxe2srmyNSvXg",
@@ -267,8 +315,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "aEHVN5v6mfM4eovDsL8Z7d",
@@ -283,8 +335,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "7J5DBmLL9S8cZoRJpQkUda",
@@ -299,8 +355,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "miaW1xp1scEQBREQYHRbaL",
@@ -315,8 +375,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "95cydKu4zdmeK3V4rXXSKZ",
@@ -331,8 +395,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "a3pmZtcpA5asHkNtN3SGoF",
@@ -347,8 +415,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "hsyJcmBceSfPzvvXzVTuk7",
@@ -363,8 +435,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "rNRUHCSwyFxFnddSQ3cpnL",
@@ -379,8 +455,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "mqxdhm5p6WHAt7hW1mdcCX",
@@ -395,8 +475,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "kpio2pzukKRJkKg6SSrKTe",
@@ -411,8 +495,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "hjKYmYi6HMwK6TRyk7ew5R",
@@ -470,8 +558,12 @@
           "componentImportPath": "@plasmicpkgs/plasmic-cms"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "gvZmCBEn1URTZWQ5E6hHJp",
@@ -486,8 +578,12 @@
       "globalContextsFilePath": "",
       "splitsProviderFilePath": "",
       "codeComponents": [],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "gmeH6XgPaBtkt51HunAo4g",
@@ -695,8 +791,12 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "jkU633o1Cz7HrJdwdxhVHk",
@@ -750,8 +850,12 @@
           }
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -1151,8 +1255,12 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
+<<<<<<< HEAD
       "customFunctions": [],
       "jsBundleThemes": []
+=======
+      "customFunctions": []
+>>>>>>> b1bcec0 (Add initial components and styles for FocusFlow)
     },
     {
       "projectId": "wj2qAuEBWxMEsUxpANdi1b",
