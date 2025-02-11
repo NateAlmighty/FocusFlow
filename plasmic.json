@@ -29,20 +29,6 @@
       "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
       "components": [
         {
-          "id": "fnUkSM9xXbxs",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "wj2qAuEBWxMEsUxpANdi1b",
-          "renderModuleFilePath": "plasmic/focusflow/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/focusflow.mysite.com.tsx"
-          },
-          "cssFilePath": "plasmic/focusflow/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/focusflow.mysite.com"
-        },
-        {
           "id": "nQAzkSlk0HL0",
           "name": "Button",
           "type": "managed",
@@ -197,6 +183,20 @@
           "cssFilePath": "plasmic/focusflow/PlasmicSwitch.module.css",
           "scheme": "blackbox",
           "componentType": "component"
+        },
+        {
+          "id": "fnUkSM9xXbxs",
+          "name": "Homepage",
+          "type": "managed",
+          "projectId": "wj2qAuEBWxMEsUxpANdi1b",
+          "renderModuleFilePath": "plasmic/focusflow/PlasmicHomepage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/focusflow.mysite.com.tsx"
+          },
+          "cssFilePath": "plasmic/focusflow/PlasmicHomepage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/focusflow.mysite.com"
         }
       ],
       "icons": [
@@ -1373,20 +1373,6 @@
       "version": "latest",
       "cssFilePath": "plasmic/focusflow/plasmic.module.css",
       "components": [
-        {
-          "id": "fnUkSM9xXbxs",
-          "name": "Homepage",
-          "type": "managed",
-          "projectId": "wj2qAuEBWxMEsUxpANdi1b",
-          "renderModuleFilePath": "plasmic/focusflow/PlasmicHomepage.tsx",
-          "importSpec": {
-            "modulePath": "../pages/focusflow.mysite.com.tsx"
-          },
-          "cssFilePath": "plasmic/focusflow/PlasmicHomepage.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/focusflow.mysite.com"
-        },
         {
           "id": "nQAzkSlk0HL0",
           "name": "Button",

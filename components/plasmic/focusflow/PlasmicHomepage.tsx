@@ -428,7 +428,6 @@ function PlasmicHomepage__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => false
       }
     ],
-
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -450,7 +449,6 @@ function PlasmicHomepage__RenderFunc(props: {
           property="og:title"
           content={PlasmicHomepage.pageMetadata.title}
         />
-
         <meta
           key="twitter:title"
           name="twitter:title"
@@ -619,7 +617,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 plasmicStateName: "calendar.selectedDate"
               }
             ],
-
             [],
             RichCalendar_Helpers ?? {},
             child$Props
@@ -805,7 +802,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       }
                     </h6>
                   }
-
                   <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               </div>
@@ -1237,7 +1233,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Create Your Task: Basic Info"}
                   </h4>
                 }
-
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
@@ -1619,7 +1614,6 @@ function PlasmicHomepage__RenderFunc(props: {
                       }
                     </h5>
                   }
-
                   <React.Fragment>{""}</React.Fragment>
                 </React.Fragment>
               </div>
@@ -1729,7 +1723,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null }
                       ];
-
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
                       __composite["2"]["label"] = "3";
@@ -1871,7 +1864,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null }
                       ];
-
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
                       __composite["2"]["label"] = "02";
@@ -2005,7 +1997,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", value: "action1", label: null },
                         { type: "item", value: "action2", label: null }
                       ];
-
                       __composite["0"]["label"] = "AM";
                       __composite["1"]["label"] = "PM";
                       return __composite;
@@ -2172,7 +2163,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null }
                       ];
-
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
                       __composite["2"]["label"] = "3";
@@ -2321,7 +2311,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null }
                       ];
-
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
                       __composite["2"]["label"] = "02";
@@ -2557,7 +2546,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Create Your Task: Estimate Your Start Time and Length"}
                   </h4>
                 }
-
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
@@ -2638,7 +2626,6 @@ function PlasmicHomepage__RenderFunc(props: {
                         {"Choose what info to change:"}
                       </h4>
                     }
-
                     <React.Fragment>{""}</React.Fragment>
                   </React.Fragment>
                 </div>
@@ -3083,7 +3070,6 @@ function PlasmicHomepage__RenderFunc(props: {
                     {"Edit Task"}
                   </h3>
                 }
-
                 <React.Fragment>{""}</React.Fragment>
               </React.Fragment>
             </div>
@@ -3324,7 +3310,6 @@ function PlasmicHomepage__RenderFunc(props: {
                             }
                           </blockquote>
                         }
-
                         <React.Fragment>{""}</React.Fragment>
                       </React.Fragment>
                     </div>
@@ -3352,7 +3337,6 @@ function PlasmicHomepage__RenderFunc(props: {
                           {"Premium Options"}
                         </h4>
                       }
-
                       <React.Fragment>{""}</React.Fragment>
                     </React.Fragment>
                   </div>
@@ -3507,7 +3491,6 @@ const PlasmicDescendants = {
     "_switch",
     "blockquote"
   ],
-
   focusFlowTitle: ["focusFlowTitle"],
   ownYourScheduleTagline: ["ownYourScheduleTagline"],
   calendar: ["calendar"],
@@ -3535,7 +3518,6 @@ const PlasmicDescendants = {
     "cancelAddTaskButton",
     "addTaskGoToNextButton"
   ],
-
   addTaskButton: [
     "addTaskButton",
     "addTaskLabel",
@@ -3543,7 +3525,6 @@ const PlasmicDescendants = {
     "cmsDataFetcher",
     "continueButtonEditTask2"
   ],
-
   addTaskLabel: ["addTaskLabel"],
   editTask2: ["editTask2", "cmsDataFetcher", "continueButtonEditTask2"],
   cmsDataFetcher: ["cmsDataFetcher"],
@@ -3552,7 +3533,6 @@ const PlasmicDescendants = {
     "addTaskBasicInfoTitleHolder",
     "addTaskBasicInfoTitle"
   ],
-
   addTaskBasicInfoTitle: ["addTaskBasicInfoTitle"],
   addTaskContentHolder: [
     "addTaskContentHolder",
@@ -3566,7 +3546,6 @@ const PlasmicDescendants = {
     "weeklyTrigger",
     "monthlyTrigger"
   ],
-
   basicInfoExplanation: ["basicInfoExplanation", "h6"],
   h6: ["h6"],
   addTaskNameInputTextField: ["addTaskNameInputTextField"],
@@ -3578,7 +3557,6 @@ const PlasmicDescendants = {
     "weeklyTrigger",
     "monthlyTrigger"
   ],
-
   addTaskFrequencySelection: [
     "addTaskFrequencySelection",
     "onceTrigger",
@@ -3586,7 +3564,6 @@ const PlasmicDescendants = {
     "weeklyTrigger",
     "monthlyTrigger"
   ],
-
   onceTrigger: ["onceTrigger"],
   dailyTrigger: ["dailyTrigger"],
   weeklyTrigger: ["weeklyTrigger"],
@@ -3614,7 +3591,6 @@ const PlasmicDescendants = {
     "addTask2CancelButton",
     "addTask2FinishButton"
   ],
-
   addTask2BodyHolder: [
     "addTask2BodyHolder",
     "addTask2BodyTextHolder",
@@ -3632,7 +3608,6 @@ const PlasmicDescendants = {
     "mmDropdown2",
     "mmButton2"
   ],
-
   addTask2BodyTextHolder: ["addTask2BodyTextHolder", "h5"],
   h5: ["h5"],
   addTask2StartTimeSelectionHolder: [
@@ -3643,7 +3618,6 @@ const PlasmicDescendants = {
     "mmButton",
     "amPmDropdown"
   ],
-
   timeHhDropdown: ["timeHhDropdown", "hourButton"],
   hourButton: ["hourButton"],
   timeMmDropdown: ["timeMmDropdown", "mmButton"],
@@ -3657,7 +3631,6 @@ const PlasmicDescendants = {
     "mmDropdown2",
     "mmButton2"
   ],
-
   timeEstimate: ["timeEstimate"],
   hhDropdown2: ["hhDropdown2", "hourButton2"],
   hourButton2: ["hourButton2"],
@@ -3668,7 +3641,6 @@ const PlasmicDescendants = {
     "addTask2CancelButton",
     "addTask2FinishButton"
   ],
-
   addTask2CancelButton: ["addTask2CancelButton"],
   addTask2FinishButton: ["addTask2FinishButton"],
   editTask1: [
@@ -3688,7 +3660,6 @@ const PlasmicDescendants = {
     "editTaskCloseButton",
     "editTaskContinueButton"
   ],
-
   editTaskButton: ["editTaskButton"],
   editTaskLabelHolder: ["editTaskLabelHolder", "h3"],
   h3: ["h3"],
@@ -3702,7 +3673,6 @@ const PlasmicDescendants = {
     "frequencyOption",
     "estimatedTimeOption"
   ],
-
   editTaskInfoChecksHolder: [
     "editTaskInfoChecksHolder",
     "titleOption",
@@ -3710,7 +3680,6 @@ const PlasmicDescendants = {
     "frequencyOption",
     "estimatedTimeOption"
   ],
-
   titleOption: ["titleOption"],
   startTimeOption: ["startTimeOption"],
   frequencyOption: ["frequencyOption"],
@@ -3720,7 +3689,6 @@ const PlasmicDescendants = {
     "editTaskCloseButton",
     "editTaskContinueButton"
   ],
-
   editTaskCloseButton: ["editTaskCloseButton"],
   editTaskContinueButton: ["editTaskContinueButton"],
   deleteTaskButton: ["deleteTaskButton", "deleteTaskText"],
@@ -3805,7 +3773,6 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicHomepage__OverridesType,
   DescendantsType<T>
 >;
-
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
