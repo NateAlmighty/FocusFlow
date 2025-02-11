@@ -1,0 +1,113 @@
+.ariaDialogTrigger:global(.__wab_instance) {
+  position: relative;
+}
+.svg__yn61D {
+  position: relative;
+  height: 1em;
+}
+.svg__yApRa {
+  position: relative;
+  height: 1em;
+}
+.ariaModal:global(.__wab_instance) {
+  background: var(--token-nGu8RhnEzQVy);
+  display: block;
+  color: var(--token-pIQZ5uu6lf2u);
+  font-family: var(--token-CxhN_ZIRU3Wr);
+  font-size: var(--token-LVpNIyOyNyRy);
+  line-height: var(--token-0KR9PzFSwzMK);
+  outline-style: none;
+  box-shadow: 0px 24px 48px -12px #00000040;
+  border-radius: var(--token-I7r9F2vq0oUV);
+}
+.pcls_H0Um83gx-MyO {
+  background: var(--token-p_NdvryN2UwC);
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  outline: none;
+}
+.ariaDialog:global(.__wab_instance) {
+  max-width: 90vw;
+  object-fit: cover;
+  overflow: hidden;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  outline-style: none;
+}
+.ariaHeadingDeprecated:global(.__wab_instance) {
+  flex-shrink: 0;
+  padding: var(--token-Yi4MsMcz7N4z);
+  margin: 0rem;
+}
+.scrollableContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow: auto;
+  padding-left: var(--token-Yi4MsMcz7N4z);
+  padding-right: var(--token-Yi4MsMcz7N4z);
+}
+.freeBox__s8ZdW {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.freeBox__s8ZdW > :global(.__wab_flex-container) {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: calc(0px - var(--token-vrhqNf2xyleo));
+  height: calc(100% + var(--token-vrhqNf2xyleo));
+}
+.freeBox__s8ZdW > :global(.__wab_flex-container) > *,
+.freeBox__s8ZdW > :global(.__wab_flex-container) > :global(.__wab_slot) > *,
+.freeBox__s8ZdW > :global(.__wab_flex-container) > picture > img,
+.freeBox__s8ZdW
+  > :global(.__wab_flex-container)
+  > :global(.__wab_slot)
+  > picture
+  > img {
+  margin-top: var(--token-vrhqNf2xyleo);
+}
+.text__cwn44 {
+  position: relative;
+}
+.freeBox {
+  display: flex;
+  position: relative;
+  flex-shrink: 0;
+  padding: var(--token-Yi4MsMcz7N4z);
+}
+.freeBox__ht7G {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  min-width: 0;
+}
+.svg__qx9Z {
+  position: relative;
+  height: 1em;
+}
+.text__rQr65 {
+  padding-left: 0px;
+}
+.svg__tKwKw {
+  position: relative;
+  height: 1em;
+}
