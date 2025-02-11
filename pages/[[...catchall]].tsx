@@ -5,8 +5,8 @@ import { PlasmicComponent, PlasmicRootProvider, initPlasmicLoader } from '@plasm
 const PLASMIC = initPlasmicLoader({
   projects: [
     {
-      id: 'your-project-id',  // Replace with your project ID
-      token: 'your-project-token'  // Replace with your project token
+      id: 'wj2qAuEBWxMEsUxpANdi1b',  // Replace with your project ID
+      token: '5n1TP5CE9Le64WMjytUC0jQyTe2ByN4RSUWFBGmaFGARWtxZ08ZBKWDIYHWUAAfpuu8IaQXQglr1Y81VU0A'  // Replace with your project token
     }
   ]
 });
