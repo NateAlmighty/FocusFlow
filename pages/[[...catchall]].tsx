@@ -58,9 +58,23 @@ export default function CatchallPage(props: { plasmicData?: ComponentRenderData;
       pageQuery={router.query}
     >
       {
-        // pageMeta.displayName contains the name of the component you fetched.
+      // pageMeta.displayName contains the name of the component you fetched.
       }
       <PlasmicComponent component={pageMeta.displayName} />
+      {
+      // Add your dynamic data rendering logic here
+      }
+      <div>
+      <h1>Dynamic Data</h1>
+      <p>{router.query.dynamicData}</p>
+      </div>
     </PlasmicRootProvider>
   );
+}
+export async function getStaticPaths() {
+  const pageModules = await PLASMIC.fetchPages();
+  const paths = pageModules.map((mod) => ({
+    params: { catchall: mod.path.substring(1).split("/") },
+  }));
+  return { paths, fallback: "blocking" };
 }
