@@ -125,13 +125,13 @@ export default function GlobalContextsProvider(
           cmsCredentialsProviderProps &&
           "databaseId" in cmsCredentialsProviderProps
             ? cmsCredentialsProviderProps.databaseId!
-            : "sq4jLnDJhH5gEFiETGFKxm"
+            : "9Qi194Bap8vGTHqckpMxgT"
         }
         databaseToken={
           cmsCredentialsProviderProps &&
           "databaseToken" in cmsCredentialsProviderProps
             ? cmsCredentialsProviderProps.databaseToken!
-            : "eDTQAiMH8GDUPpje9rScJSd3KF0fo1aWFneEQc9pZejVUxnr10j2Zt2tABzCGKCGed0r15N2p1syOHOMbYw"
+            : "JVHK0BqCdPnGn7gR4OhxL4amE8OzvMe0ZdPQNkAEyzDpIi1MJ2GXFrsadumsUtomFQCrdoaLSL6uvHYSQw"
         }
         host={
           cmsCredentialsProviderProps && "host" in cmsCredentialsProviderProps
@@ -141,7 +141,7 @@ export default function GlobalContextsProvider(
         locale={
           cmsCredentialsProviderProps && "locale" in cmsCredentialsProviderProps
             ? cmsCredentialsProviderProps.locale!
-            : ``
+            : undefined
         }
       >
         {children}

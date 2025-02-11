@@ -104,9 +104,13 @@ export const PlasmicHomepage__VariantProps = new Array<VariantPropType>(
   "darkMode"
 );
 
-export type PlasmicHomepage__ArgsType = {};
+export type PlasmicHomepage__ArgsType = {
+  onDarkModeChange?: (val: any) => void;
+};
 type ArgPropType = keyof PlasmicHomepage__ArgsType;
-export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
+export const PlasmicHomepage__ArgProps = new Array<ArgPropType>(
+  "onDarkModeChange"
+);
 
 export type PlasmicHomepage__OverridesType = {
   lightMode?: Flex__<"div">;
@@ -262,7 +266,7 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "taskSelection",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ``
+        initFunc: ({ $props, $state, $queries, $ctx }) => "SelectedTask"
       },
       {
         path: "estimatedHours",
@@ -362,9 +366,11 @@ function PlasmicHomepage__RenderFunc(props: {
       },
       {
         path: "darkMode",
-        type: "private",
+        type: "writable",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.darkMode
+
+        valueProp: "darkMode",
+        onChangeProp: "onDarkModeChange"
       },
       {
         path: "selectedDate",

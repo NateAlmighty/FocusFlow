@@ -25,7 +25,7 @@
       "projectId": "wj2qAuEBWxMEsUxpANdi1b",
       "projectApiToken": "5n1TP5CE9Le64WMjytUC0jQyTe2ByN4RSUWFBGmaFGARWtxZ08ZBKWDIYHWUAAfpuu8IaQXQglr1Y81VU0A",
       "projectName": "focusflow",
-      "version": ">0.0.0",
+      "version": "latest",
       "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
       "components": [
         {
@@ -237,7 +237,7 @@
         }
       ],
       "images": [],
-      "indirect": true,
+      "indirect": false,
       "globalContextsFilePath": "plasmic/focusflow/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
       "codeComponents": [
