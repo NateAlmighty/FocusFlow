@@ -22,8 +22,8 @@
   "defaultPlasmicDir": "./plasmic",
   "projects": [
     {
-      "projectId": "58GpZjZCWTaJ8AUhpCwt2K",
-      "projectApiToken": "DIkcfhBwjMCJSjcxfBkMuy4NImyytq5EWylxVcpS9t9EpdhnPQuBgBGxmk00AB1itMFa1KXTxOKnrjN2PN9nlA",
+      "projectId": "wj2qAuEBWxMEsUxpANdi1b",
+      "projectApiToken": "5n1TP5CE9Le64WMjytUC0jQyTe2ByN4RSUWFBGmaFGARWtxZ08ZBKWDIYHWUAAfpuu8IaQXQglr1Y81VU0A",
       "projectName": "react-awesome-reveal",
       "version": ">0.0.0",
       "cssFilePath": "plasmic/react_awesome_reveal/plasmic.module.css",
