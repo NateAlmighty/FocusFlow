@@ -204,6 +204,7 @@ function PlasmicModal__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => $props.noTrigger
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -321,6 +322,7 @@ function PlasmicModal__RenderFunc(props: {
                     </div>
                   </Stack__>
                 ),
+
                 value: args.content
               })}
             </div>
@@ -395,6 +397,7 @@ function PlasmicModal__RenderFunc(props: {
                       />
                     </div>
                   ),
+
                   value: args.footer
                 })}
               </div>
@@ -431,6 +434,7 @@ const PlasmicDescendants = {
     "scrollableContent",
     "freeBox"
   ],
+
   ariaModal: [
     "ariaModal",
     "ariaDialog",
@@ -438,12 +442,14 @@ const PlasmicDescendants = {
     "scrollableContent",
     "freeBox"
   ],
+
   ariaDialog: [
     "ariaDialog",
     "ariaHeadingDeprecated",
     "scrollableContent",
     "freeBox"
   ],
+
   ariaHeadingDeprecated: ["ariaHeadingDeprecated"],
   scrollableContent: ["scrollableContent"],
   freeBox: ["freeBox"]
@@ -465,6 +471,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicModal__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

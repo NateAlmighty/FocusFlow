@@ -174,6 +174,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         onChangeProp: "onChange"
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -268,6 +269,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
             />
           </Stack__>
         ),
+
         value: args.options
       })}
       {$props.showDescription ? (
@@ -305,6 +307,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicCheckboxGroup__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {

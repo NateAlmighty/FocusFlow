@@ -381,6 +381,7 @@ function PlasmicTextField__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       }
     ],
+
     [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
@@ -649,6 +650,7 @@ const PlasmicDescendants = {
     "textAreaInput",
     "description"
   ],
+
   label: ["label"],
   textInput: ["textInput"],
   textAreaInput: ["textAreaInput"],
@@ -670,6 +672,7 @@ type NodeOverridesType<T extends NodeNameType> = Pick<
   PlasmicTextField__OverridesType,
   DescendantsType<T>
 >;
+
 type NodeComponentProps<T extends NodeNameType> =
   // Explicitly specify variants, args, and overrides as objects
   {
