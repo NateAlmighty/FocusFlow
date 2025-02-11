@@ -454,6 +454,8 @@ function PlasmicHomepage__RenderFunc(props: {
           name="twitter:title"
           content={PlasmicHomepage.pageMetadata.title}
         />
+
+        <link rel="canonical" href={PlasmicHomepage.pageMetadata.canonical} />
       </Head>
 
       <style>{`
@@ -3908,7 +3910,7 @@ export const PlasmicHomepage = Object.assign(
       title: "FocusFlow",
       description: "",
       ogImageSrc: "",
-      canonical: ""
+      canonical: "http://localhost3000/focusflow.mysite.com"
     }
   }
 );
