@@ -6,7 +6,7 @@ const PLASMIC = initPlasmicLoader({
   projects: [
     {
       id: 'wj2qAuEBWxMEsUxpANdi1b',  // Replace with your project ID
-      token: '5n1TP5CE9Le64WMjytUC0jQyTe2ByN4RSUWFBGmaFGARWtxZ08ZBKWDIYHWUAAfpuu8IaQXQglr1Y81VU0A'  // Replace with your project token
+      token: 'Q1QcshdYrv5nhVThbK34N5nNHj9tXmP1LCUWjffbRHfmOdtRhsQehNanZ7eFvMcAjvJCDZvCYBDT7KA'  // Replace with your project token
     }
   ]
 });
