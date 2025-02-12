@@ -749,6 +749,7 @@ function PlasmicHomepage__RenderFunc(props: {
           className={classNames("__wab_instance", sty.addTask1, {
             [sty.addTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
           })}
+          closeOnBackdropClick={false}
           content={
             <Stack__
               as={"div"}
@@ -1561,6 +1562,7 @@ function PlasmicHomepage__RenderFunc(props: {
           className={classNames("__wab_instance", sty.addTask2, {
             [sty.addTask2darkMode]: hasVariant($state, "darkMode", "darkMode")
           })}
+          closeOnBackdropClick={false}
           content={
             <Stack__
               as={"div"}
@@ -2576,6 +2578,7 @@ function PlasmicHomepage__RenderFunc(props: {
           className={classNames("__wab_instance", sty.editTask1, {
             [sty.editTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
           })}
+          closeOnBackdropClick={false}
           content={
             <React.Fragment>
               <Stack__
@@ -3406,9 +3409,7 @@ function PlasmicHomepage__RenderFunc(props: {
               ? (() => {
                   const actionArgs = {
                     customFunction: async () => {
-                      return (() => {
-                        return ($state.showPremiumModal = true);
-                      })();
+                      return ($state.premiumModal.isOpen = true);
                     }
                   };
                   return (({ customFunction }) => {
