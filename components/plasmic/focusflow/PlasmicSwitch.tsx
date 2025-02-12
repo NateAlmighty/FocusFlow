@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseSwitch } from "@plasmicpkgs/react-aria/skinny/registerSwitch";
@@ -97,7 +97,7 @@ export const PlasmicSwitch__ArgProps = new Array<ArgPropType>(
   "readOnly",
   "ariaLabel",
   "onChange",
-  "label"
+  "label",
 );
 
 export type PlasmicSwitch__OverridesType = {
@@ -145,18 +145,18 @@ function PlasmicSwitch__RenderFunc(props: {
           showLabel: true,
           showDescription: false,
           autoFocus: false,
-          disabled: false
+          disabled: false,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -172,17 +172,17 @@ function PlasmicSwitch__RenderFunc(props: {
         variableType: "boolean",
 
         valueProp: "isSelected",
-        onChangeProp: "onChange"
-      }
+        onChangeProp: "onChange",
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   const [$ccVariants, setDollarCcVariants] = React.useState<
@@ -194,18 +194,18 @@ function PlasmicSwitch__RenderFunc(props: {
     focusVisible: false,
     selected: false,
     disabled: false,
-    readonly: false
+    readonly: false,
   });
   const updateVariant = React.useCallback(
     (changes: Record<string, boolean>) => {
-      setDollarCcVariants(prev => {
-        if (!Object.keys(changes).some(k => prev[k] !== changes[k])) {
+      setDollarCcVariants((prev) => {
+        if (!Object.keys(changes).some((k) => prev[k] !== changes[k])) {
           return prev;
         }
         return { ...prev, ...changes };
       });
     },
-    []
+    [],
   );
 
   return (
@@ -224,7 +224,7 @@ function PlasmicSwitch__RenderFunc(props: {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.ariaSwitch
+        sty.ariaSwitch,
       )}
       isDisabled={args.disabled}
       isReadOnly={args.readOnly}
@@ -232,7 +232,7 @@ function PlasmicSwitch__RenderFunc(props: {
       onChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, ["ariaSwitch", "isSelected"]).apply(
           null,
-          eventArgs
+          eventArgs,
         );
       }}
       plasmicUpdateVariant={updateVariant}
@@ -258,7 +258,7 @@ function PlasmicSwitch__RenderFunc(props: {
         {$props.showLabel
           ? renderPlasmicSlot({
               defaultContents: "Label",
-              value: args.label
+              value: args.label,
             })
           : null}
       </Stack__>
@@ -279,13 +279,13 @@ const PlasmicDescendants = {
     "freeBox",
     "switchIndicator",
     "thumb",
-    "description"
+    "description",
   ],
 
   freeBox: ["freeBox", "switchIndicator", "thumb"],
   switchIndicator: ["switchIndicator", "thumb"],
   thumb: ["thumb"],
-  description: ["description"]
+  description: ["description"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -327,7 +327,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -335,15 +335,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicSwitch__ArgProps,
-          internalVariantPropNames: PlasmicSwitch__VariantProps
+          internalVariantPropNames: PlasmicSwitch__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicSwitch__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaSwitch") {
@@ -366,8 +366,8 @@ export const PlasmicSwitch = Object.assign(
 
     // Metadata about props expected for PlasmicSwitch
     internalVariantProps: PlasmicSwitch__VariantProps,
-    internalArgProps: PlasmicSwitch__ArgProps
-  }
+    internalArgProps: PlasmicSwitch__ArgProps,
+  },
 );
 
 export default PlasmicSwitch;

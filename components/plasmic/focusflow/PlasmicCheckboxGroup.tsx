@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseCheckboxGroup } from "@plasmicpkgs/react-aria/skinny/registerCheckboxGroup";
@@ -99,7 +99,7 @@ export const PlasmicCheckboxGroup__ArgProps = new Array<ArgPropType>(
   "onChange",
   "label",
   "options",
-  "description"
+  "description",
 );
 
 export type PlasmicCheckboxGroup__OverridesType = {
@@ -143,18 +143,18 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
       Object.assign(
         {
           showLabel: true,
-          showDescription: false
+          showDescription: false,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -171,35 +171,35 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props["defaultValues"],
 
-        onChangeProp: "onChange"
-      }
+        onChangeProp: "onChange",
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   const [$ccVariants, setDollarCcVariants] = React.useState<
     Record<string, boolean>
   >({
     disabled: false,
-    readonly: false
+    readonly: false,
   });
   const updateVariant = React.useCallback(
     (changes: Record<string, boolean>) => {
-      setDollarCcVariants(prev => {
-        if (!Object.keys(changes).some(k => prev[k] !== changes[k])) {
+      setDollarCcVariants((prev) => {
+        if (!Object.keys(changes).some((k) => prev[k] !== changes[k])) {
           return prev;
         }
         return { ...prev, ...changes };
       });
     },
-    []
+    [],
   );
 
   return (
@@ -217,7 +217,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.ariaCheckboxGroup
+        sty.ariaCheckboxGroup,
       )}
       defaultValue={args.defaultValues}
       isDisabled={args.disabled}
@@ -225,7 +225,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
       onChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, ["ariaCheckboxGroup", "value"]).apply(
           null,
-          eventArgs
+          eventArgs,
         );
       }}
       plasmicUpdateVariant={updateVariant}
@@ -239,7 +239,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: "Label",
-            value: args.label
+            value: args.label,
           })}
         </Label>
       ) : null}
@@ -270,7 +270,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
           </Stack__>
         ),
 
-        value: args.options
+        value: args.options,
       })}
       {$props.showDescription ? (
         <Description
@@ -280,7 +280,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: "Description...",
-            value: args.description
+            value: args.description,
           })}
         </Description>
       ) : null}
@@ -291,7 +291,7 @@ function PlasmicCheckboxGroup__RenderFunc(props: {
 const PlasmicDescendants = {
   ariaCheckboxGroup: ["ariaCheckboxGroup", "label", "description"],
   label: ["label"],
-  description: ["description"]
+  description: ["description"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -331,7 +331,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -339,15 +339,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicCheckboxGroup__ArgProps,
-          internalVariantPropNames: PlasmicCheckboxGroup__VariantProps
+          internalVariantPropNames: PlasmicCheckboxGroup__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicCheckboxGroup__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaCheckboxGroup") {
@@ -368,8 +368,8 @@ export const PlasmicCheckboxGroup = Object.assign(
 
     // Metadata about props expected for PlasmicCheckboxGroup
     internalVariantProps: PlasmicCheckboxGroup__VariantProps,
-    internalArgProps: PlasmicCheckboxGroup__ArgProps
-  }
+    internalArgProps: PlasmicCheckboxGroup__ArgProps,
+  },
 );
 
 export default PlasmicCheckboxGroup;

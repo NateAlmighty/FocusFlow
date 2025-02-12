@@ -11,7 +11,7 @@ export type PencilUiCircleSvgrepoComSvgIconProps =
   };
 
 export function PencilUiCircleSvgrepoComSvgIcon(
-  props: PencilUiCircleSvgrepoComSvgIconProps
+  props: PencilUiCircleSvgrepoComSvgIconProps,
 ) {
   const { className, style, title, ...restProps } = props;
   return (

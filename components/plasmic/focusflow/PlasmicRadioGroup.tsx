@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseRadioGroup } from "@plasmicpkgs/react-aria/skinny/registerRadioGroup";
@@ -99,7 +99,7 @@ export const PlasmicRadioGroup__ArgProps = new Array<ArgPropType>(
   "onChange",
   "label",
   "options",
-  "description"
+  "description",
 );
 
 export type PlasmicRadioGroup__OverridesType = {
@@ -143,18 +143,18 @@ function PlasmicRadioGroup__RenderFunc(props: {
       Object.assign(
         {
           showLabel: true,
-          showDescription: false
+          showDescription: false,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -171,35 +171,35 @@ function PlasmicRadioGroup__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props["defaultValue"],
 
-        onChangeProp: "onChange"
-      }
+        onChangeProp: "onChange",
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   const [$ccVariants, setDollarCcVariants] = React.useState<
     Record<string, boolean>
   >({
     disabled: false,
-    readonly: false
+    readonly: false,
   });
   const updateVariant = React.useCallback(
     (changes: Record<string, boolean>) => {
-      setDollarCcVariants(prev => {
-        if (!Object.keys(changes).some(k => prev[k] !== changes[k])) {
+      setDollarCcVariants((prev) => {
+        if (!Object.keys(changes).some((k) => prev[k] !== changes[k])) {
           return prev;
         }
         return { ...prev, ...changes };
       });
     },
-    []
+    [],
   );
 
   return (
@@ -217,7 +217,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.ariaRadioGroup
+        sty.ariaRadioGroup,
       )}
       defaultValue={args.defaultValue}
       isDisabled={args.disabled}
@@ -225,7 +225,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
       onChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, ["ariaRadioGroup", "value"]).apply(
           null,
-          eventArgs
+          eventArgs,
         );
       }}
       plasmicUpdateVariant={updateVariant}
@@ -239,7 +239,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: "Label",
-            value: args.label
+            value: args.label,
           })}
         </Label>
       ) : null}
@@ -270,7 +270,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
           </Stack__>
         ),
 
-        value: args.options
+        value: args.options,
       })}
       {$props.showDescription ? (
         <Description
@@ -280,7 +280,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: "Description...",
-            value: args.description
+            value: args.description,
           })}
         </Description>
       ) : null}
@@ -291,7 +291,7 @@ function PlasmicRadioGroup__RenderFunc(props: {
 const PlasmicDescendants = {
   ariaRadioGroup: ["ariaRadioGroup", "label", "description"],
   label: ["label"],
-  description: ["description"]
+  description: ["description"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -331,7 +331,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -339,15 +339,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicRadioGroup__ArgProps,
-          internalVariantPropNames: PlasmicRadioGroup__VariantProps
+          internalVariantPropNames: PlasmicRadioGroup__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicRadioGroup__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaRadioGroup") {
@@ -368,8 +368,8 @@ export const PlasmicRadioGroup = Object.assign(
 
     // Metadata about props expected for PlasmicRadioGroup
     internalVariantProps: PlasmicRadioGroup__VariantProps,
-    internalArgProps: PlasmicRadioGroup__ArgProps
-  }
+    internalArgProps: PlasmicRadioGroup__ArgProps,
+  },
 );
 
 export default PlasmicRadioGroup;

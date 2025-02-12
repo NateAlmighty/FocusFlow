@@ -51,19 +51,19 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import {
   executePlasmicDataOp,
   usePlasmicDataOp,
-  usePlasmicInvalidate
+  usePlasmicInvalidate,
 } from "@plasmicapp/react-web/lib/data-sources";
 
 import { RichCalendar } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar";
@@ -101,7 +101,7 @@ export type PlasmicHomepage__VariantsArgs = {
 };
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>(
-  "darkMode"
+  "darkMode",
 );
 
 export type PlasmicHomepage__ArgsType = {
@@ -109,7 +109,7 @@ export type PlasmicHomepage__ArgsType = {
 };
 type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>(
-  "onDarkModeChange"
+  "onDarkModeChange",
 );
 
 export type PlasmicHomepage__OverridesType = {
@@ -205,15 +205,15 @@ function PlasmicHomepage__RenderFunc(props: {
       Object.assign(
         {},
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -229,7 +229,7 @@ function PlasmicHomepage__RenderFunc(props: {
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "month",
 
-        onMutate: generateOnMutateForSpec("mode", RichCalendar_Helpers)
+        onMutate: generateOnMutateForSpec("mode", RichCalendar_Helpers),
       },
       {
         path: "calendar.selectedDate",
@@ -250,133 +250,133 @@ function PlasmicHomepage__RenderFunc(props: {
             }
           })(),
 
-        onMutate: generateOnMutateForSpec("selectedDate", RichCalendar_Helpers)
+        onMutate: generateOnMutateForSpec("selectedDate", RichCalendar_Helpers),
       },
       {
         path: "addTask1.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "addTaskNameInputTextField.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "addTaskRadioGroup.value",
         type: "private",
         variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "editTask1.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "taskSelection",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "SelectedTask"
+        initFunc: ({ $props, $state, $queries, $ctx }) => "SelectedTask",
       },
       {
         path: "estimatedHours",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
       },
       {
         path: "taskName",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $ctx }) => "",
       },
       {
         path: "estimatedMinutes",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
       },
       {
         path: "startMinute",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
       },
       {
         path: "addTask2.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "startHour",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
       },
       {
         path: "morning",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
       },
       {
         path: "editTaskCheckboxGroup.value",
         type: "private",
         variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "titleOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "startTimeOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "frequencyOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "estimatedTimeOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "editTask2.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "checkedEditStates",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+        initFunc: ({ $props, $state, $queries, $ctx }) => "",
       },
       {
         path: "showEstimateHolder",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => true,
       },
       {
         path: "showStartTimeSelectionHolder",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => true,
       },
       {
         path: "darkMode",
@@ -384,14 +384,14 @@ function PlasmicHomepage__RenderFunc(props: {
         variableType: "variant",
 
         valueProp: "darkMode",
-        onChangeProp: "onDarkModeChange"
+        onChangeProp: "onDarkModeChange",
       },
       {
         path: "selectedDate",
         type: "private",
         variableType: "dateString",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
-          "2025-01-16T12:57:35.154Z"
+          "2025-01-16T12:57:35.154Z",
       },
       {
         path: "startDateTime",
@@ -403,7 +403,7 @@ function PlasmicHomepage__RenderFunc(props: {
               return (() => {
                 $state.startdatetime = new Date().toISOString();
                 return ($state.LocalTaskListDB.ForTaskList.find(
-                  item => item.id === "started?"
+                  (item) => item.id === "started?",
                 ).value = true);
               })();
             } catch (e) {
@@ -415,40 +415,40 @@ function PlasmicHomepage__RenderFunc(props: {
               }
               throw e;
             }
-          })()
+          })(),
       },
       {
         path: "isPremium",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => true,
       },
       {
         path: "premiumModal.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
       },
       {
         path: "_switch.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
+        initFunc: ({ $props, $state, $queries, $ctx }) => true,
       },
       {
         path: "autoEnabled",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
-      }
+        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+      },
     ],
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
   const dataSourcesCtx = usePlasmicDataSourceContext();
   const plasmicInvalidate = usePlasmicInvalidate();
@@ -493,17 +493,21 @@ function PlasmicHomepage__RenderFunc(props: {
           plasmic_plasmic_rich_components_css.plasmic_tokens,
           sty.lightMode,
           {
-            [sty.lightModedarkMode]: hasVariant($state, "darkMode", "darkMode")
-          }
+            [sty.lightModedarkMode]: hasVariant($state, "darkMode", "darkMode"),
+          },
         )}
-        onClick={async event => {
+        onClick={async (event) => {
           const $steps = {};
         }}
       >
         {(() => {
           const child$Props = {
             className: classNames("__wab_instance", sty.calendar, {
-              [sty.calendardarkMode]: hasVariant($state, "darkMode", "darkMode")
+              [sty.calendardarkMode]: hasVariant(
+                $state,
+                "darkMode",
+                "darkMode",
+              ),
             }),
             defaultValue: (() => {
               try {
@@ -524,10 +528,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 $state,
                 "selectedDate",
                 ["calendar", "selectedDate"],
-                RichCalendar_Helpers
+                RichCalendar_Helpers,
               ).apply(null, eventArgs);
 
-              (async date => {
+              (async (date) => {
                 const $steps = {};
 
                 $steps["updateSelectedDate"] = true
@@ -535,16 +539,16 @@ function PlasmicHomepage__RenderFunc(props: {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["selectedDate"]
+                          variablePath: ["selectedDate"],
                         },
                         operation: 0,
-                        value: ($state.selectedDate = new Date().toISOString())
+                        value: ($state.selectedDate = new Date().toISOString()),
                       };
                       return (({
                         variable,
                         value,
                         startIndex,
-                        deleteCount
+                        deleteCount,
                       }) => {
                         if (!variable) {
                           return;
@@ -561,9 +565,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   typeof $steps["updateSelectedDate"] === "object" &&
                   typeof $steps["updateSelectedDate"].then === "function"
                 ) {
-                  $steps["updateSelectedDate"] = await $steps[
-                    "updateSelectedDate"
-                  ];
+                  $steps["updateSelectedDate"] =
+                    await $steps["updateSelectedDate"];
                 }
 
                 $steps["refreshData"] = true
@@ -591,26 +594,26 @@ function PlasmicHomepage__RenderFunc(props: {
                 $state,
                 "mode",
                 ["calendar", "mode"],
-                RichCalendar_Helpers
+                RichCalendar_Helpers,
               ).apply(null, eventArgs);
             },
-            value: generateStateValueProp($state, ["calendar", "selectedDate"])
+            value: generateStateValueProp($state, ["calendar", "selectedDate"]),
           };
           initializeCodeComponentStates(
             $state,
             [
               {
                 name: "mode",
-                plasmicStateName: "calendar.mode"
+                plasmicStateName: "calendar.mode",
               },
               {
                 name: "selectedDate",
-                plasmicStateName: "calendar.selectedDate"
-              }
+                plasmicStateName: "calendar.selectedDate",
+              },
             ],
             [],
             RichCalendar_Helpers ?? {},
-            child$Props
+            child$Props,
           );
 
           return (
@@ -633,9 +636,9 @@ function PlasmicHomepage__RenderFunc(props: {
               [sty.focusFlowTitledarkMode]: hasVariant(
                 $state,
                 "darkMode",
-                "darkMode"
-              )
-            }
+                "darkMode",
+              ),
+            },
           )}
         >
           {"FocusFlow"}
@@ -652,9 +655,9 @@ function PlasmicHomepage__RenderFunc(props: {
               [sty.ownYourScheduleTaglinedarkMode]: hasVariant(
                 $state,
                 "darkMode",
-                "darkMode"
-              )
-            }
+                "darkMode",
+              ),
+            },
           )}
         >
           {"Own Your Schedule"}
@@ -666,8 +669,8 @@ function PlasmicHomepage__RenderFunc(props: {
             [sty.darkModeButtondarkMode]: hasVariant(
               $state,
               "darkMode",
-              "darkMode"
-            )
+              "darkMode",
+            ),
           })}
           color={"muted"}
           label={
@@ -682,11 +685,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.toggleModedarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
-                }
+                    "darkMode",
+                  ),
+                },
               )}
-              onClick={async event => {
+              onClick={async (event) => {
                 const $steps = {};
               }}
             >
@@ -695,7 +698,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 : "Toggle\nMode"}
             </div>
           }
-          onClick={async event => {
+          onClick={async (event) => {
             const $steps = {};
 
             $steps["runCode"] = true
@@ -703,7 +706,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     customFunction: async () => {
                       return ($state.darkMode = !$state.darkMode);
-                    }
+                    },
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -733,7 +736,7 @@ function PlasmicHomepage__RenderFunc(props: {
           data-plasmic-name={"addTask1"}
           data-plasmic-override={overrides.addTask1}
           className={classNames("__wab_instance", sty.addTask1, {
-            [sty.addTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
+            [sty.addTask1darkMode]: hasVariant($state, "darkMode", "darkMode"),
           })}
           closeOnBackdropClick={false}
           content={
@@ -746,8 +749,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTaskContentHolderdarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode"
-                )
+                  "darkMode",
+                ),
               })}
             >
               <div
@@ -761,9 +764,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.basicInfoExplanationdarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
               >
                 <React.Fragment>
@@ -781,9 +784,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.h6darkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode"
-                          )
-                        }
+                            "darkMode",
+                          ),
+                        },
                       )}
                     >
                       {
@@ -805,9 +808,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.addTaskNameInputTextFielddarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
                 defaultValue={``}
                 description={null}
@@ -822,9 +825,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.textdarkMode__dtf189HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Input Task Name Here:"}
@@ -833,7 +836,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
                     "addTaskNameInputTextField",
-                    "value"
+                    "value",
                   ]).apply(null, eventArgs);
 
                   if (
@@ -844,7 +847,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     return;
                   }
 
-                  (async val => {
+                  (async (val) => {
                     const $steps = {};
 
                     $steps["updateTaskIsTask"] = $state
@@ -853,15 +856,15 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             variable: {
                               objRoot: $state,
-                              variablePath: ["taskName"]
+                              variablePath: ["taskName"],
                             },
-                            operation: 4
+                            operation: 4,
                           };
                           return (({
                             variable,
                             value,
                             startIndex,
-                            deleteCount
+                            deleteCount,
                           }) => {
                             if (!variable) {
                               return;
@@ -879,9 +882,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       typeof $steps["updateTaskIsTask"] === "object" &&
                       typeof $steps["updateTaskIsTask"].then === "function"
                     ) {
-                      $steps["updateTaskIsTask"] = await $steps[
-                        "updateTaskIsTask"
-                      ];
+                      $steps["updateTaskIsTask"] =
+                        await $steps["updateTaskIsTask"];
                     }
                   }).apply(null, eventArgs);
                 }}
@@ -896,8 +898,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.addTaskRadioGroupdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
+                    "darkMode",
+                  ),
                 })}
                 defaultValue={"Once"}
                 description={null}
@@ -906,7 +908,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__f55Kt
+                      sty.text__f55Kt,
                     )}
                   >
                     {"Pick one of the Following Frequencies:"}
@@ -915,7 +917,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
                     "addTaskRadioGroup",
-                    "value"
+                    "value",
                   ]).apply(null, eventArgs);
 
                   if (
@@ -934,7 +936,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     hasGap={true}
                     className={classNames(
                       projectcss.all,
-                      sty.addTaskFrequencySelection
+                      sty.addTaskFrequencySelection,
                     )}
                   >
                     <Radio
@@ -946,7 +948,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__q3L
+                            sty.text__q3L,
                           )}
                         >
                           {"Once"}
@@ -964,7 +966,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__uj6Mb
+                            sty.text__uj6Mb,
                           )}
                         >
                           {"Daily"}
@@ -978,14 +980,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-override={overrides.weeklyTrigger}
                       className={classNames(
                         "__wab_instance",
-                        sty.weeklyTrigger
+                        sty.weeklyTrigger,
                       )}
                       label={
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__fUa2P
+                            sty.text__fUa2P,
                           )}
                         >
                           {"Weekly"}
@@ -999,14 +1001,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-override={overrides.monthlyTrigger}
                       className={classNames(
                         "__wab_instance",
-                        sty.monthlyTrigger
+                        sty.monthlyTrigger,
                       )}
                       label={
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__ddBk6
+                            sty.text__ddBk6,
                           )}
                         >
                           {"Monthly"}
@@ -1027,7 +1029,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.cancelAddTaskButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.cancelAddTaskButton
+                  sty.cancelAddTaskButton,
                 )}
                 color={"muted"}
                 label={
@@ -1035,13 +1037,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___4IgH
+                      sty.text___4IgH,
                     )}
                   >
                     {"Cancel"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
 
                   $steps["updateAddTask10IsOpen"] = true
@@ -1049,15 +1051,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["addTask1", "isOpen"]
+                            variablePath: ["addTask1", "isOpen"],
                           },
-                          operation: 4
+                          operation: 4,
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -1075,9 +1077,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateAddTask10IsOpen"] === "object" &&
                     typeof $steps["updateAddTask10IsOpen"].then === "function"
                   ) {
-                    $steps["updateAddTask10IsOpen"] = await $steps[
-                      "updateAddTask10IsOpen"
-                    ];
+                    $steps["updateAddTask10IsOpen"] =
+                      await $steps["updateAddTask10IsOpen"];
                   }
                 }}
               />
@@ -1087,7 +1088,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.addTaskGoToNextButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.addTaskGoToNextButton
+                  sty.addTaskGoToNextButton,
                 )}
                 color={"success"}
                 label={
@@ -1095,13 +1096,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__zTxGw
+                      sty.text__zTxGw,
                     )}
                   >
                     {"Submit"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
 
                   $steps["updateAddTask1IsOpen"] = true
@@ -1109,15 +1110,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["addTask1", "isOpen"]
+                            variablePath: ["addTask1", "isOpen"],
                           },
-                          operation: 4
+                          operation: 4,
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -1135,9 +1136,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateAddTask1IsOpen"] === "object" &&
                     typeof $steps["updateAddTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateAddTask1IsOpen"] = await $steps[
-                      "updateAddTask1IsOpen"
-                    ];
+                    $steps["updateAddTask1IsOpen"] =
+                      await $steps["updateAddTask1IsOpen"];
                   }
 
                   $steps["updateAddTask2IsOpen"] = !(
@@ -1147,15 +1147,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["addTask2", "isOpen"]
+                            variablePath: ["addTask2", "isOpen"],
                           },
-                          operation: 4
+                          operation: 4,
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -1173,9 +1173,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateAddTask2IsOpen"] === "object" &&
                     typeof $steps["updateAddTask2IsOpen"].then === "function"
                   ) {
-                    $steps["updateAddTask2IsOpen"] = await $steps[
-                      "updateAddTask2IsOpen"
-                    ];
+                    $steps["updateAddTask2IsOpen"] =
+                      await $steps["updateAddTask2IsOpen"];
                   }
                 }}
                 type={"soft"}
@@ -1194,9 +1193,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.addTaskBasicInfoTitleHolderdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
-                }
+                    "darkMode",
+                  ),
+                },
               )}
             >
               <React.Fragment>
@@ -1214,9 +1213,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.addTaskBasicInfoTitledarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Create Your Task: Basic Info"}
@@ -1230,7 +1229,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["addTask1", "isOpen"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
 
             if (
@@ -1249,8 +1248,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTaskButtondarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode"
-                )
+                  "darkMode",
+                ),
               })}
               label={
                 <div
@@ -1267,9 +1266,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.addTaskLabeldarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Add\nTask"}
@@ -1281,8 +1280,8 @@ function PlasmicHomepage__RenderFunc(props: {
                       [sty.editTask2darkMode]: hasVariant(
                         $state,
                         "darkMode",
-                        "darkMode"
-                      )
+                        "darkMode",
+                      ),
                     })}
                     content={
                       <Stack__
@@ -1290,14 +1289,14 @@ function PlasmicHomepage__RenderFunc(props: {
                         hasGap={true}
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox___3HtuU
+                          sty.freeBox___3HtuU,
                         )}
                       >
                         <div
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__dwvEq
+                            sty.text__dwvEq,
                           )}
                         >
                           {"Change the parts of your task you'd like!"}
@@ -1306,7 +1305,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           className={classNames(
                             projectcss.all,
                             projectcss.__wab_text,
-                            sty.text__ygcwe
+                            sty.text__ygcwe,
                           )}
                         >
                           {
@@ -1319,7 +1318,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       <div
                         className={classNames(
                           projectcss.all,
-                          sty.freeBox__ykX7T
+                          sty.freeBox__ykX7T,
                         )}
                       >
                         <Button
@@ -1329,7 +1328,7 @@ function PlasmicHomepage__RenderFunc(props: {
                           }
                           className={classNames(
                             "__wab_instance",
-                            sty.continueButtonEditTask2
+                            sty.continueButtonEditTask2,
                           )}
                           color={"success"}
                           label={
@@ -1337,7 +1336,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__dPIr9
+                                sty.text__dPIr9,
                               )}
                             >
                               {"Continue"}
@@ -1349,7 +1348,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <Button
                           className={classNames(
                             "__wab_instance",
-                            sty.button__o7EfQ
+                            sty.button__o7EfQ,
                           )}
                           color={"muted"}
                           label={
@@ -1357,13 +1356,13 @@ function PlasmicHomepage__RenderFunc(props: {
                               className={classNames(
                                 projectcss.all,
                                 projectcss.__wab_text,
-                                sty.text__oyf2P
+                                sty.text__oyf2P,
                               )}
                             >
                               {"Close"}
                             </div>
                           }
-                          onClick={async event => {
+                          onClick={async (event) => {
                             const $steps = {};
 
                             $steps["updateAriaDialogTriggerIsOpen"] = true
@@ -1373,17 +1372,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                       objRoot: $state,
                                       variablePath: [
                                         "ariaDialogTrigger",
-                                        "isOpen"
-                                      ]
+                                        "isOpen",
+                                      ],
                                     },
                                     operation: 0,
-                                    value: false
+                                    value: false,
                                   };
                                   return (({
                                     variable,
                                     value,
                                     startIndex,
-                                    deleteCount
+                                    deleteCount,
                                   }) => {
                                     if (!variable) {
                                       return;
@@ -1415,7 +1414,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__qlPPl
+                          sty.text__qlPPl,
                         )}
                       >
                         {"Edit Task Part 2"}
@@ -1423,12 +1422,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     }
                     isOpen={generateStateValueProp($state, [
                       "editTask2",
-                      "isOpen"
+                      "isOpen",
                     ])}
                     onOpenChange={async (...eventArgs: any) => {
                       generateStateOnChangeProp($state, [
                         "editTask2",
-                        "isOpen"
+                        "isOpen",
                       ]).apply(null, eventArgs);
 
                       if (
@@ -1446,17 +1445,17 @@ function PlasmicHomepage__RenderFunc(props: {
                         children={null}
                         className={classNames(
                           "__wab_instance",
-                          sty.cmsDataFetcher
+                          sty.cmsDataFetcher,
                         )}
                         desc={true}
                         emptyMessage={
                           <DataCtxReader__>
-                            {$ctx => (
+                            {($ctx) => (
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text__ciJ
+                                  sty.text__ciJ,
                                 )}
                               >
                                 {"No matching published entries found."}
@@ -1469,12 +1468,12 @@ function PlasmicHomepage__RenderFunc(props: {
                         limit={0}
                         loadingMessage={
                           <DataCtxReader__>
-                            {$ctx => (
+                            {($ctx) => (
                               <div
                                 className={classNames(
                                   projectcss.all,
                                   projectcss.__wab_text,
-                                  sty.text___1RvSt
+                                  sty.text___1RvSt,
                                 )}
                               >
                                 {"Loading..."}
@@ -1493,7 +1492,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
                 </div>
               }
-              onClick={async event => {
+              onClick={async (event) => {
                 const $steps = {};
 
                 $steps["updateCalendarMode"] = true
@@ -1501,15 +1500,15 @@ function PlasmicHomepage__RenderFunc(props: {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["calendar", "mode"]
+                          variablePath: ["calendar", "mode"],
                         },
-                        operation: 0
+                        operation: 0,
                       };
                       return (({
                         variable,
                         value,
                         startIndex,
-                        deleteCount
+                        deleteCount,
                       }) => {
                         if (!variable) {
                           return;
@@ -1526,9 +1525,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   typeof $steps["updateCalendarMode"] === "object" &&
                   typeof $steps["updateCalendarMode"].then === "function"
                 ) {
-                  $steps["updateCalendarMode"] = await $steps[
-                    "updateCalendarMode"
-                  ];
+                  $steps["updateCalendarMode"] =
+                    await $steps["updateCalendarMode"];
                 }
               }}
               roundedFull={true}
@@ -1546,7 +1544,7 @@ function PlasmicHomepage__RenderFunc(props: {
           data-plasmic-name={"addTask2"}
           data-plasmic-override={overrides.addTask2}
           className={classNames("__wab_instance", sty.addTask2, {
-            [sty.addTask2darkMode]: hasVariant($state, "darkMode", "darkMode")
+            [sty.addTask2darkMode]: hasVariant($state, "darkMode", "darkMode"),
           })}
           closeOnBackdropClick={false}
           content={
@@ -1559,8 +1557,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTask2BodyHolderdarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode"
-                )
+                  "darkMode",
+                ),
               })}
             >
               <div
@@ -1574,9 +1572,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.addTask2BodyTextHolderdarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
               >
                 <React.Fragment>
@@ -1594,9 +1592,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.h5darkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode"
-                          )
-                        }
+                            "darkMode",
+                          ),
+                        },
                       )}
                     >
                       {
@@ -1630,8 +1628,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.addTask2StartTimeSelectionHolder,
                     {
                       [sty.addTask2StartTimeSelectionHolderdarkMode]:
-                        hasVariant($state, "darkMode", "darkMode")
-                    }
+                        hasVariant($state, "darkMode", "darkMode"),
+                    },
                   )}
                 >
                   <div
@@ -1643,9 +1641,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.textdarkMode__xJi8I9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Start Time:"}
@@ -1658,14 +1656,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty["timeHhDropdown__dropdownMenu"]
                     }
                     menuClassName={classNames({
-                      [sty["pcls_bvrglo98eD8t"]]: true
+                      [sty["pcls_bvrglo98eD8t"]]: true,
                     })}
                     menuItems={() => (
                       <React.Fragment>
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__jbSKd
+                            sty.menuItem__jbSKd,
                           )}
                           key={"menu-item-1"}
                         >
@@ -1673,7 +1671,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__nGg2
+                              sty.text__nGg2,
                             )}
                           >
                             {"Menu item"}
@@ -1682,7 +1680,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__w3NtS
+                            sty.menuItem__w3NtS,
                           )}
                           key={"menu-item-2"}
                         >
@@ -1690,7 +1688,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__cZKn2
+                              sty.text__cZKn2,
                             )}
                           >
                             {"Menu item"}
@@ -1711,7 +1709,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null }
+                        { type: "item", label: null },
                       ];
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
@@ -1739,7 +1737,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__i1Dm0
+                          sty.text__i1Dm0,
                         )}
                       >
                         {"Hour"}
@@ -1758,7 +1756,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__s10Ct
+                            sty.menuItem__s10Ct,
                           )}
                           key={"menu-item-1"}
                         >
@@ -1766,7 +1764,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__imqvz
+                              sty.text__imqvz,
                             )}
                           >
                             {"Menu item"}
@@ -1775,7 +1773,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__uruG5
+                            sty.menuItem__uruG5,
                           )}
                           key={"menu-item-2"}
                         >
@@ -1783,7 +1781,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__fGvcp
+                              sty.text__fGvcp,
                             )}
                           >
                             {"Menu item"}
@@ -1852,7 +1850,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null }
+                        { type: "item", label: null },
                       ];
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
@@ -1916,7 +1914,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["59"]["label"] = "59";
                       return __composite;
                     })()}
-                    onAction={async key => {
+                    onAction={async (key) => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -1930,7 +1928,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__tyohM
+                          sty.text__tyohM,
                         )}
                       >
                         {"Minute"}
@@ -1949,7 +1947,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__sY9P
+                            sty.menuItem__sY9P,
                           )}
                           key={"menu-item-1"}
                         >
@@ -1957,7 +1955,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__kveUm
+                              sty.text__kveUm,
                             )}
                           >
                             {"Menu item"}
@@ -1966,7 +1964,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__kcPzU
+                            sty.menuItem__kcPzU,
                           )}
                           key={"menu-item-2"}
                         >
@@ -1974,7 +1972,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___1DKgm
+                              sty.text___1DKgm,
                             )}
                           >
                             {"Menu item"}
@@ -1985,13 +1983,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     menuItemsJson={(() => {
                       const __composite = [
                         { type: "item", value: "action1", label: null },
-                        { type: "item", value: "action2", label: null }
+                        { type: "item", value: "action2", label: null },
                       ];
                       __composite["0"]["label"] = "AM";
                       __composite["1"]["label"] = "PM";
                       return __composite;
                     })()}
-                    onAction={async key => {
+                    onAction={async (key) => {
                       const $steps = {};
 
                       $steps["updateStateVariable"] = true
@@ -2001,7 +1999,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               variable,
                               value,
                               startIndex,
-                              deleteCount
+                              deleteCount,
                             }) => {
                               if (!variable) {
                                 return;
@@ -2018,9 +2016,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         typeof $steps["updateStateVariable"] === "object" &&
                         typeof $steps["updateStateVariable"].then === "function"
                       ) {
-                        $steps["updateStateVariable"] = await $steps[
-                          "updateStateVariable"
-                        ];
+                        $steps["updateStateVariable"] =
+                          await $steps["updateStateVariable"];
                       }
                     }}
                     trigger={"hover"}
@@ -2028,14 +2025,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <AntdButton
                       className={classNames(
                         "__wab_instance",
-                        sty.button__ovVsj
+                        sty.button__ovVsj,
                       )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__hhTOf
+                          sty.text__hhTOf,
                         )}
                       >
                         {"AM/PM"}
@@ -2067,9 +2064,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       [sty.addTask2EstimateHolderdarkMode]: hasVariant(
                         $state,
                         "darkMode",
-                        "darkMode"
-                      )
-                    }
+                        "darkMode",
+                      ),
+                    },
                   )}
                 >
                   <div
@@ -2083,9 +2080,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.timeEstimatedarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Time Estimate:"}
@@ -2098,14 +2095,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty["hhDropdown2__dropdownMenu"]
                     }
                     menuClassName={classNames({
-                      [sty["pcls_nhdsZa7RUMLe"]]: true
+                      [sty["pcls_nhdsZa7RUMLe"]]: true,
                     })}
                     menuItems={() => (
                       <React.Fragment>
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__kgnfi
+                            sty.menuItem__kgnfi,
                           )}
                           key={"menu-item-1"}
                         >
@@ -2113,7 +2110,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__kceJ9
+                              sty.text__kceJ9,
                             )}
                           >
                             {"Menu item"}
@@ -2122,7 +2119,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__uFmW
+                            sty.menuItem__uFmW,
                           )}
                           key={"menu-item-2"}
                         >
@@ -2130,7 +2127,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__e4Ym5
+                              sty.text__e4Ym5,
                             )}
                           >
                             {"Menu item"}
@@ -2151,7 +2148,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null }
+                        { type: "item", label: null },
                       ];
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
@@ -2168,7 +2165,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["11"]["label"] = "12";
                       return __composite;
                     })()}
-                    onAction={async key => {
+                    onAction={async (key) => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -2185,7 +2182,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__oPsrB
+                          sty.text__oPsrB,
                         )}
                       >
                         {"Hour"}
@@ -2205,7 +2202,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__tpCmC
+                            sty.menuItem__tpCmC,
                           )}
                           key={"menu-item-1"}
                         >
@@ -2213,7 +2210,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__i8Vju
+                              sty.text__i8Vju,
                             )}
                           >
                             {"Menu item"}
@@ -2222,7 +2219,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem___2Mmjc
+                            sty.menuItem___2Mmjc,
                           )}
                           key={"menu-item-2"}
                         >
@@ -2230,7 +2227,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___1TdZj
+                              sty.text___1TdZj,
                             )}
                           >
                             {"Menu item"}
@@ -2299,7 +2296,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null }
+                        { type: "item", label: null },
                       ];
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
@@ -2363,7 +2360,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["59"]["label"] = "59";
                       return __composite;
                     })()}
-                    onAction={async key => {
+                    onAction={async (key) => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -2377,7 +2374,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__y7Jlw
+                          sty.text__y7Jlw,
                         )}
                       >
                         {"Minute"}
@@ -2396,8 +2393,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTask2ButtonsHolderdarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode"
-                )
+                  "darkMode",
+                ),
               })}
             >
               <Button
@@ -2410,9 +2407,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.addTask2CancelButtondarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
                 color={"muted"}
                 label={
@@ -2425,15 +2422,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.textdarkMode__lrmix9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Cancel"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
 
                   $steps["updateAddTask12IsOpen"] = true
@@ -2441,15 +2438,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["addTask2", "isOpen"]
+                            variablePath: ["addTask2", "isOpen"],
                           },
-                          operation: 4
+                          operation: 4,
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -2467,9 +2464,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateAddTask12IsOpen"] === "object" &&
                     typeof $steps["updateAddTask12IsOpen"].then === "function"
                   ) {
-                    $steps["updateAddTask12IsOpen"] = await $steps[
-                      "updateAddTask12IsOpen"
-                    ];
+                    $steps["updateAddTask12IsOpen"] =
+                      await $steps["updateAddTask12IsOpen"];
                   }
                 }}
               />
@@ -2479,7 +2475,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.addTask2FinishButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.addTask2FinishButton
+                  sty.addTask2FinishButton,
                 )}
                 color={"success"}
                 label={
@@ -2487,13 +2483,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___6YJa
+                      sty.text___6YJa,
                     )}
                   >
                     {"Finish"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
                 }}
                 type={"soft"}
@@ -2510,9 +2506,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.textdarkMode__egXvl9HcnI]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
-                }
+                    "darkMode",
+                  ),
+                },
               )}
             >
               <React.Fragment>
@@ -2528,9 +2524,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.h4darkMode__ihh5I9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     {"Create Your Task: Estimate Your Start Time and Length"}
@@ -2544,7 +2540,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["addTask2", "isOpen"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
 
             if (
@@ -2562,7 +2558,7 @@ function PlasmicHomepage__RenderFunc(props: {
           data-plasmic-name={"editTask1"}
           data-plasmic-override={overrides.editTask1}
           className={classNames("__wab_instance", sty.editTask1, {
-            [sty.editTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
+            [sty.editTask1darkMode]: hasVariant($state, "darkMode", "darkMode"),
           })}
           closeOnBackdropClick={false}
           content={
@@ -2576,8 +2572,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskInfoStackerdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
+                    "darkMode",
+                  ),
                 })}
               >
                 <div
@@ -2591,9 +2587,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       [sty.editTaskInfoHeredarkMode]: hasVariant(
                         $state,
                         "darkMode",
-                        "darkMode"
-                      )
-                    }
+                        "darkMode",
+                      ),
+                    },
                   )}
                 >
                   <React.Fragment>
@@ -2609,9 +2605,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             [sty.h4darkMode__hamgt9HcnI]: hasVariant(
                               $state,
                               "darkMode",
-                              "darkMode"
-                            )
-                          }
+                              "darkMode",
+                            ),
+                          },
                         )}
                       >
                         {"Choose what info to change:"}
@@ -2631,9 +2627,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.editTaskCheckboxGroupdarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
                 description={null}
                 disabled={false}
@@ -2641,7 +2637,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
                     "editTaskCheckboxGroup",
-                    "value"
+                    "value",
                   ]).apply(null, eventArgs);
 
                   if (
@@ -2652,7 +2648,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     return;
                   }
 
-                  (async val => {
+                  (async (val) => {
                     const $steps = {};
 
                     $steps["runCode"] = true
@@ -2665,17 +2661,18 @@ function PlasmicHomepage__RenderFunc(props: {
                                     title: false,
                                     startTime: false,
                                     frequency: false,
-                                    estimatedTime: false
+                                    estimatedTime: false,
                                   });
-                                const handleCheckboxChange = key => event => {
-                                  setCheckedStates(prev => ({
-                                    ...prev,
-                                    [key]: event.target.checked
-                                  }));
-                                };
+                                const handleCheckboxChange =
+                                  (key) => (event) => {
+                                    setCheckedStates((prev) => ({
+                                      ...prev,
+                                      [key]: event.target.checked,
+                                    }));
+                                  };
                                 return handleCheckboxChange;
                               })();
-                            }
+                            },
                           };
                           return (({ customFunction }) => {
                             return customFunction();
@@ -2702,9 +2699,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.editTaskInfoChecksHolderdarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
-                      }
+                          "darkMode",
+                        ),
+                      },
                     )}
                   >
                     <Checkbox
@@ -2714,8 +2711,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.titleOptiondarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode"
-                        )
+                          "darkMode",
+                        ),
                       })}
                       label={
                         <div
@@ -2727,9 +2724,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__rc0Lp9HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode"
-                              )
-                            }
+                                "darkMode",
+                              ),
+                            },
                           )}
                         >
                           {"Title"}
@@ -2738,7 +2735,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "titleOption",
-                          "isSelected"
+                          "isSelected",
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2762,9 +2759,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.startTimeOptiondarkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode"
-                          )
-                        }
+                            "darkMode",
+                          ),
+                        },
                       )}
                       label={
                         <div
@@ -2776,9 +2773,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__yQsgm9HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode"
-                              )
-                            }
+                                "darkMode",
+                              ),
+                            },
                           )}
                         >
                           {"Start Time"}
@@ -2787,7 +2784,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "startTimeOption",
-                          "isSelected"
+                          "isSelected",
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2806,7 +2803,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-override={overrides.frequencyOption}
                       className={classNames(
                         "__wab_instance",
-                        sty.frequencyOption
+                        sty.frequencyOption,
                       )}
                       label={
                         <div
@@ -2818,9 +2815,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__mnVr69HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode"
-                              )
-                            }
+                                "darkMode",
+                              ),
+                            },
                           )}
                         >
                           {"Frequency"}
@@ -2829,7 +2826,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "frequencyOption",
-                          "isSelected"
+                          "isSelected",
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2853,9 +2850,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.estimatedTimeOptiondarkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode"
-                          )
-                        }
+                            "darkMode",
+                          ),
+                        },
                       )}
                       label={
                         <div
@@ -2867,9 +2864,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__tu9L09HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode"
-                              )
-                            }
+                                "darkMode",
+                              ),
+                            },
                           )}
                         >
                           {"Estimated Time"}
@@ -2878,7 +2875,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "estimatedTimeOption",
-                          "isSelected"
+                          "isSelected",
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2907,9 +2904,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskCloseAndContinueButtonsdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
-                }
+                    "darkMode",
+                  ),
+                },
               )}
             >
               <Button
@@ -2922,9 +2919,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.editTaskCloseButtondarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode"
-                    )
-                  }
+                      "darkMode",
+                    ),
+                  },
                 )}
                 color={"muted"}
                 label={
@@ -2932,13 +2929,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__lg9Et
+                      sty.text__lg9Et,
                     )}
                   >
                     {"Close"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
 
                   $steps["updateEditTask1IsOpen"] = true
@@ -2946,16 +2943,16 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["editTask1", "isOpen"]
+                            variablePath: ["editTask1", "isOpen"],
                           },
                           operation: 0,
-                          value: false
+                          value: false,
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -2972,9 +2969,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask1IsOpen"] === "object" &&
                     typeof $steps["updateEditTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask1IsOpen"] = await $steps[
-                      "updateEditTask1IsOpen"
-                    ];
+                    $steps["updateEditTask1IsOpen"] =
+                      await $steps["updateEditTask1IsOpen"];
                   }
                 }}
                 type={"soft"}
@@ -2985,7 +2981,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.editTaskContinueButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.editTaskContinueButton
+                  sty.editTaskContinueButton,
                 )}
                 color={"success"}
                 label={
@@ -2993,13 +2989,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__um2Zi
+                      sty.text__um2Zi,
                     )}
                   >
                     {"Continue"}
                   </div>
                 }
-                onClick={async event => {
+                onClick={async (event) => {
                   const $steps = {};
 
                   $steps["updateEditTask1IsOpen"] =
@@ -3008,16 +3004,16 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             variable: {
                               objRoot: $state,
-                              variablePath: ["editTask1", "isOpen"]
+                              variablePath: ["editTask1", "isOpen"],
                             },
                             operation: 0,
-                            value: ($state.editTask1.isOpen = false)
+                            value: ($state.editTask1.isOpen = false),
                           };
                           return (({
                             variable,
                             value,
                             startIndex,
-                            deleteCount
+                            deleteCount,
                           }) => {
                             if (!variable) {
                               return;
@@ -3034,9 +3030,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask1IsOpen"] === "object" &&
                     typeof $steps["updateEditTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask1IsOpen"] = await $steps[
-                      "updateEditTask1IsOpen"
-                    ];
+                    $steps["updateEditTask1IsOpen"] =
+                      await $steps["updateEditTask1IsOpen"];
                   }
 
                   $steps["updateEditTask2IsOpen"] = true
@@ -3044,16 +3039,16 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["editTask2", "isOpen"]
+                            variablePath: ["editTask2", "isOpen"],
                           },
                           operation: 0,
-                          value: ($state.editTask2.isOpen = true)
+                          value: ($state.editTask2.isOpen = true),
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount
+                          deleteCount,
                         }) => {
                           if (!variable) {
                             return;
@@ -3070,9 +3065,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask2IsOpen"] === "object" &&
                     typeof $steps["updateEditTask2IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask2IsOpen"] = await $steps[
-                      "updateEditTask2IsOpen"
-                    ];
+                    $steps["updateEditTask2IsOpen"] =
+                      await $steps["updateEditTask2IsOpen"];
                   }
                 }}
                 type={"soft"}
@@ -3091,9 +3085,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskLabelHolderdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode"
-                  )
-                }
+                    "darkMode",
+                  ),
+                },
               )}
             >
               <React.Fragment>
@@ -3106,7 +3100,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.h3,
                       projectcss.__wab_text,
-                      sty.h3
+                      sty.h3,
                     )}
                   >
                     {"Edit Task"}
@@ -3120,7 +3114,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["editTask1", "isOpen"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
 
             if (
@@ -3139,8 +3133,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.editTaskButtondarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode"
-                )
+                  "darkMode",
+                ),
               })}
               iconStart={undefined}
               label={
@@ -3148,13 +3142,13 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__dsKyk
+                    sty.text__dsKyk,
                   )}
                 >
                   {"Edit\nTask"}
                 </div>
               }
-              onClick={async event => {
+              onClick={async (event) => {
                 const $steps = {};
               }}
               roundedFull={true}
@@ -3169,8 +3163,8 @@ function PlasmicHomepage__RenderFunc(props: {
             [sty.deleteTaskButtondarkMode]: hasVariant(
               $state,
               "darkMode",
-              "darkMode"
-            )
+              "darkMode",
+            ),
           })}
           label={
             <div
@@ -3179,13 +3173,13 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.deleteTaskText
+                sty.deleteTaskText,
               )}
             >
               {"Delete\nTask"}
             </div>
           }
-          onClick={async event => {
+          onClick={async (event) => {
             const $steps = {};
 
             $steps["runCode"] = true
@@ -3193,7 +3187,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     customFunction: async () => {
                       return undefined;
-                    }
+                    },
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -3221,7 +3215,7 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__hVrKf
+                sty.text__hVrKf,
               )}
             >
               <React.Fragment>
@@ -3243,7 +3237,7 @@ function PlasmicHomepage__RenderFunc(props: {
               </React.Fragment>
             </div>
           }
-          onClick={async event => {
+          onClick={async (event) => {
             const $steps = {};
 
             $steps["updateIsPremium"] = ($state.isPremium = false)
@@ -3251,9 +3245,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     variable: {
                       objRoot: $state,
-                      variablePath: ["isPremium"]
+                      variablePath: ["isPremium"],
                     },
-                    operation: 4
+                    operation: 4,
                   };
                   return (({ variable, value, startIndex, deleteCount }) => {
                     if (!variable) {
@@ -3280,7 +3274,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     customFunction: async () => {
                       return ($state.premiumModal.isOpen = true);
-                    }
+                    },
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -3318,14 +3312,14 @@ function PlasmicHomepage__RenderFunc(props: {
                 disabled={false}
                 isSelected={generateStateValueProp($state, [
                   "_switch",
-                  "isSelected"
+                  "isSelected",
                 ])}
                 label={
                   <div
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__ezf5S
+                      sty.text__ezf5S,
                     )}
                   >
                     {"Disable AutoSchedule"}
@@ -3334,7 +3328,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
                     "_switch",
-                    "isSelected"
+                    "isSelected",
                   ]).apply(null, eventArgs);
 
                   if (
@@ -3345,7 +3339,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     return;
                   }
 
-                  (async val => {
+                  (async (val) => {
                     const $steps = {};
 
                     $steps["updateVariable"] = true
@@ -3354,14 +3348,14 @@ function PlasmicHomepage__RenderFunc(props: {
                             operation: 4,
                             variable: {
                               objRoot: $state,
-                              variablePath: ["autoEnabled"]
-                            }
+                              variablePath: ["autoEnabled"],
+                            },
                           };
                           return (({
                             variable,
                             value,
                             startIndex,
-                            deleteCount
+                            deleteCount,
                           }) => {
                             if (!variable) {
                               return;
@@ -3389,7 +3383,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__ylm0S
+                  sty.text__ylm0S,
                 )}
               >
                 <React.Fragment>
@@ -3401,7 +3395,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.blockquote
+                        sty.blockquote,
                       )}
                     >
                       {
@@ -3419,7 +3413,7 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___5ZtO8
+                sty.text___5ZtO8,
               )}
             >
               <React.Fragment>
@@ -3430,7 +3424,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.h4,
                       projectcss.__wab_text,
-                      sty.h4__oAyrH
+                      sty.h4__oAyrH,
                     )}
                   >
                     {"Premium Options"}
@@ -3444,7 +3438,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["premiumModal", "isOpen"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
 
             if (
@@ -3529,7 +3523,7 @@ const PlasmicDescendants = {
     "premiumButton",
     "premiumModal",
     "_switch",
-    "blockquote"
+    "blockquote",
   ],
   calendar: ["calendar"],
   focusFlowTitle: ["focusFlowTitle"],
@@ -3556,14 +3550,14 @@ const PlasmicDescendants = {
     "weeklyTrigger",
     "monthlyTrigger",
     "cancelAddTaskButton",
-    "addTaskGoToNextButton"
+    "addTaskGoToNextButton",
   ],
   addTaskButton: [
     "addTaskButton",
     "addTaskLabel",
     "editTask2",
     "cmsDataFetcher",
-    "continueButtonEditTask2"
+    "continueButtonEditTask2",
   ],
   addTaskLabel: ["addTaskLabel"],
   editTask2: ["editTask2", "cmsDataFetcher", "continueButtonEditTask2"],
@@ -3571,7 +3565,7 @@ const PlasmicDescendants = {
   continueButtonEditTask2: ["continueButtonEditTask2"],
   addTaskBasicInfoTitleHolder: [
     "addTaskBasicInfoTitleHolder",
-    "addTaskBasicInfoTitle"
+    "addTaskBasicInfoTitle",
   ],
   addTaskBasicInfoTitle: ["addTaskBasicInfoTitle"],
   addTaskContentHolder: [
@@ -3584,7 +3578,7 @@ const PlasmicDescendants = {
     "onceTrigger",
     "dailyTrigger",
     "weeklyTrigger",
-    "monthlyTrigger"
+    "monthlyTrigger",
   ],
   basicInfoExplanation: ["basicInfoExplanation", "h6"],
   h6: ["h6"],
@@ -3595,14 +3589,14 @@ const PlasmicDescendants = {
     "onceTrigger",
     "dailyTrigger",
     "weeklyTrigger",
-    "monthlyTrigger"
+    "monthlyTrigger",
   ],
   addTaskFrequencySelection: [
     "addTaskFrequencySelection",
     "onceTrigger",
     "dailyTrigger",
     "weeklyTrigger",
-    "monthlyTrigger"
+    "monthlyTrigger",
   ],
   onceTrigger: ["onceTrigger"],
   dailyTrigger: ["dailyTrigger"],
@@ -3629,7 +3623,7 @@ const PlasmicDescendants = {
     "mmButton2",
     "addTask2ButtonsHolder",
     "addTask2CancelButton",
-    "addTask2FinishButton"
+    "addTask2FinishButton",
   ],
   addTask2BodyHolder: [
     "addTask2BodyHolder",
@@ -3646,7 +3640,7 @@ const PlasmicDescendants = {
     "hhDropdown2",
     "hourButton2",
     "mmDropdown2",
-    "mmButton2"
+    "mmButton2",
   ],
   addTask2BodyTextHolder: ["addTask2BodyTextHolder", "h5"],
   h5: ["h5"],
@@ -3656,7 +3650,7 @@ const PlasmicDescendants = {
     "hourButton",
     "timeMmDropdown",
     "mmButton",
-    "amPmDropdown"
+    "amPmDropdown",
   ],
   timeHhDropdown: ["timeHhDropdown", "hourButton"],
   hourButton: ["hourButton"],
@@ -3669,7 +3663,7 @@ const PlasmicDescendants = {
     "hhDropdown2",
     "hourButton2",
     "mmDropdown2",
-    "mmButton2"
+    "mmButton2",
   ],
   timeEstimate: ["timeEstimate"],
   hhDropdown2: ["hhDropdown2", "hourButton2"],
@@ -3679,7 +3673,7 @@ const PlasmicDescendants = {
   addTask2ButtonsHolder: [
     "addTask2ButtonsHolder",
     "addTask2CancelButton",
-    "addTask2FinishButton"
+    "addTask2FinishButton",
   ],
   addTask2CancelButton: ["addTask2CancelButton"],
   addTask2FinishButton: ["addTask2FinishButton"],
@@ -3698,7 +3692,7 @@ const PlasmicDescendants = {
     "estimatedTimeOption",
     "editTaskCloseAndContinueButtons",
     "editTaskCloseButton",
-    "editTaskContinueButton"
+    "editTaskContinueButton",
   ],
   editTaskButton: ["editTaskButton"],
   editTaskLabelHolder: ["editTaskLabelHolder", "h3"],
@@ -3711,14 +3705,14 @@ const PlasmicDescendants = {
     "titleOption",
     "startTimeOption",
     "frequencyOption",
-    "estimatedTimeOption"
+    "estimatedTimeOption",
   ],
   editTaskInfoChecksHolder: [
     "editTaskInfoChecksHolder",
     "titleOption",
     "startTimeOption",
     "frequencyOption",
-    "estimatedTimeOption"
+    "estimatedTimeOption",
   ],
   titleOption: ["titleOption"],
   startTimeOption: ["startTimeOption"],
@@ -3727,7 +3721,7 @@ const PlasmicDescendants = {
   editTaskCloseAndContinueButtons: [
     "editTaskCloseAndContinueButtons",
     "editTaskCloseButton",
-    "editTaskContinueButton"
+    "editTaskContinueButton",
   ],
   editTaskCloseButton: ["editTaskCloseButton"],
   editTaskContinueButton: ["editTaskContinueButton"],
@@ -3736,7 +3730,7 @@ const PlasmicDescendants = {
   premiumButton: ["premiumButton"],
   premiumModal: ["premiumModal", "_switch", "blockquote"],
   _switch: ["_switch"],
-  blockquote: ["blockquote"]
+  blockquote: ["blockquote"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3838,7 +3832,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -3846,15 +3840,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicHomepage__ArgProps,
-          internalVariantPropNames: PlasmicHomepage__VariantProps
+          internalVariantPropNames: PlasmicHomepage__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicHomepage__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "lightMode") {
@@ -3882,7 +3876,7 @@ export const PlasmicHomepage = Object.assign(
     cmsDataFetcher: makeNodeComponent("cmsDataFetcher"),
     continueButtonEditTask2: makeNodeComponent("continueButtonEditTask2"),
     addTaskBasicInfoTitleHolder: makeNodeComponent(
-      "addTaskBasicInfoTitleHolder"
+      "addTaskBasicInfoTitleHolder",
     ),
     addTaskBasicInfoTitle: makeNodeComponent("addTaskBasicInfoTitle"),
     addTaskContentHolder: makeNodeComponent("addTaskContentHolder"),
@@ -3902,7 +3896,7 @@ export const PlasmicHomepage = Object.assign(
     addTask2BodyTextHolder: makeNodeComponent("addTask2BodyTextHolder"),
     h5: makeNodeComponent("h5"),
     addTask2StartTimeSelectionHolder: makeNodeComponent(
-      "addTask2StartTimeSelectionHolder"
+      "addTask2StartTimeSelectionHolder",
     ),
     timeHhDropdown: makeNodeComponent("timeHhDropdown"),
     hourButton: makeNodeComponent("hourButton"),
@@ -3931,7 +3925,7 @@ export const PlasmicHomepage = Object.assign(
     frequencyOption: makeNodeComponent("frequencyOption"),
     estimatedTimeOption: makeNodeComponent("estimatedTimeOption"),
     editTaskCloseAndContinueButtons: makeNodeComponent(
-      "editTaskCloseAndContinueButtons"
+      "editTaskCloseAndContinueButtons",
     ),
     editTaskCloseButton: makeNodeComponent("editTaskCloseButton"),
     editTaskContinueButton: makeNodeComponent("editTaskContinueButton"),
@@ -3951,9 +3945,9 @@ export const PlasmicHomepage = Object.assign(
       title: "FocusFlow",
       description: "",
       ogImageSrc: "",
-      canonical: "http://localhost3000/focusflow.mysite.com"
-    }
-  }
+      canonical: "http://localhost3000/focusflow.mysite.com",
+    },
+  },
 );
 
 export default PlasmicHomepage;

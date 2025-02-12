@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   PlasmicCheckbox,
-  DefaultCheckboxProps
+  DefaultCheckboxProps,
 } from "./plasmic/focusflow/PlasmicCheckbox";
 
 // Your component props start with props for variants and slots you defined

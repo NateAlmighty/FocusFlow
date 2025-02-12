@@ -21,7 +21,7 @@ export interface GlobalContextsProviderProps {
 }
 
 export default function GlobalContextsProvider(
-  props: GlobalContextsProviderProps
+  props: GlobalContextsProviderProps,
 ) {
   const { children, antdConfigProviderProps, cmsCredentialsProviderProps } =
     props;
@@ -103,15 +103,15 @@ export default function GlobalContextsProvider(
         antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
           ? antdConfigProviderProps.themeStyles!
           : true
-          ? {
-              fontFamily: "Inter",
-              fontSize: "16px",
-              fontWeight: "400",
-              lineHeight: "1.5",
-              color: "#535353",
-              letterSpacing: "normal"
-            }
-          : undefined
+            ? {
+                fontFamily: "Inter",
+                fontSize: "16px",
+                fontWeight: "400",
+                lineHeight: "1.5",
+                color: "#535353",
+                letterSpacing: "normal",
+              }
+            : undefined
       }
       wireframe={
         antdConfigProviderProps && "wireframe" in antdConfigProviderProps

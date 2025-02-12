@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseDialogTrigger } from "@plasmicpkgs/react-aria/skinny/registerDialogTrigger";
@@ -85,7 +85,7 @@ export type PlasmicModal__VariantsArgs = {
 };
 type VariantPropType = keyof PlasmicModal__VariantsArgs;
 export const PlasmicModal__VariantProps = new Array<VariantPropType>(
-  "noTrigger"
+  "noTrigger",
 );
 
 export type PlasmicModal__ArgsType = {
@@ -111,7 +111,7 @@ export const PlasmicModal__ArgProps = new Array<ArgPropType>(
   "trigger",
   "heading",
   "content",
-  "footer"
+  "footer",
 );
 
 export type PlasmicModal__OverridesType = {
@@ -160,18 +160,18 @@ function PlasmicModal__RenderFunc(props: {
         {
           closeOnBackdropClick: true,
           showHeader: true,
-          showFooter: true
+          showFooter: true,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -187,7 +187,7 @@ function PlasmicModal__RenderFunc(props: {
         variableType: "boolean",
 
         valueProp: "isOpen",
-        onChangeProp: "onOpenChange"
+        onChangeProp: "onOpenChange",
       },
       {
         path: "ariaModal.isOpen",
@@ -195,23 +195,23 @@ function PlasmicModal__RenderFunc(props: {
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => true,
 
-        refName: "ariaModal"
+        refName: "ariaModal",
       },
       {
         path: "noTrigger",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.noTrigger
-      }
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.noTrigger,
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   return (
@@ -228,8 +228,8 @@ function PlasmicModal__RenderFunc(props: {
             [sty.ariaModalnoTrigger]: hasVariant(
               $state,
               "noTrigger",
-              "noTrigger"
-            )
+              "noTrigger",
+            ),
           })}
           defaultOpen={true}
           isDismissable={args.closeOnBackdropClick}
@@ -239,10 +239,10 @@ function PlasmicModal__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["ariaModal", "isOpen"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
           }}
-          ref={ref => {
+          ref={(ref) => {
             $refs["ariaModal"] = ref;
           }}
           resetClassName={classNames(
@@ -251,7 +251,7 @@ function PlasmicModal__RenderFunc(props: {
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
             plasmic_antd_5_hostless_css.plasmic_tokens,
-            plasmic_plasmic_rich_components_css.plasmic_tokens
+            plasmic_plasmic_rich_components_css.plasmic_tokens,
           )}
         >
           <BaseDialog
@@ -261,8 +261,8 @@ function PlasmicModal__RenderFunc(props: {
               [sty.ariaDialognoTrigger]: hasVariant(
                 $state,
                 "noTrigger",
-                "noTrigger"
-              )
+                "noTrigger",
+              ),
             })}
           >
             {$props.showHeader ? (
@@ -276,15 +276,15 @@ function PlasmicModal__RenderFunc(props: {
                     [sty.ariaHeadingDeprecatednoTrigger]: hasVariant(
                       $state,
                       "noTrigger",
-                      "noTrigger"
-                    )
-                  }
+                      "noTrigger",
+                    ),
+                  },
                 )}
                 slot={"title"}
               >
                 {renderPlasmicSlot({
                   defaultContents: "Heading",
-                  value: args.heading
+                  value: args.heading,
                 })}
               </BaseHeading>
             ) : null}
@@ -304,7 +304,7 @@ function PlasmicModal__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__or9Mh
+                        sty.text__or9Mh,
                       )}
                     >
                       {"This is a Modal!"}
@@ -313,7 +313,7 @@ function PlasmicModal__RenderFunc(props: {
                       className={classNames(
                         projectcss.all,
                         projectcss.__wab_text,
-                        sty.text__cwn44
+                        sty.text__cwn44,
                       )}
                     >
                       {
@@ -323,7 +323,7 @@ function PlasmicModal__RenderFunc(props: {
                   </Stack__>
                 ),
 
-                value: args.content
+                value: args.content,
               })}
             </div>
             {$props.showFooter ? (
@@ -344,13 +344,13 @@ function PlasmicModal__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__rQr65
+                              sty.text__rQr65,
                             )}
                           >
                             {"Close"}
                           </div>
                         }
-                        onClick={async event => {
+                        onClick={async (event) => {
                           const $steps = {};
 
                           $steps["updateAriaDialogTriggerIsOpen"] = true
@@ -360,17 +360,17 @@ function PlasmicModal__RenderFunc(props: {
                                     objRoot: $state,
                                     variablePath: [
                                       "ariaDialogTrigger",
-                                      "isOpen"
-                                    ]
+                                      "isOpen",
+                                    ],
                                   },
                                   operation: 0,
-                                  value: false
+                                  value: false,
                                 };
                                 return (({
                                   variable,
                                   value,
                                   startIndex,
-                                  deleteCount
+                                  deleteCount,
                                 }) => {
                                   if (!variable) {
                                     return;
@@ -398,7 +398,7 @@ function PlasmicModal__RenderFunc(props: {
                     </div>
                   ),
 
-                  value: args.footer
+                  value: args.footer,
                 })}
               </div>
             ) : null}
@@ -409,7 +409,7 @@ function PlasmicModal__RenderFunc(props: {
       onOpenChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, [
           "ariaDialogTrigger",
-          "isOpen"
+          "isOpen",
         ]).apply(null, eventArgs);
       }}
       trigger={
@@ -417,7 +417,7 @@ function PlasmicModal__RenderFunc(props: {
           ? renderPlasmicSlot({
               defaultContents: <Button label={"Open Modal"} />,
 
-              value: args.trigger
+              value: args.trigger,
             })
           : null
       }
@@ -432,7 +432,7 @@ const PlasmicDescendants = {
     "ariaDialog",
     "ariaHeadingDeprecated",
     "scrollableContent",
-    "freeBox"
+    "freeBox",
   ],
 
   ariaModal: [
@@ -440,19 +440,19 @@ const PlasmicDescendants = {
     "ariaDialog",
     "ariaHeadingDeprecated",
     "scrollableContent",
-    "freeBox"
+    "freeBox",
   ],
 
   ariaDialog: [
     "ariaDialog",
     "ariaHeadingDeprecated",
     "scrollableContent",
-    "freeBox"
+    "freeBox",
   ],
 
   ariaHeadingDeprecated: ["ariaHeadingDeprecated"],
   scrollableContent: ["scrollableContent"],
-  freeBox: ["freeBox"]
+  freeBox: ["freeBox"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -495,7 +495,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -503,15 +503,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicModal__ArgProps,
-          internalVariantPropNames: PlasmicModal__VariantProps
+          internalVariantPropNames: PlasmicModal__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicModal__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaDialogTrigger") {
@@ -535,8 +535,8 @@ export const PlasmicModal = Object.assign(
 
     // Metadata about props expected for PlasmicModal
     internalVariantProps: PlasmicModal__VariantProps,
-    internalArgProps: PlasmicModal__ArgProps
-  }
+    internalArgProps: PlasmicModal__ArgProps,
+  },
 );
 
 export default PlasmicModal;

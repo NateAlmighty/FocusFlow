@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseTextField } from "@plasmicpkgs/react-aria/skinny/registerTextField";
@@ -90,7 +90,7 @@ type VariantPropType = keyof PlasmicTextField__VariantsArgs;
 export const PlasmicTextField__VariantProps = new Array<VariantPropType>(
   "multiLine",
   "iconStart",
-  "iconEnd"
+  "iconEnd",
 );
 
 export type PlasmicTextField__ArgsType = {
@@ -195,7 +195,7 @@ export const PlasmicTextField__ArgProps = new Array<ArgPropType>(
   "label",
   "start",
   "end",
-  "description"
+  "description",
 );
 
 export type PlasmicTextField__OverridesType = {
@@ -320,18 +320,18 @@ function PlasmicTextField__RenderFunc(props: {
           showLabel: true,
           showDescription: false,
           readOnly: false,
-          autoFocus: false
+          autoFocus: false,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -348,65 +348,65 @@ function PlasmicTextField__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props["defaultValue"],
 
-        onChangeProp: "onChange"
+        onChangeProp: "onChange",
       },
       {
         path: "multiLine",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.multiLine
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.multiLine,
       },
       {
         path: "iconStart",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.iconStart
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.iconStart,
       },
       {
         path: "iconEnd",
         type: "private",
         variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.iconEnd
+        initFunc: ({ $props, $state, $queries, $ctx }) => $props.iconEnd,
       },
       {
         path: "textInput.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
       },
       {
         path: "textAreaInput.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
-      }
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   const [$ccVariants, setDollarCcVariants] = React.useState<
     Record<string, boolean>
   >({
     disabled: false,
-    readonly: false
+    readonly: false,
   });
   const updateVariant = React.useCallback(
     (changes: Record<string, boolean>) => {
-      setDollarCcVariants(prev => {
-        if (!Object.keys(changes).some(k => prev[k] !== changes[k])) {
+      setDollarCcVariants((prev) => {
+        if (!Object.keys(changes).some((k) => prev[k] !== changes[k])) {
           return prev;
         }
         return { ...prev, ...changes };
       });
     },
-    []
+    [],
   );
 
   return (
@@ -432,7 +432,7 @@ function PlasmicTextField__RenderFunc(props: {
           [sty.ariaTextFieldiconStart]: hasVariant(
             $state,
             "iconStart",
-            "iconStart"
+            "iconStart",
           ),
           [sty.ariaTextFieldiconStart_iconEnd]:
             hasVariant($state, "iconStart", "iconStart") &&
@@ -440,9 +440,9 @@ function PlasmicTextField__RenderFunc(props: {
           [sty.ariaTextFieldmultiLine]: hasVariant(
             $state,
             "multiLine",
-            "multiLine"
-          )
-        }
+            "multiLine",
+          ),
+        },
       )}
       defaultValue={args.defaultValue}
       inputMode={args.inputMode}
@@ -451,7 +451,7 @@ function PlasmicTextField__RenderFunc(props: {
       onChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, ["ariaTextField", "value"]).apply(
           null,
-          eventArgs
+          eventArgs,
         );
       }}
       plasmicUpdateVariant={updateVariant}
@@ -463,12 +463,12 @@ function PlasmicTextField__RenderFunc(props: {
           data-plasmic-name={"label"}
           data-plasmic-override={overrides.label}
           className={classNames("__wab_instance", sty.label, {
-            [sty.labelmultiLine]: hasVariant($state, "multiLine", "multiLine")
+            [sty.labelmultiLine]: hasVariant($state, "multiLine", "multiLine"),
           })}
         >
           {renderPlasmicSlot({
             defaultContents: "Label",
-            value: args.label
+            value: args.label,
           })}
         </Label>
       ) : null}
@@ -477,18 +477,18 @@ function PlasmicTextField__RenderFunc(props: {
           [sty.freeBoxiconEnd__znkThweBVx]: hasVariant(
             $state,
             "iconEnd",
-            "iconEnd"
+            "iconEnd",
           ),
           [sty.freeBoxiconStart__znkThstsaH]: hasVariant(
             $state,
             "iconStart",
-            "iconStart"
+            "iconStart",
           ),
           [sty.freeBoxmultiLine__znkThBu1Cv]: hasVariant(
             $state,
             "multiLine",
-            "multiLine"
-          )
+            "multiLine",
+          ),
         })}
       >
         <div
@@ -496,13 +496,13 @@ function PlasmicTextField__RenderFunc(props: {
             [sty.freeBoxiconStart__kZmwZstsaH]: hasVariant(
               $state,
               "iconStart",
-              "iconStart"
+              "iconStart",
             ),
             [sty.freeBoxmultiLine__kZmwZBu1Cv]: hasVariant(
               $state,
               "multiLine",
-              "multiLine"
-            )
+              "multiLine",
+            ),
           })}
         >
           {renderPlasmicSlot({
@@ -518,9 +518,9 @@ function PlasmicTextField__RenderFunc(props: {
               [sty.slotTargetStarticonStart]: hasVariant(
                 $state,
                 "iconStart",
-                "iconStart"
-              )
-            })
+                "iconStart",
+              ),
+            }),
           })}
         </div>
         <TextInput
@@ -530,14 +530,14 @@ function PlasmicTextField__RenderFunc(props: {
             [sty.textInputmultiLine]: hasVariant(
               $state,
               "multiLine",
-              "multiLine"
-            )
+              "multiLine",
+            ),
           })}
           disabled={$ccVariants["disabled"] ? true : undefined}
           onChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["textInput", "value"]).apply(
               null,
-              eventArgs
+              eventArgs,
             );
 
             if (
@@ -553,10 +553,10 @@ function PlasmicTextField__RenderFunc(props: {
             hasVariant($state, "iconEnd", "iconEnd")
               ? ["right", "left"]
               : hasVariant($state, "iconEnd", "iconEnd")
-              ? ["right"]
-              : hasVariant($state, "iconStart", "iconStart")
-              ? ["left"]
-              : undefined
+                ? ["right"]
+                : hasVariant($state, "iconStart", "iconStart")
+                  ? ["left"]
+                  : undefined
           }
           placeholder={args.placeholder}
         />
@@ -569,13 +569,13 @@ function PlasmicTextField__RenderFunc(props: {
               [sty.textAreaInputmultiLine]: hasVariant(
                 $state,
                 "multiLine",
-                "multiLine"
-              )
+                "multiLine",
+              ),
             })}
             onChange={async (...eventArgs: any) => {
               generateStateOnChangeProp($state, [
                 "textAreaInput",
-                "value"
+                "value",
               ]).apply(null, eventArgs);
 
               if (
@@ -591,10 +591,10 @@ function PlasmicTextField__RenderFunc(props: {
               hasVariant($state, "iconEnd", "iconEnd")
                 ? ["right", "left"]
                 : hasVariant($state, "iconEnd", "iconEnd")
-                ? ["right"]
-                : hasVariant($state, "iconStart", "iconStart")
-                ? ["left"]
-                : undefined
+                  ? ["right"]
+                  : hasVariant($state, "iconStart", "iconStart")
+                    ? ["left"]
+                    : undefined
             }
             placeholder={args.placeholder}
           />
@@ -604,13 +604,13 @@ function PlasmicTextField__RenderFunc(props: {
             [sty.freeBoxiconEnd__pOsBweBVx]: hasVariant(
               $state,
               "iconEnd",
-              "iconEnd"
+              "iconEnd",
             ),
             [sty.freeBoxiconStart__pOsBstsaH]: hasVariant(
               $state,
               "iconStart",
-              "iconStart"
-            )
+              "iconStart",
+            ),
           })}
         >
           {renderPlasmicSlot({
@@ -622,7 +622,7 @@ function PlasmicTextField__RenderFunc(props: {
             ),
 
             value: args.end,
-            className: classNames(sty.slotTargetEnd)
+            className: classNames(sty.slotTargetEnd),
           })}
         </div>
       </div>
@@ -634,7 +634,7 @@ function PlasmicTextField__RenderFunc(props: {
         >
           {renderPlasmicSlot({
             defaultContents: "Description...",
-            value: args.description
+            value: args.description,
           })}
         </Description>
       ) : null}
@@ -648,13 +648,13 @@ const PlasmicDescendants = {
     "label",
     "textInput",
     "textAreaInput",
-    "description"
+    "description",
   ],
 
   label: ["label"],
   textInput: ["textInput"],
   textAreaInput: ["textAreaInput"],
-  description: ["description"]
+  description: ["description"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -696,7 +696,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -704,15 +704,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicTextField__ArgProps,
-          internalVariantPropNames: PlasmicTextField__VariantProps
+          internalVariantPropNames: PlasmicTextField__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicTextField__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaTextField") {
@@ -735,8 +735,8 @@ export const PlasmicTextField = Object.assign(
 
     // Metadata about props expected for PlasmicTextField
     internalVariantProps: PlasmicTextField__VariantProps,
-    internalArgProps: PlasmicTextField__ArgProps
-  }
+    internalArgProps: PlasmicTextField__ArgProps,
+  },
 );
 
 export default PlasmicTextField;

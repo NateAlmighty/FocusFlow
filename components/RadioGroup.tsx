@@ -3,7 +3,7 @@
 import * as React from "react";
 import {
   PlasmicRadioGroup,
-  DefaultRadioGroupProps
+  DefaultRadioGroupProps,
 } from "./plasmic/focusflow/PlasmicRadioGroup";
 
 // Your component props start with props for variants and slots you defined

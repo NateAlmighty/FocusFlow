@@ -51,12 +51,12 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName
+  wrapWithClassName,
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions
+  useGlobalActions,
 } from "@plasmicapp/react-web/lib/host";
 
 import { BaseCheckbox } from "@plasmicpkgs/react-aria/skinny/registerCheckbox";
@@ -95,7 +95,7 @@ export const PlasmicCheckbox__ArgProps = new Array<ArgPropType>(
   "disabled",
   "ariaLabel",
   "onChange",
-  "label"
+  "label",
 );
 
 export type PlasmicCheckbox__OverridesType = {
@@ -136,18 +136,18 @@ function PlasmicCheckbox__RenderFunc(props: {
       Object.assign(
         {
           defaultSelected: false,
-          autoFocus: false
+          autoFocus: false,
         },
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined)
-        )
+          Object.entries(props.args).filter(([_, v]) => v !== undefined),
+        ),
       ),
-    [props.args]
+    [props.args],
   );
 
   const $props = {
     ...args,
-    ...variants
+    ...variants,
   };
 
   const __nextRouter = useNextRouter();
@@ -164,17 +164,17 @@ function PlasmicCheckbox__RenderFunc(props: {
         initFunc: ({ $props, $state, $queries, $ctx }) =>
           $props["defaultSelected"],
 
-        onChangeProp: "onChange"
-      }
+        onChangeProp: "onChange",
+      },
     ],
 
-    [$props, $ctx, $refs]
+    [$props, $ctx, $refs],
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs
+    $refs,
   });
 
   const [$ccVariants, setDollarCcVariants] = React.useState<
@@ -187,18 +187,18 @@ function PlasmicCheckbox__RenderFunc(props: {
     indeterminate: false,
     disabled: false,
     selected: false,
-    readonly: false
+    readonly: false,
   });
   const updateVariant = React.useCallback(
     (changes: Record<string, boolean>) => {
-      setDollarCcVariants(prev => {
-        if (!Object.keys(changes).some(k => prev[k] !== changes[k])) {
+      setDollarCcVariants((prev) => {
+        if (!Object.keys(changes).some((k) => prev[k] !== changes[k])) {
           return prev;
         }
         return { ...prev, ...changes };
       });
     },
-    []
+    [],
   );
 
   return (
@@ -217,7 +217,7 @@ function PlasmicCheckbox__RenderFunc(props: {
         projectcss.plasmic_tokens,
         plasmic_antd_5_hostless_css.plasmic_tokens,
         plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.ariaCheckbox
+        sty.ariaCheckbox,
       )}
       defaultSelected={args.defaultSelected}
       isDisabled={args.disabled}
@@ -225,12 +225,12 @@ function PlasmicCheckbox__RenderFunc(props: {
       isReadOnly={$ccVariants["readonly"] ? true : undefined}
       isSelected={generateStateValueProp($state, [
         "ariaCheckbox",
-        "isSelected"
+        "isSelected",
       ])}
       onChange={async (...eventArgs: any) => {
         generateStateOnChangeProp($state, ["ariaCheckbox", "isSelected"]).apply(
           null,
-          eventArgs
+          eventArgs,
         );
       }}
       plasmicUpdateVariant={updateVariant}
@@ -253,7 +253,7 @@ function PlasmicCheckbox__RenderFunc(props: {
       </div>
       {renderPlasmicSlot({
         defaultContents: "Option",
-        value: args.label
+        value: args.label,
       })}
     </BaseCheckbox>
   ) as React.ReactElement | null;
@@ -261,7 +261,7 @@ function PlasmicCheckbox__RenderFunc(props: {
 
 const PlasmicDescendants = {
   ariaCheckbox: ["ariaCheckbox", "freeBox"],
-  freeBox: ["freeBox"]
+  freeBox: ["freeBox"],
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -300,7 +300,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>
+    props: T & StrictProps<T, PropsType>,
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -308,15 +308,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicCheckbox__ArgProps,
-          internalVariantPropNames: PlasmicCheckbox__VariantProps
+          internalVariantPropNames: PlasmicCheckbox__VariantProps,
         }),
-      [props, nodeName]
+      [props, nodeName],
     );
     return PlasmicCheckbox__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName
+      forNode: nodeName,
     });
   };
   if (nodeName === "ariaCheckbox") {
@@ -336,8 +336,8 @@ export const PlasmicCheckbox = Object.assign(
 
     // Metadata about props expected for PlasmicCheckbox
     internalVariantProps: PlasmicCheckbox__VariantProps,
-    internalArgProps: PlasmicCheckbox__ArgProps
-  }
+    internalArgProps: PlasmicCheckbox__ArgProps,
+  },
 );
 
 export default PlasmicCheckbox;
