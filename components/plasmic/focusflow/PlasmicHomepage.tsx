@@ -235,7 +235,20 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "calendar.selectedDate",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) =>
+          (() => {
+            try {
+              return new Date().toISOString().split("T")[0];
+            } catch (e) {
+              if (
+                e instanceof TypeError ||
+                e?.plasmicType === "PlasmicUndefinedDataError"
+              ) {
+                return undefined;
+              }
+              throw e;
+            }
+          })(),
 
         onMutate: generateOnMutateForSpec("selectedDate", RichCalendar_Helpers)
       },
@@ -530,6 +543,19 @@ function PlasmicHomepage__RenderFunc(props: {
             className: classNames("__wab_instance", sty.calendar, {
               [sty.calendardarkMode]: hasVariant($state, "darkMode", "darkMode")
             }),
+            defaultValue: (() => {
+              try {
+                return new Date().toISOString().split("T")[0];
+              } catch (e) {
+                if (
+                  e instanceof TypeError ||
+                  e?.plasmicType === "PlasmicUndefinedDataError"
+                ) {
+                  return undefined;
+                }
+                throw e;
+              }
+            })(),
             mode: generateStateValueProp($state, ["calendar", "mode"]),
             onChange: async (...eventArgs: any) => {
               generateStateOnChangePropForCodeComponents(
@@ -672,30 +698,24 @@ function PlasmicHomepage__RenderFunc(props: {
           onClick={async event => {
             const $steps = {};
 
-            $steps["updateDarkMode"] = true
+            $steps["runCode"] = true
               ? (() => {
                   const actionArgs = {
-                    vgroup: "darkMode",
-                    operation: 2,
-                    value: "darkMode"
-                  };
-                  return (({ vgroup, value }) => {
-                    if (typeof value === "string") {
-                      value = [value];
+                    customFunction: async () => {
+                      return ($state.darkMode = !$state.darkMode);
                     }
-
-                    const oldValue = $stateGet($state, vgroup);
-                    $stateSet($state, vgroup, !oldValue);
-                    return !oldValue;
+                  };
+                  return (({ customFunction }) => {
+                    return customFunction();
                   })?.apply(null, [actionArgs]);
                 })()
               : undefined;
             if (
-              $steps["updateDarkMode"] != null &&
-              typeof $steps["updateDarkMode"] === "object" &&
-              typeof $steps["updateDarkMode"].then === "function"
+              $steps["runCode"] != null &&
+              typeof $steps["runCode"] === "object" &&
+              typeof $steps["runCode"].then === "function"
             ) {
-              $steps["updateDarkMode"] = await $steps["updateDarkMode"];
+              $steps["runCode"] = await $steps["runCode"];
             }
           }}
           roundedFull={true}
