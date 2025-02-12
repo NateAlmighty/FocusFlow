@@ -175,7 +175,7 @@ export type PlasmicHomepage__OverridesType = {
   editTaskContinueButton?: Flex__<typeof Button>;
   deleteTaskButton?: Flex__<typeof Button>;
   deleteTaskText?: Flex__<"div">;
-  modal?: Flex__<typeof Modal>;
+  premiumModal?: Flex__<typeof Modal>;
   _switch?: Flex__<typeof Switch>;
   blockquote?: Flex__<"blockquote">;
 };
@@ -407,10 +407,10 @@ function PlasmicHomepage__RenderFunc(props: {
         path: "isPremium",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
-        path: "modal.isOpen",
+        path: "premiumModal.isOpen",
         type: "private",
         variableType: "boolean",
         initFunc: ({ $props, $state, $queries, $ctx }) => false
@@ -3199,9 +3199,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 </React.Fragment>
               </div>
               <Modal
-                data-plasmic-name={"modal"}
-                data-plasmic-override={overrides.modal}
-                className={classNames("__wab_instance", sty.modal)}
+                data-plasmic-name={"premiumModal"}
+                data-plasmic-override={overrides.premiumModal}
+                className={classNames("__wab_instance", sty.premiumModal)}
                 closeOnBackdropClick={false}
                 content={
                   <Stack__
@@ -3343,13 +3343,15 @@ function PlasmicHomepage__RenderFunc(props: {
                     </React.Fragment>
                   </div>
                 }
-                isOpen={generateStateValueProp($state, ["modal", "isOpen"])}
-                noTrigger={true}
+                isOpen={generateStateValueProp($state, [
+                  "premiumModal",
+                  "isOpen"
+                ])}
                 onOpenChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, ["modal", "isOpen"]).apply(
-                    null,
-                    eventArgs
-                  );
+                  generateStateOnChangeProp($state, [
+                    "premiumModal",
+                    "isOpen"
+                  ]).apply(null, eventArgs);
 
                   if (
                     eventArgs.length > 1 &&
@@ -3359,6 +3361,12 @@ function PlasmicHomepage__RenderFunc(props: {
                     return;
                   }
                 }}
+                trigger={
+                  <Button
+                    className={classNames("__wab_instance", sty.button__viFzs)}
+                    label={"Open Modal"}
+                  />
+                }
               />
             </React.Fragment>
           }
@@ -3489,7 +3497,7 @@ const PlasmicDescendants = {
     "editTaskContinueButton",
     "deleteTaskButton",
     "deleteTaskText",
-    "modal",
+    "premiumModal",
     "_switch",
     "blockquote"
   ],
@@ -3695,7 +3703,7 @@ const PlasmicDescendants = {
   editTaskContinueButton: ["editTaskContinueButton"],
   deleteTaskButton: ["deleteTaskButton", "deleteTaskText"],
   deleteTaskText: ["deleteTaskText"],
-  modal: ["modal", "_switch", "blockquote"],
+  premiumModal: ["premiumModal", "_switch", "blockquote"],
   _switch: ["_switch"],
   blockquote: ["blockquote"]
 } as const;
@@ -3765,7 +3773,7 @@ type NodeDefaultElementType = {
   editTaskContinueButton: typeof Button;
   deleteTaskButton: typeof Button;
   deleteTaskText: "div";
-  modal: typeof Modal;
+  premiumModal: typeof Modal;
   _switch: typeof Switch;
   blockquote: "blockquote";
 };
@@ -3897,7 +3905,7 @@ export const PlasmicHomepage = Object.assign(
     editTaskContinueButton: makeNodeComponent("editTaskContinueButton"),
     deleteTaskButton: makeNodeComponent("deleteTaskButton"),
     deleteTaskText: makeNodeComponent("deleteTaskText"),
-    modal: makeNodeComponent("modal"),
+    premiumModal: makeNodeComponent("premiumModal"),
     _switch: makeNodeComponent("_switch"),
     blockquote: makeNodeComponent("blockquote"),
 

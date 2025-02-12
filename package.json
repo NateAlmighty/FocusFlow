@@ -16,6 +16,7 @@
     "@ant-design/icons": "^5.6.1",
     "@ant-design/pro-components": "^2.6.4",
     "@faker-js/faker": "^9.4.0",
+    "@plasmicapp/cli": "^0.1.335",
     "@plasmicapp/loader-nextjs": "^1.0.411",
     "@plasmicapp/react-web": "^0.2.363",
     "@plasmicpkgs/antd5": "^0.0.267",

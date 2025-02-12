@@ -1203,8 +1203,11 @@
   color: var(--token-nGu8RhnEzQVy);
   font-weight: 800;
 }
-.modal:global(.__wab_instance):global(.__wab_instance) {
+.premiumModal:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
+}
+.button__viFzs:global(.__wab_instance):global(.__wab_instance) {
+  display: none;
 }
 .svg__h9H3X {
   position: relative;
