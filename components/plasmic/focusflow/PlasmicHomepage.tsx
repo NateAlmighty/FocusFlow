@@ -114,9 +114,9 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>(
 
 export type PlasmicHomepage__OverridesType = {
   lightMode?: Flex__<"div">;
+  calendar?: Flex__<typeof RichCalendar>;
   focusFlowTitle?: Flex__<"h1">;
   ownYourScheduleTagline?: Flex__<"h2">;
-  calendar?: Flex__<typeof RichCalendar>;
   darkModeButton?: Flex__<typeof Button>;
   toggleMode?: Flex__<"div">;
   addTask1?: Flex__<typeof Modal>;
@@ -500,44 +500,6 @@ function PlasmicHomepage__RenderFunc(props: {
           const $steps = {};
         }}
       >
-        <h1
-          data-plasmic-name={"focusFlowTitle"}
-          data-plasmic-override={overrides.focusFlowTitle}
-          className={classNames(
-            projectcss.all,
-            projectcss.h1,
-            projectcss.__wab_text,
-            sty.focusFlowTitle,
-            {
-              [sty.focusFlowTitledarkMode]: hasVariant(
-                $state,
-                "darkMode",
-                "darkMode"
-              )
-            }
-          )}
-        >
-          {"FocusFlow"}
-        </h1>
-        <h2
-          data-plasmic-name={"ownYourScheduleTagline"}
-          data-plasmic-override={overrides.ownYourScheduleTagline}
-          className={classNames(
-            projectcss.all,
-            projectcss.h2,
-            projectcss.__wab_text,
-            sty.ownYourScheduleTagline,
-            {
-              [sty.ownYourScheduleTaglinedarkMode]: hasVariant(
-                $state,
-                "darkMode",
-                "darkMode"
-              )
-            }
-          )}
-        >
-          {"Own Your Schedule"}
-        </h2>
         {(() => {
           const child$Props = {
             className: classNames("__wab_instance", sty.calendar, {
@@ -659,6 +621,44 @@ function PlasmicHomepage__RenderFunc(props: {
             />
           );
         })()}
+        <h1
+          data-plasmic-name={"focusFlowTitle"}
+          data-plasmic-override={overrides.focusFlowTitle}
+          className={classNames(
+            projectcss.all,
+            projectcss.h1,
+            projectcss.__wab_text,
+            sty.focusFlowTitle,
+            {
+              [sty.focusFlowTitledarkMode]: hasVariant(
+                $state,
+                "darkMode",
+                "darkMode"
+              )
+            }
+          )}
+        >
+          {"FocusFlow"}
+        </h1>
+        <h2
+          data-plasmic-name={"ownYourScheduleTagline"}
+          data-plasmic-override={overrides.ownYourScheduleTagline}
+          className={classNames(
+            projectcss.all,
+            projectcss.h2,
+            projectcss.__wab_text,
+            sty.ownYourScheduleTagline,
+            {
+              [sty.ownYourScheduleTaglinedarkMode]: hasVariant(
+                $state,
+                "darkMode",
+                "darkMode"
+              )
+            }
+          )}
+        >
+          {"Own Your Schedule"}
+        </h2>
         <Button
           data-plasmic-name={"darkModeButton"}
           data-plasmic-override={overrides.darkModeButton}
@@ -3465,9 +3465,9 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   lightMode: [
     "lightMode",
+    "calendar",
     "focusFlowTitle",
     "ownYourScheduleTagline",
-    "calendar",
     "darkModeButton",
     "toggleMode",
     "addTask1",
@@ -3531,9 +3531,9 @@ const PlasmicDescendants = {
     "_switch",
     "blockquote"
   ],
+  calendar: ["calendar"],
   focusFlowTitle: ["focusFlowTitle"],
   ownYourScheduleTagline: ["ownYourScheduleTagline"],
-  calendar: ["calendar"],
   darkModeButton: ["darkModeButton", "toggleMode"],
   toggleMode: ["toggleMode"],
   addTask1: [
@@ -3743,9 +3743,9 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   lightMode: "div";
+  calendar: typeof RichCalendar;
   focusFlowTitle: "h1";
   ownYourScheduleTagline: "h2";
-  calendar: typeof RichCalendar;
   darkModeButton: typeof Button;
   toggleMode: "div";
   addTask1: typeof Modal;
@@ -3870,9 +3870,9 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("lightMode"),
   {
     // Helper components rendering sub-elements
+    calendar: makeNodeComponent("calendar"),
     focusFlowTitle: makeNodeComponent("focusFlowTitle"),
     ownYourScheduleTagline: makeNodeComponent("ownYourScheduleTagline"),
-    calendar: makeNodeComponent("calendar"),
     darkModeButton: makeNodeComponent("darkModeButton"),
     toggleMode: makeNodeComponent("toggleMode"),
     addTask1: makeNodeComponent("addTask1"),
