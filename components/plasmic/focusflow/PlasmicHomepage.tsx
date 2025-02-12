@@ -3435,12 +3435,7 @@ function PlasmicHomepage__RenderFunc(props: {
               return;
             }
           }}
-          trigger={
-            <Button
-              className={classNames("__wab_instance", sty.button__viFzs)}
-              label={"Open Modal"}
-            />
-          }
+          trigger={null}
         />
       </div>
     </React.Fragment>
