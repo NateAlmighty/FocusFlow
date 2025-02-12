@@ -662,41 +662,6 @@ function PlasmicHomepage__RenderFunc(props: {
               )}
               onClick={async event => {
                 const $steps = {};
-
-                $steps["updateCalendarMode"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["calendar", "mode"]
-                        },
-                        operation: 0
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateCalendarMode"] != null &&
-                  typeof $steps["updateCalendarMode"] === "object" &&
-                  typeof $steps["updateCalendarMode"].then === "function"
-                ) {
-                  $steps["updateCalendarMode"] = await $steps[
-                    "updateCalendarMode"
-                  ];
-                }
               }}
             >
               {hasVariant($state, "darkMode", "darkMode")
@@ -2956,12 +2921,12 @@ function PlasmicHomepage__RenderFunc(props: {
                 onClick={async event => {
                   const $steps = {};
 
-                  $steps["updateAriaDialogTriggerIsOpen"] = true
+                  $steps["updateEditTask1IsOpen"] = true
                     ? (() => {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["ariaDialogTrigger", "isOpen"]
+                            variablePath: ["editTask1", "isOpen"]
                           },
                           operation: 0,
                           value: false
@@ -2983,14 +2948,12 @@ function PlasmicHomepage__RenderFunc(props: {
                       })()
                     : undefined;
                   if (
-                    $steps["updateAriaDialogTriggerIsOpen"] != null &&
-                    typeof $steps["updateAriaDialogTriggerIsOpen"] ===
-                      "object" &&
-                    typeof $steps["updateAriaDialogTriggerIsOpen"].then ===
-                      "function"
+                    $steps["updateEditTask1IsOpen"] != null &&
+                    typeof $steps["updateEditTask1IsOpen"] === "object" &&
+                    typeof $steps["updateEditTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateAriaDialogTriggerIsOpen"] = await $steps[
-                      "updateAriaDialogTriggerIsOpen"
+                    $steps["updateEditTask1IsOpen"] = await $steps[
+                      "updateEditTask1IsOpen"
                     ];
                   }
                 }}
@@ -3019,24 +2982,77 @@ function PlasmicHomepage__RenderFunc(props: {
                 onClick={async event => {
                   const $steps = {};
 
-                  $steps["runCode"] = true
+                  $steps["updateEditTask1IsOpen"] =
+                    $state.editTaskCheckboxGroup.value > 0
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["editTask1", "isOpen"]
+                            },
+                            operation: 0,
+                            value: ($state.editTask1.isOpen = false)
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            $stateSet(objRoot, variablePath, value);
+                            return value;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                  if (
+                    $steps["updateEditTask1IsOpen"] != null &&
+                    typeof $steps["updateEditTask1IsOpen"] === "object" &&
+                    typeof $steps["updateEditTask1IsOpen"].then === "function"
+                  ) {
+                    $steps["updateEditTask1IsOpen"] = await $steps[
+                      "updateEditTask1IsOpen"
+                    ];
+                  }
+
+                  $steps["updateEditTask2IsOpen"] = true
                     ? (() => {
                         const actionArgs = {
-                          customFunction: async () => {
-                            return undefined;
-                          }
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["editTask2", "isOpen"]
+                          },
+                          operation: 0,
+                          value: ($state.editTask2.isOpen = true)
                         };
-                        return (({ customFunction }) => {
-                          return customFunction();
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          $stateSet(objRoot, variablePath, value);
+                          return value;
                         })?.apply(null, [actionArgs]);
                       })()
                     : undefined;
                   if (
-                    $steps["runCode"] != null &&
-                    typeof $steps["runCode"] === "object" &&
-                    typeof $steps["runCode"].then === "function"
+                    $steps["updateEditTask2IsOpen"] != null &&
+                    typeof $steps["updateEditTask2IsOpen"] === "object" &&
+                    typeof $steps["updateEditTask2IsOpen"].then === "function"
                   ) {
-                    $steps["runCode"] = await $steps["runCode"];
+                    $steps["updateEditTask2IsOpen"] = await $steps[
+                      "updateEditTask2IsOpen"
+                    ];
                   }
                 }}
                 type={"soft"}
@@ -3118,6 +3134,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   {"Edit\nTask"}
                 </div>
               }
+              onClick={async event => {
+                const $steps = {};
+              }}
               roundedFull={true}
             />
           }
