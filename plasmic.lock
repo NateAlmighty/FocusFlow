@@ -201,12 +201,12 @@
         {
           "type": "renderModule",
           "assetId": "fnUkSM9xXbxs",
-          "checksum": "76aa8c6a6d9def05c813335829507096"
+          "checksum": "22e11cd321c5616f2c28ebab1bda8e8e"
         },
         {
           "type": "cssRules",
           "assetId": "fnUkSM9xXbxs",
-          "checksum": "76aa8c6a6d9def05c813335829507096"
+          "checksum": "22e11cd321c5616f2c28ebab1bda8e8e"
         }
       ],
       "codegenVersion": "0.0.1"
