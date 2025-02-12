@@ -175,6 +175,7 @@ export type PlasmicHomepage__OverridesType = {
   editTaskContinueButton?: Flex__<typeof Button>;
   deleteTaskButton?: Flex__<typeof Button>;
   deleteTaskText?: Flex__<"div">;
+  premiumButton?: Flex__<typeof Button>;
   premiumModal?: Flex__<typeof Modal>;
   _switch?: Flex__<typeof Switch>;
   blockquote?: Flex__<"blockquote">;
@@ -3173,205 +3174,35 @@ function PlasmicHomepage__RenderFunc(props: {
         />
 
         <Button
-          className={classNames("__wab_instance", sty.button___5St3L)}
+          data-plasmic-name={"premiumButton"}
+          data-plasmic-override={overrides.premiumButton}
+          className={classNames("__wab_instance", sty.premiumButton)}
           label={
-            <React.Fragment>
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__hVrKf
-                )}
-              >
-                <React.Fragment>
-                  {(() => {
-                    try {
-                      return $state.isPremium
-                        ? "Premium\nFeatures"
-                        : "Buy\nPremium";
-                    } catch (e) {
-                      if (
-                        e instanceof TypeError ||
-                        e?.plasmicType === "PlasmicUndefinedDataError"
-                      ) {
-                        return "Buy\nPremium";
-                      }
-                      throw e;
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__hVrKf
+              )}
+            >
+              <React.Fragment>
+                {(() => {
+                  try {
+                    return $state.isPremium
+                      ? "Premium\nFeatures"
+                      : "Buy\nPremium";
+                  } catch (e) {
+                    if (
+                      e instanceof TypeError ||
+                      e?.plasmicType === "PlasmicUndefinedDataError"
+                    ) {
+                      return "Buy\nPremium";
                     }
-                  })()}
-                </React.Fragment>
-              </div>
-              <Modal
-                data-plasmic-name={"premiumModal"}
-                data-plasmic-override={overrides.premiumModal}
-                className={classNames("__wab_instance", sty.premiumModal)}
-                closeOnBackdropClick={false}
-                content={
-                  <Stack__
-                    as={"div"}
-                    hasGap={true}
-                    className={classNames(projectcss.all, sty.freeBox__wwbHl)}
-                  >
-                    <Switch
-                      data-plasmic-name={"_switch"}
-                      data-plasmic-override={overrides._switch}
-                      className={classNames("__wab_instance", sty._switch)}
-                      disabled={false}
-                      isSelected={generateStateValueProp($state, [
-                        "_switch",
-                        "isSelected"
-                      ])}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ezf5S
-                          )}
-                        >
-                          {"Disable AutoSchedule"}
-                        </div>
-                      }
-                      onChange={async (...eventArgs: any) => {
-                        generateStateOnChangeProp($state, [
-                          "_switch",
-                          "isSelected"
-                        ]).apply(null, eventArgs);
-
-                        if (
-                          eventArgs.length > 1 &&
-                          eventArgs[1] &&
-                          eventArgs[1]._plasmic_state_init_
-                        ) {
-                          return;
-                        }
-
-                        (async val => {
-                          const $steps = {};
-
-                          $steps["updateVariable"] = true
-                            ? (() => {
-                                const actionArgs = {
-                                  operation: 4,
-                                  variable: {
-                                    objRoot: $state,
-                                    variablePath: ["autoEnabled"]
-                                  }
-                                };
-                                return (({
-                                  variable,
-                                  value,
-                                  startIndex,
-                                  deleteCount
-                                }) => {
-                                  if (!variable) {
-                                    return;
-                                  }
-                                  const { objRoot, variablePath } = variable;
-
-                                  const oldValue = $stateGet(
-                                    objRoot,
-                                    variablePath
-                                  );
-                                  $stateSet(objRoot, variablePath, !oldValue);
-                                  return !oldValue;
-                                })?.apply(null, [actionArgs]);
-                              })()
-                            : undefined;
-                          if (
-                            $steps["updateVariable"] != null &&
-                            typeof $steps["updateVariable"] === "object" &&
-                            typeof $steps["updateVariable"].then === "function"
-                          ) {
-                            $steps["updateVariable"] = await $steps[
-                              "updateVariable"
-                            ];
-                          }
-                        }).apply(null, eventArgs);
-                      }}
-                    />
-
-                    <div
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.text__ylm0S
-                      )}
-                    >
-                      <React.Fragment>
-                        <React.Fragment>{""}</React.Fragment>
-                        {
-                          <blockquote
-                            data-plasmic-name={"blockquote"}
-                            data-plasmic-override={overrides.blockquote}
-                            className={classNames(
-                              projectcss.all,
-                              projectcss.__wab_text,
-                              sty.blockquote
-                            )}
-                          >
-                            {
-                              "Can't find what you need?\nEmail us at FocusFlowADHDApp@gmail.com!"
-                            }
-                          </blockquote>
-                        }
-                        <React.Fragment>{""}</React.Fragment>
-                      </React.Fragment>
-                    </div>
-                  </Stack__>
-                }
-                heading={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___5ZtO8
-                    )}
-                  >
-                    <React.Fragment>
-                      <React.Fragment>{""}</React.Fragment>
-                      {
-                        <h4
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.h4,
-                            projectcss.__wab_text,
-                            sty.h4__oAyrH
-                          )}
-                        >
-                          {"Premium Options"}
-                        </h4>
-                      }
-                      <React.Fragment>{""}</React.Fragment>
-                    </React.Fragment>
-                  </div>
-                }
-                isOpen={generateStateValueProp($state, [
-                  "premiumModal",
-                  "isOpen"
-                ])}
-                onOpenChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, [
-                    "premiumModal",
-                    "isOpen"
-                  ]).apply(null, eventArgs);
-
-                  if (
-                    eventArgs.length > 1 &&
-                    eventArgs[1] &&
-                    eventArgs[1]._plasmic_state_init_
-                  ) {
-                    return;
+                    throw e;
                   }
-                }}
-                trigger={
-                  <Button
-                    className={classNames("__wab_instance", sty.button__viFzs)}
-                    label={"Open Modal"}
-                  />
-                }
-              />
-            </React.Fragment>
+                })()}
+              </React.Fragment>
+            </div>
           }
           onClick={async event => {
             const $steps = {};
@@ -3428,6 +3259,169 @@ function PlasmicHomepage__RenderFunc(props: {
           roundedFull={true}
           size={"extraLarge"}
           submitsForm={false}
+        />
+
+        <Modal
+          data-plasmic-name={"premiumModal"}
+          data-plasmic-override={overrides.premiumModal}
+          className={classNames("__wab_instance", sty.premiumModal)}
+          closeOnBackdropClick={false}
+          content={
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__wwbHl)}
+            >
+              <Switch
+                data-plasmic-name={"_switch"}
+                data-plasmic-override={overrides._switch}
+                className={classNames("__wab_instance", sty._switch)}
+                disabled={false}
+                isSelected={generateStateValueProp($state, [
+                  "_switch",
+                  "isSelected"
+                ])}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ezf5S
+                    )}
+                  >
+                    {"Disable AutoSchedule"}
+                  </div>
+                }
+                onChange={async (...eventArgs: any) => {
+                  generateStateOnChangeProp($state, [
+                    "_switch",
+                    "isSelected"
+                  ]).apply(null, eventArgs);
+
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+
+                  (async val => {
+                    const $steps = {};
+
+                    $steps["updateVariable"] = true
+                      ? (() => {
+                          const actionArgs = {
+                            operation: 4,
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["autoEnabled"]
+                            }
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            const oldValue = $stateGet(objRoot, variablePath);
+                            $stateSet(objRoot, variablePath, !oldValue);
+                            return !oldValue;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateVariable"] != null &&
+                      typeof $steps["updateVariable"] === "object" &&
+                      typeof $steps["updateVariable"].then === "function"
+                    ) {
+                      $steps["updateVariable"] = await $steps["updateVariable"];
+                    }
+                  }).apply(null, eventArgs);
+                }}
+              />
+
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text__ylm0S
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <blockquote
+                      data-plasmic-name={"blockquote"}
+                      data-plasmic-override={overrides.blockquote}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.__wab_text,
+                        sty.blockquote
+                      )}
+                    >
+                      {
+                        "Can't find what you need?\nEmail us at FocusFlowADHDApp@gmail.com!"
+                      }
+                    </blockquote>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+            </Stack__>
+          }
+          heading={
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___5ZtO8
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h4
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h4,
+                      projectcss.__wab_text,
+                      sty.h4__oAyrH
+                    )}
+                  >
+                    {"Premium Options"}
+                  </h4>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+          }
+          isOpen={generateStateValueProp($state, ["premiumModal", "isOpen"])}
+          onOpenChange={async (...eventArgs: any) => {
+            generateStateOnChangeProp($state, ["premiumModal", "isOpen"]).apply(
+              null,
+              eventArgs
+            );
+
+            if (
+              eventArgs.length > 1 &&
+              eventArgs[1] &&
+              eventArgs[1]._plasmic_state_init_
+            ) {
+              return;
+            }
+          }}
+          trigger={
+            <Button
+              className={classNames("__wab_instance", sty.button__viFzs)}
+              label={"Open Modal"}
+            />
+          }
         />
       </div>
     </React.Fragment>
@@ -3498,6 +3492,7 @@ const PlasmicDescendants = {
     "editTaskContinueButton",
     "deleteTaskButton",
     "deleteTaskText",
+    "premiumButton",
     "premiumModal",
     "_switch",
     "blockquote"
@@ -3704,6 +3699,7 @@ const PlasmicDescendants = {
   editTaskContinueButton: ["editTaskContinueButton"],
   deleteTaskButton: ["deleteTaskButton", "deleteTaskText"],
   deleteTaskText: ["deleteTaskText"],
+  premiumButton: ["premiumButton"],
   premiumModal: ["premiumModal", "_switch", "blockquote"],
   _switch: ["_switch"],
   blockquote: ["blockquote"]
@@ -3774,6 +3770,7 @@ type NodeDefaultElementType = {
   editTaskContinueButton: typeof Button;
   deleteTaskButton: typeof Button;
   deleteTaskText: "div";
+  premiumButton: typeof Button;
   premiumModal: typeof Modal;
   _switch: typeof Switch;
   blockquote: "blockquote";
@@ -3906,6 +3903,7 @@ export const PlasmicHomepage = Object.assign(
     editTaskContinueButton: makeNodeComponent("editTaskContinueButton"),
     deleteTaskButton: makeNodeComponent("deleteTaskButton"),
     deleteTaskText: makeNodeComponent("deleteTaskText"),
+    premiumButton: makeNodeComponent("premiumButton"),
     premiumModal: makeNodeComponent("premiumModal"),
     _switch: makeNodeComponent("_switch"),
     blockquote: makeNodeComponent("blockquote"),

@@ -1184,7 +1184,7 @@
   position: relative;
   height: 1em;
 }
-.button___5St3L:global(.__wab_instance):global(.__wab_instance) {
+.premiumButton:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
   position: absolute;
   left: 1291px;
@@ -1203,8 +1203,15 @@
   color: var(--token-nGu8RhnEzQVy);
   font-weight: 800;
 }
+.svg___2T1Ra {
+  position: relative;
+  height: 1em;
+}
 .premiumModal:global(.__wab_instance):global(.__wab_instance) {
   max-width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .button__viFzs:global(.__wab_instance):global(.__wab_instance) {
   display: none;
@@ -1289,10 +1296,6 @@
   padding-left: 0px;
 }
 .svg__cxaYo {
-  position: relative;
-  height: 1em;
-}
-.svg___2T1Ra {
   position: relative;
   height: 1em;
 }
