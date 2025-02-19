@@ -7,24 +7,18 @@
 import * as React from "react";
 import { hasVariant, ensureGlobalVariants } from "@plasmicapp/react-web";
 import { AntdConfigProvider } from "@plasmicpkgs/antd5/skinny/registerConfigProvider";
-import { CmsCredentialsProvider } from "@plasmicpkgs/plasmic-cms";
 
 export interface GlobalContextsProviderProps {
   children?: React.ReactElement;
   antdConfigProviderProps?: Partial<
     Omit<React.ComponentProps<typeof AntdConfigProvider>, "children">
   >;
-
-  cmsCredentialsProviderProps?: Partial<
-    Omit<React.ComponentProps<typeof CmsCredentialsProvider>, "children">
-  >;
 }
 
 export default function GlobalContextsProvider(
-  props: GlobalContextsProviderProps,
+  props: GlobalContextsProviderProps
 ) {
-  const { children, antdConfigProviderProps, cmsCredentialsProviderProps } =
-    props;
+  const { children, antdConfigProviderProps } = props;
 
   return (
     <AntdConfigProvider
@@ -103,15 +97,15 @@ export default function GlobalContextsProvider(
         antdConfigProviderProps && "themeStyles" in antdConfigProviderProps
           ? antdConfigProviderProps.themeStyles!
           : true
-            ? {
-                fontFamily: "Inter",
-                fontSize: "16px",
-                fontWeight: "400",
-                lineHeight: "1.5",
-                color: "#535353",
-                letterSpacing: "normal",
-              }
-            : undefined
+          ? {
+              fontFamily: "Inter",
+              fontSize: "16px",
+              fontWeight: "400",
+              lineHeight: "1.5",
+              color: "#535353",
+              letterSpacing: "normal"
+            }
+          : undefined
       }
       wireframe={
         antdConfigProviderProps && "wireframe" in antdConfigProviderProps
@@ -119,33 +113,7 @@ export default function GlobalContextsProvider(
           : true
       }
     >
-      <CmsCredentialsProvider
-        {...cmsCredentialsProviderProps}
-        databaseId={
-          cmsCredentialsProviderProps &&
-          "databaseId" in cmsCredentialsProviderProps
-            ? cmsCredentialsProviderProps.databaseId!
-            : "9Qi194Bap8vGTHqckpMxgT"
-        }
-        databaseToken={
-          cmsCredentialsProviderProps &&
-          "databaseToken" in cmsCredentialsProviderProps
-            ? cmsCredentialsProviderProps.databaseToken!
-            : "JVHK0BqCdPnGn7gR4OhxL4amE8OzvMe0ZdPQNkAEyzDpIi1MJ2GXFrsadumsUtomFQCrdoaLSL6uvHYSQw"
-        }
-        host={
-          cmsCredentialsProviderProps && "host" in cmsCredentialsProviderProps
-            ? cmsCredentialsProviderProps.host!
-            : "https://data.plasmic.app"
-        }
-        locale={
-          cmsCredentialsProviderProps && "locale" in cmsCredentialsProviderProps
-            ? cmsCredentialsProviderProps.locale!
-            : undefined
-        }
-      >
-        {children}
-      </CmsCredentialsProvider>
+      {children}
     </AntdConfigProvider>
   );
 }

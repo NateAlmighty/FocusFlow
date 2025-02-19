@@ -51,35 +51,34 @@ import {
   useDollarState,
   usePlasmicTranslator,
   useTrigger,
-  wrapWithClassName,
+  wrapWithClassName
 } from "@plasmicapp/react-web";
 import {
   DataCtxReader as DataCtxReader__,
   useDataEnv,
-  useGlobalActions,
+  useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
 import { usePlasmicDataSourceContext } from "@plasmicapp/data-sources-context";
 import {
   executePlasmicDataOp,
   usePlasmicDataOp,
-  usePlasmicInvalidate,
+  usePlasmicInvalidate
 } from "@plasmicapp/react-web/lib/data-sources";
 
 import { RichCalendar } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar";
 import { calendarHelpers as RichCalendar_Helpers } from "@plasmicpkgs/plasmic-rich-components/skinny/rich-calendar";
 import Button from "../../Button"; // plasmic-import: nQAzkSlk0HL0/component
 import Modal from "../../Modal"; // plasmic-import: e0ng8ipOCA27/component
-import { CmsQueryRepeater } from "@plasmicpkgs/plasmic-cms";
-import TextField from "../../TextField"; // plasmic-import: BesENwisZjRR/component
-import RadioGroup from "../../RadioGroup"; // plasmic-import: 5EOwd79N6RNV/component
-import Radio from "../../Radio"; // plasmic-import: trR-dZObjWEJ/component
+import Switch from "../../Switch"; // plasmic-import: pl-hfq6xTow5/component
 import { AntdDropdown } from "@plasmicpkgs/antd5/skinny/registerDropdown";
 import { AntdMenuItem } from "@plasmicpkgs/antd5/skinny/registerMenu";
 import { AntdButton } from "@plasmicpkgs/antd5/skinny/registerButton";
+import TextField from "../../TextField"; // plasmic-import: BesENwisZjRR/component
+import RadioGroup from "../../RadioGroup"; // plasmic-import: 5EOwd79N6RNV/component
+import Radio from "../../Radio"; // plasmic-import: trR-dZObjWEJ/component
 import CheckboxGroup from "../../CheckboxGroup"; // plasmic-import: 74X7Xnsr0LfR/component
 import Checkbox from "../../Checkbox"; // plasmic-import: Fiwni9fctKpg/component
-import Switch from "../../Switch"; // plasmic-import: pl-hfq6xTow5/component
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
@@ -101,7 +100,7 @@ export type PlasmicHomepage__VariantsArgs = {
 };
 type VariantPropType = keyof PlasmicHomepage__VariantsArgs;
 export const PlasmicHomepage__VariantProps = new Array<VariantPropType>(
-  "darkMode",
+  "darkMode"
 );
 
 export type PlasmicHomepage__ArgsType = {
@@ -109,7 +108,7 @@ export type PlasmicHomepage__ArgsType = {
 };
 type ArgPropType = keyof PlasmicHomepage__ArgsType;
 export const PlasmicHomepage__ArgProps = new Array<ArgPropType>(
-  "onDarkModeChange",
+  "onDarkModeChange"
 );
 
 export type PlasmicHomepage__OverridesType = {
@@ -119,27 +118,10 @@ export type PlasmicHomepage__OverridesType = {
   ownYourScheduleTagline?: Flex__<"h2">;
   darkModeButton?: Flex__<typeof Button>;
   toggleMode?: Flex__<"div">;
-  addTask1?: Flex__<typeof Modal>;
-  addTaskButton?: Flex__<typeof Button>;
-  addTaskLabel?: Flex__<"div">;
-  editTask2?: Flex__<typeof Modal>;
-  cmsDataFetcher?: Flex__<typeof CmsQueryRepeater>;
-  continueButtonEditTask2?: Flex__<typeof Button>;
-  addTaskBasicInfoTitleHolder?: Flex__<"div">;
-  addTaskBasicInfoTitle?: Flex__<"h4">;
-  addTaskContentHolder?: Flex__<"div">;
-  basicInfoExplanation?: Flex__<"div">;
-  h6?: Flex__<"h6">;
-  addTaskNameInputTextField?: Flex__<typeof TextField>;
-  addTaskRadioGroup?: Flex__<typeof RadioGroup>;
-  addTaskFrequencySelection?: Flex__<"div">;
-  onceTrigger?: Flex__<typeof Radio>;
-  dailyTrigger?: Flex__<typeof Radio>;
-  weeklyTrigger?: Flex__<typeof Radio>;
-  monthlyTrigger?: Flex__<typeof Radio>;
-  cancelAddTaskButton?: Flex__<typeof Button>;
-  addTaskGoToNextButton?: Flex__<typeof Button>;
   addTask2?: Flex__<typeof Modal>;
+  addTask2Modal?: Flex__<typeof Modal>;
+  _switch?: Flex__<typeof Switch>;
+  blockquote?: Flex__<"blockquote">;
   addTask2BodyHolder?: Flex__<"div">;
   addTask2BodyTextHolder?: Flex__<"div">;
   h5?: Flex__<"h5">;
@@ -158,6 +140,25 @@ export type PlasmicHomepage__OverridesType = {
   addTask2ButtonsHolder?: Flex__<"div">;
   addTask2CancelButton?: Flex__<typeof Button>;
   addTask2FinishButton?: Flex__<typeof Button>;
+  addTask1?: Flex__<typeof Modal>;
+  addTaskButton?: Flex__<typeof Button>;
+  addTaskLabel?: Flex__<"div">;
+  editTask2?: Flex__<typeof Modal>;
+  continueButtonEditTask2?: Flex__<typeof Button>;
+  addTaskBasicInfoTitleHolder?: Flex__<"div">;
+  addTaskBasicInfoTitle?: Flex__<"h4">;
+  addTaskContentHolder?: Flex__<"div">;
+  basicInfoExplanation?: Flex__<"div">;
+  h6?: Flex__<"h6">;
+  addTaskNameInputTextField?: Flex__<typeof TextField>;
+  addTaskRadioGroup?: Flex__<typeof RadioGroup>;
+  addTaskFrequencySelection?: Flex__<"div">;
+  onceTrigger?: Flex__<typeof Radio>;
+  dailyTrigger?: Flex__<typeof Radio>;
+  weeklyTrigger?: Flex__<typeof Radio>;
+  monthlyTrigger?: Flex__<typeof Radio>;
+  cancelAddTaskButton?: Flex__<typeof Button>;
+  addTaskGoToNextButton?: Flex__<typeof Button>;
   editTask1?: Flex__<typeof Modal>;
   editTaskButton?: Flex__<typeof Button>;
   editTaskLabelHolder?: Flex__<"div">;
@@ -176,9 +177,6 @@ export type PlasmicHomepage__OverridesType = {
   deleteTaskButton?: Flex__<typeof Button>;
   deleteTaskText?: Flex__<"div">;
   premiumButton?: Flex__<typeof Button>;
-  premiumModal?: Flex__<typeof Modal>;
-  _switch?: Flex__<typeof Switch>;
-  blockquote?: Flex__<"blockquote">;
 };
 
 export interface DefaultHomepageProps {}
@@ -205,15 +203,15 @@ function PlasmicHomepage__RenderFunc(props: {
       Object.assign(
         {},
         Object.fromEntries(
-          Object.entries(props.args).filter(([_, v]) => v !== undefined),
-        ),
+          Object.entries(props.args).filter(([_, v]) => v !== undefined)
+        )
       ),
-    [props.args],
+    [props.args]
   );
 
   const $props = {
     ...args,
-    ...variants,
+    ...variants
   };
 
   const __nextRouter = useNextRouter();
@@ -229,7 +227,7 @@ function PlasmicHomepage__RenderFunc(props: {
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => "month",
 
-        onMutate: generateOnMutateForSpec("mode", RichCalendar_Helpers),
+        onMutate: generateOnMutateForSpec("mode", RichCalendar_Helpers)
       },
       {
         path: "calendar.selectedDate",
@@ -250,133 +248,133 @@ function PlasmicHomepage__RenderFunc(props: {
             }
           })(),
 
-        onMutate: generateOnMutateForSpec("selectedDate", RichCalendar_Helpers),
+        onMutate: generateOnMutateForSpec("selectedDate", RichCalendar_Helpers)
       },
       {
         path: "addTask1.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "addTaskNameInputTextField.value",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "addTaskRadioGroup.value",
         type: "private",
         variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "editTask1.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "taskSelection",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "SelectedTask",
+        initFunc: ({ $props, $state, $queries, $ctx }) => "SelectedTask"
       },
       {
         path: "estimatedHours",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       },
       {
         path: "taskName",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       },
       {
         path: "estimatedMinutes",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       },
       {
         path: "startMinute",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       },
       {
         path: "addTask2.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "startHour",
         type: "private",
         variableType: "number",
-        initFunc: ({ $props, $state, $queries, $ctx }) => 0,
+        initFunc: ({ $props, $state, $queries, $ctx }) => 0
       },
       {
         path: "morning",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
         path: "editTaskCheckboxGroup.value",
         type: "private",
         variableType: "array",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "titleOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "startTimeOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "frequencyOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "estimatedTimeOption.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "editTask2.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => undefined,
+        initFunc: ({ $props, $state, $queries, $ctx }) => undefined
       },
       {
         path: "checkedEditStates",
         type: "private",
         variableType: "text",
-        initFunc: ({ $props, $state, $queries, $ctx }) => "",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
       },
       {
         path: "showEstimateHolder",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true,
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
         path: "showStartTimeSelectionHolder",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true,
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
         path: "darkMode",
@@ -384,14 +382,14 @@ function PlasmicHomepage__RenderFunc(props: {
         variableType: "variant",
 
         valueProp: "darkMode",
-        onChangeProp: "onDarkModeChange",
+        onChangeProp: "onDarkModeChange"
       },
       {
         path: "selectedDate",
         type: "private",
         variableType: "dateString",
         initFunc: ({ $props, $state, $queries, $ctx }) =>
-          "2025-01-16T12:57:35.154Z",
+          "2025-01-16T12:57:35.154Z"
       },
       {
         path: "startDateTime",
@@ -403,7 +401,7 @@ function PlasmicHomepage__RenderFunc(props: {
               return (() => {
                 $state.startdatetime = new Date().toISOString();
                 return ($state.LocalTaskListDB.ForTaskList.find(
-                  (item) => item.id === "started?",
+                  item => item.id === "started?"
                 ).value = true);
               })();
             } catch (e) {
@@ -415,40 +413,40 @@ function PlasmicHomepage__RenderFunc(props: {
               }
               throw e;
             }
-          })(),
+          })()
       },
       {
         path: "isPremium",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true,
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
-        path: "premiumModal.isOpen",
+        path: "addTask2Modal.isOpen",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
       },
       {
         path: "_switch.isSelected",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true,
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
       },
       {
         path: "autoEnabled",
         type: "private",
         variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => false,
-      },
+        initFunc: ({ $props, $state, $queries, $ctx }) => false
+      }
     ],
-    [$props, $ctx, $refs],
+    [$props, $ctx, $refs]
   );
   const $state = useDollarState(stateSpecs, {
     $props,
     $ctx,
     $queries: {},
-    $refs,
+    $refs
   });
   const dataSourcesCtx = usePlasmicDataSourceContext();
   const plasmicInvalidate = usePlasmicInvalidate();
@@ -493,21 +491,17 @@ function PlasmicHomepage__RenderFunc(props: {
           plasmic_plasmic_rich_components_css.plasmic_tokens,
           sty.lightMode,
           {
-            [sty.lightModedarkMode]: hasVariant($state, "darkMode", "darkMode"),
-          },
+            [sty.lightModedarkMode]: hasVariant($state, "darkMode", "darkMode")
+          }
         )}
-        onClick={async (event) => {
+        onClick={async event => {
           const $steps = {};
         }}
       >
         {(() => {
           const child$Props = {
             className: classNames("__wab_instance", sty.calendar, {
-              [sty.calendardarkMode]: hasVariant(
-                $state,
-                "darkMode",
-                "darkMode",
-              ),
+              [sty.calendardarkMode]: hasVariant($state, "darkMode", "darkMode")
             }),
             defaultValue: (() => {
               try {
@@ -528,10 +522,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 $state,
                 "selectedDate",
                 ["calendar", "selectedDate"],
-                RichCalendar_Helpers,
+                RichCalendar_Helpers
               ).apply(null, eventArgs);
 
-              (async (date) => {
+              (async date => {
                 const $steps = {};
 
                 $steps["updateSelectedDate"] = true
@@ -539,16 +533,16 @@ function PlasmicHomepage__RenderFunc(props: {
                       const actionArgs = {
                         variable: {
                           objRoot: $state,
-                          variablePath: ["selectedDate"],
+                          variablePath: ["selectedDate"]
                         },
                         operation: 0,
-                        value: ($state.selectedDate = new Date().toISOString()),
+                        value: ($state.selectedDate = new Date().toISOString())
                       };
                       return (({
                         variable,
                         value,
                         startIndex,
-                        deleteCount,
+                        deleteCount
                       }) => {
                         if (!variable) {
                           return;
@@ -565,8 +559,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   typeof $steps["updateSelectedDate"] === "object" &&
                   typeof $steps["updateSelectedDate"].then === "function"
                 ) {
-                  $steps["updateSelectedDate"] =
-                    await $steps["updateSelectedDate"];
+                  $steps["updateSelectedDate"] = await $steps[
+                    "updateSelectedDate"
+                  ];
                 }
 
                 $steps["refreshData"] = true
@@ -594,26 +589,26 @@ function PlasmicHomepage__RenderFunc(props: {
                 $state,
                 "mode",
                 ["calendar", "mode"],
-                RichCalendar_Helpers,
+                RichCalendar_Helpers
               ).apply(null, eventArgs);
             },
-            value: generateStateValueProp($state, ["calendar", "selectedDate"]),
+            value: generateStateValueProp($state, ["calendar", "selectedDate"])
           };
           initializeCodeComponentStates(
             $state,
             [
               {
                 name: "mode",
-                plasmicStateName: "calendar.mode",
+                plasmicStateName: "calendar.mode"
               },
               {
                 name: "selectedDate",
-                plasmicStateName: "calendar.selectedDate",
-              },
+                plasmicStateName: "calendar.selectedDate"
+              }
             ],
             [],
             RichCalendar_Helpers ?? {},
-            child$Props,
+            child$Props
           );
 
           return (
@@ -636,9 +631,9 @@ function PlasmicHomepage__RenderFunc(props: {
               [sty.focusFlowTitledarkMode]: hasVariant(
                 $state,
                 "darkMode",
-                "darkMode",
-              ),
-            },
+                "darkMode"
+              )
+            }
           )}
         >
           {"FocusFlow"}
@@ -655,9 +650,9 @@ function PlasmicHomepage__RenderFunc(props: {
               [sty.ownYourScheduleTaglinedarkMode]: hasVariant(
                 $state,
                 "darkMode",
-                "darkMode",
-              ),
-            },
+                "darkMode"
+              )
+            }
           )}
         >
           {"Own Your Schedule"}
@@ -669,8 +664,8 @@ function PlasmicHomepage__RenderFunc(props: {
             [sty.darkModeButtondarkMode]: hasVariant(
               $state,
               "darkMode",
-              "darkMode",
-            ),
+              "darkMode"
+            )
           })}
           color={"muted"}
           label={
@@ -685,11 +680,11 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.toggleModedarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode",
-                  ),
-                },
+                    "darkMode"
+                  )
+                }
               )}
-              onClick={async (event) => {
+              onClick={async event => {
                 const $steps = {};
               }}
             >
@@ -698,7 +693,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 : "Toggle\nMode"}
             </div>
           }
-          onClick={async (event) => {
+          onClick={async event => {
             const $steps = {};
 
             $steps["runCode"] = true
@@ -706,7 +701,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     customFunction: async () => {
                       return ($state.darkMode = !$state.darkMode);
-                    },
+                    }
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -730,821 +725,11 @@ function PlasmicHomepage__RenderFunc(props: {
           }
         />
 
-        <div className={classNames(projectcss.all, sty.freeBox__rfgUj)} />
-
-        <Modal
-          data-plasmic-name={"addTask1"}
-          data-plasmic-override={overrides.addTask1}
-          className={classNames("__wab_instance", sty.addTask1, {
-            [sty.addTask1darkMode]: hasVariant($state, "darkMode", "darkMode"),
-          })}
-          closeOnBackdropClick={false}
-          content={
-            <Stack__
-              as={"div"}
-              data-plasmic-name={"addTaskContentHolder"}
-              data-plasmic-override={overrides.addTaskContentHolder}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.addTaskContentHolder, {
-                [sty.addTaskContentHolderdarkMode]: hasVariant(
-                  $state,
-                  "darkMode",
-                  "darkMode",
-                ),
-              })}
-            >
-              <div
-                data-plasmic-name={"basicInfoExplanation"}
-                data-plasmic-override={overrides.basicInfoExplanation}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.basicInfoExplanation,
-                  {
-                    [sty.basicInfoExplanationdarkMode]: hasVariant(
-                      $state,
-                      "darkMode",
-                      "darkMode",
-                    ),
-                  },
-                )}
-              >
-                <React.Fragment>
-                  <React.Fragment>{""}</React.Fragment>
-                  {
-                    <h6
-                      data-plasmic-name={"h6"}
-                      data-plasmic-override={overrides.h6}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.h6,
-                        projectcss.__wab_text,
-                        sty.h6,
-                        {
-                          [sty.h6darkMode]: hasVariant(
-                            $state,
-                            "darkMode",
-                            "darkMode",
-                          ),
-                        },
-                      )}
-                    >
-                      {
-                        "Input the Title and Frequency of your Task here, and you'll be redirected accordingly"
-                      }
-                    </h6>
-                  }
-                  <React.Fragment>{""}</React.Fragment>
-                </React.Fragment>
-              </div>
-              <TextField
-                data-plasmic-name={"addTaskNameInputTextField"}
-                data-plasmic-override={overrides.addTaskNameInputTextField}
-                autoComplete={[]}
-                className={classNames(
-                  "__wab_instance",
-                  sty.addTaskNameInputTextField,
-                  {
-                    [sty.addTaskNameInputTextFielddarkMode]: hasVariant(
-                      $state,
-                      "darkMode",
-                      "darkMode",
-                    ),
-                  },
-                )}
-                defaultValue={``}
-                description={null}
-                inputMode={"text"}
-                label={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__dtf18,
-                      {
-                        [sty.textdarkMode__dtf189HcnI]: hasVariant(
-                          $state,
-                          "darkMode",
-                          "darkMode",
-                        ),
-                      },
-                    )}
-                  >
-                    {"Input Task Name Here:"}
-                  </div>
-                }
-                onChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, [
-                    "addTaskNameInputTextField",
-                    "value",
-                  ]).apply(null, eventArgs);
-
-                  if (
-                    eventArgs.length > 1 &&
-                    eventArgs[1] &&
-                    eventArgs[1]._plasmic_state_init_
-                  ) {
-                    return;
-                  }
-
-                  (async (val) => {
-                    const $steps = {};
-
-                    $steps["updateTaskIsTask"] = $state
-                      .addTaskNameInputTextField.value
-                      ? (() => {
-                          const actionArgs = {
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["taskName"],
-                            },
-                            operation: 4,
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount,
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            const oldValue = $stateGet(objRoot, variablePath);
-                            $stateSet(objRoot, variablePath, !oldValue);
-                            return !oldValue;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateTaskIsTask"] != null &&
-                      typeof $steps["updateTaskIsTask"] === "object" &&
-                      typeof $steps["updateTaskIsTask"].then === "function"
-                    ) {
-                      $steps["updateTaskIsTask"] =
-                        await $steps["updateTaskIsTask"];
-                    }
-                  }).apply(null, eventArgs);
-                }}
-                placeholder={``}
-                showLabel={true}
-              />
-
-              <RadioGroup
-                data-plasmic-name={"addTaskRadioGroup"}
-                data-plasmic-override={overrides.addTaskRadioGroup}
-                className={classNames("__wab_instance", sty.addTaskRadioGroup, {
-                  [sty.addTaskRadioGroupdarkMode]: hasVariant(
-                    $state,
-                    "darkMode",
-                    "darkMode",
-                  ),
-                })}
-                defaultValue={"Once"}
-                description={null}
-                label={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__f55Kt,
-                    )}
-                  >
-                    {"Pick one of the Following Frequencies:"}
-                  </div>
-                }
-                onChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, [
-                    "addTaskRadioGroup",
-                    "value",
-                  ]).apply(null, eventArgs);
-
-                  if (
-                    eventArgs.length > 1 &&
-                    eventArgs[1] &&
-                    eventArgs[1]._plasmic_state_init_
-                  ) {
-                    return;
-                  }
-                }}
-                options={
-                  <Stack__
-                    as={"div"}
-                    data-plasmic-name={"addTaskFrequencySelection"}
-                    data-plasmic-override={overrides.addTaskFrequencySelection}
-                    hasGap={true}
-                    className={classNames(
-                      projectcss.all,
-                      sty.addTaskFrequencySelection,
-                    )}
-                  >
-                    <Radio
-                      data-plasmic-name={"onceTrigger"}
-                      data-plasmic-override={overrides.onceTrigger}
-                      className={classNames("__wab_instance", sty.onceTrigger)}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__q3L,
-                          )}
-                        >
-                          {"Once"}
-                        </div>
-                      }
-                      value={"Once"}
-                    />
-
-                    <Radio
-                      data-plasmic-name={"dailyTrigger"}
-                      data-plasmic-override={overrides.dailyTrigger}
-                      className={classNames("__wab_instance", sty.dailyTrigger)}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__uj6Mb,
-                          )}
-                        >
-                          {"Daily"}
-                        </div>
-                      }
-                      value={"Daily"}
-                    />
-
-                    <Radio
-                      data-plasmic-name={"weeklyTrigger"}
-                      data-plasmic-override={overrides.weeklyTrigger}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.weeklyTrigger,
-                      )}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__fUa2P,
-                          )}
-                        >
-                          {"Weekly"}
-                        </div>
-                      }
-                      value={"Weekly"}
-                    />
-
-                    <Radio
-                      data-plasmic-name={"monthlyTrigger"}
-                      data-plasmic-override={overrides.monthlyTrigger}
-                      className={classNames(
-                        "__wab_instance",
-                        sty.monthlyTrigger,
-                      )}
-                      label={
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ddBk6,
-                          )}
-                        >
-                          {"Monthly"}
-                        </div>
-                      }
-                      value={"Monthly"}
-                    />
-                  </Stack__>
-                }
-                showDescription={false}
-              />
-            </Stack__>
-          }
-          footer={
-            <React.Fragment>
-              <Button
-                data-plasmic-name={"cancelAddTaskButton"}
-                data-plasmic-override={overrides.cancelAddTaskButton}
-                className={classNames(
-                  "__wab_instance",
-                  sty.cancelAddTaskButton,
-                )}
-                color={"muted"}
-                label={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text___4IgH,
-                    )}
-                  >
-                    {"Cancel"}
-                  </div>
-                }
-                onClick={async (event) => {
-                  const $steps = {};
-
-                  $steps["updateAddTask10IsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["addTask1", "isOpen"],
-                          },
-                          operation: 4,
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount,
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          const oldValue = $stateGet(objRoot, variablePath);
-                          $stateSet(objRoot, variablePath, !oldValue);
-                          return !oldValue;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAddTask10IsOpen"] != null &&
-                    typeof $steps["updateAddTask10IsOpen"] === "object" &&
-                    typeof $steps["updateAddTask10IsOpen"].then === "function"
-                  ) {
-                    $steps["updateAddTask10IsOpen"] =
-                      await $steps["updateAddTask10IsOpen"];
-                  }
-                }}
-              />
-
-              <Button
-                data-plasmic-name={"addTaskGoToNextButton"}
-                data-plasmic-override={overrides.addTaskGoToNextButton}
-                className={classNames(
-                  "__wab_instance",
-                  sty.addTaskGoToNextButton,
-                )}
-                color={"success"}
-                label={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__zTxGw,
-                    )}
-                  >
-                    {"Submit"}
-                  </div>
-                }
-                onClick={async (event) => {
-                  const $steps = {};
-
-                  $steps["updateAddTask1IsOpen"] = true
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["addTask1", "isOpen"],
-                          },
-                          operation: 4,
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount,
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          const oldValue = $stateGet(objRoot, variablePath);
-                          $stateSet(objRoot, variablePath, !oldValue);
-                          return !oldValue;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAddTask1IsOpen"] != null &&
-                    typeof $steps["updateAddTask1IsOpen"] === "object" &&
-                    typeof $steps["updateAddTask1IsOpen"].then === "function"
-                  ) {
-                    $steps["updateAddTask1IsOpen"] =
-                      await $steps["updateAddTask1IsOpen"];
-                  }
-
-                  $steps["updateAddTask2IsOpen"] = !(
-                    $state.taskName || $state.addTaskRadioGroup.value === "Once"
-                  )
-                    ? (() => {
-                        const actionArgs = {
-                          variable: {
-                            objRoot: $state,
-                            variablePath: ["addTask2", "isOpen"],
-                          },
-                          operation: 4,
-                        };
-                        return (({
-                          variable,
-                          value,
-                          startIndex,
-                          deleteCount,
-                        }) => {
-                          if (!variable) {
-                            return;
-                          }
-                          const { objRoot, variablePath } = variable;
-
-                          const oldValue = $stateGet(objRoot, variablePath);
-                          $stateSet(objRoot, variablePath, !oldValue);
-                          return !oldValue;
-                        })?.apply(null, [actionArgs]);
-                      })()
-                    : undefined;
-                  if (
-                    $steps["updateAddTask2IsOpen"] != null &&
-                    typeof $steps["updateAddTask2IsOpen"] === "object" &&
-                    typeof $steps["updateAddTask2IsOpen"].then === "function"
-                  ) {
-                    $steps["updateAddTask2IsOpen"] =
-                      await $steps["updateAddTask2IsOpen"];
-                  }
-                }}
-                type={"soft"}
-              />
-            </React.Fragment>
-          }
-          heading={
-            <div
-              data-plasmic-name={"addTaskBasicInfoTitleHolder"}
-              data-plasmic-override={overrides.addTaskBasicInfoTitleHolder}
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.addTaskBasicInfoTitleHolder,
-                {
-                  [sty.addTaskBasicInfoTitleHolderdarkMode]: hasVariant(
-                    $state,
-                    "darkMode",
-                    "darkMode",
-                  ),
-                },
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{""}</React.Fragment>
-                {
-                  <h4
-                    data-plasmic-name={"addTaskBasicInfoTitle"}
-                    data-plasmic-override={overrides.addTaskBasicInfoTitle}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h4,
-                      projectcss.__wab_text,
-                      sty.addTaskBasicInfoTitle,
-                      {
-                        [sty.addTaskBasicInfoTitledarkMode]: hasVariant(
-                          $state,
-                          "darkMode",
-                          "darkMode",
-                        ),
-                      },
-                    )}
-                  >
-                    {"Create Your Task: Basic Info"}
-                  </h4>
-                }
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
-            </div>
-          }
-          isOpen={generateStateValueProp($state, ["addTask1", "isOpen"])}
-          onOpenChange={async (...eventArgs: any) => {
-            generateStateOnChangeProp($state, ["addTask1", "isOpen"]).apply(
-              null,
-              eventArgs,
-            );
-
-            if (
-              eventArgs.length > 1 &&
-              eventArgs[1] &&
-              eventArgs[1]._plasmic_state_init_
-            ) {
-              return;
-            }
-          }}
-          trigger={
-            <Button
-              data-plasmic-name={"addTaskButton"}
-              data-plasmic-override={overrides.addTaskButton}
-              className={classNames("__wab_instance", sty.addTaskButton, {
-                [sty.addTaskButtondarkMode]: hasVariant(
-                  $state,
-                  "darkMode",
-                  "darkMode",
-                ),
-              })}
-              label={
-                <div
-                  className={classNames(projectcss.all, sty.freeBox___0Mu5P)}
-                >
-                  <div
-                    data-plasmic-name={"addTaskLabel"}
-                    data-plasmic-override={overrides.addTaskLabel}
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.addTaskLabel,
-                      {
-                        [sty.addTaskLabeldarkMode]: hasVariant(
-                          $state,
-                          "darkMode",
-                          "darkMode",
-                        ),
-                      },
-                    )}
-                  >
-                    {"Add\nTask"}
-                  </div>
-                  <Modal
-                    data-plasmic-name={"editTask2"}
-                    data-plasmic-override={overrides.editTask2}
-                    className={classNames("__wab_instance", sty.editTask2, {
-                      [sty.editTask2darkMode]: hasVariant(
-                        $state,
-                        "darkMode",
-                        "darkMode",
-                      ),
-                    })}
-                    content={
-                      <Stack__
-                        as={"div"}
-                        hasGap={true}
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox___3HtuU,
-                        )}
-                      >
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__dwvEq,
-                          )}
-                        >
-                          {"Change the parts of your task you'd like!"}
-                        </div>
-                        <div
-                          className={classNames(
-                            projectcss.all,
-                            projectcss.__wab_text,
-                            sty.text__ygcwe,
-                          )}
-                        >
-                          {
-                            "You can put anything here!\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                          }
-                        </div>
-                      </Stack__>
-                    }
-                    footer={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          sty.freeBox__ykX7T,
-                        )}
-                      >
-                        <Button
-                          data-plasmic-name={"continueButtonEditTask2"}
-                          data-plasmic-override={
-                            overrides.continueButtonEditTask2
-                          }
-                          className={classNames(
-                            "__wab_instance",
-                            sty.continueButtonEditTask2,
-                          )}
-                          color={"success"}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__dPIr9,
-                              )}
-                            >
-                              {"Continue"}
-                            </div>
-                          }
-                          type={"soft"}
-                        />
-
-                        <Button
-                          className={classNames(
-                            "__wab_instance",
-                            sty.button__o7EfQ,
-                          )}
-                          color={"muted"}
-                          label={
-                            <div
-                              className={classNames(
-                                projectcss.all,
-                                projectcss.__wab_text,
-                                sty.text__oyf2P,
-                              )}
-                            >
-                              {"Close"}
-                            </div>
-                          }
-                          onClick={async (event) => {
-                            const $steps = {};
-
-                            $steps["updateAriaDialogTriggerIsOpen"] = true
-                              ? (() => {
-                                  const actionArgs = {
-                                    variable: {
-                                      objRoot: $state,
-                                      variablePath: [
-                                        "ariaDialogTrigger",
-                                        "isOpen",
-                                      ],
-                                    },
-                                    operation: 0,
-                                    value: false,
-                                  };
-                                  return (({
-                                    variable,
-                                    value,
-                                    startIndex,
-                                    deleteCount,
-                                  }) => {
-                                    if (!variable) {
-                                      return;
-                                    }
-                                    const { objRoot, variablePath } = variable;
-
-                                    $stateSet(objRoot, variablePath, value);
-                                    return value;
-                                  })?.apply(null, [actionArgs]);
-                                })()
-                              : undefined;
-                            if (
-                              $steps["updateAriaDialogTriggerIsOpen"] != null &&
-                              typeof $steps["updateAriaDialogTriggerIsOpen"] ===
-                                "object" &&
-                              typeof $steps["updateAriaDialogTriggerIsOpen"]
-                                .then === "function"
-                            ) {
-                              $steps["updateAriaDialogTriggerIsOpen"] =
-                                await $steps["updateAriaDialogTriggerIsOpen"];
-                            }
-                          }}
-                          type={"soft"}
-                        />
-                      </div>
-                    }
-                    heading={
-                      <div
-                        className={classNames(
-                          projectcss.all,
-                          projectcss.__wab_text,
-                          sty.text__qlPPl,
-                        )}
-                      >
-                        {"Edit Task Part 2"}
-                      </div>
-                    }
-                    isOpen={generateStateValueProp($state, [
-                      "editTask2",
-                      "isOpen",
-                    ])}
-                    onOpenChange={async (...eventArgs: any) => {
-                      generateStateOnChangeProp($state, [
-                        "editTask2",
-                        "isOpen",
-                      ]).apply(null, eventArgs);
-
-                      if (
-                        eventArgs.length > 1 &&
-                        eventArgs[1] &&
-                        eventArgs[1]._plasmic_state_init_
-                      ) {
-                        return;
-                      }
-                    }}
-                    trigger={
-                      <CmsQueryRepeater
-                        data-plasmic-name={"cmsDataFetcher"}
-                        data-plasmic-override={overrides.cmsDataFetcher}
-                        children={null}
-                        className={classNames(
-                          "__wab_instance",
-                          sty.cmsDataFetcher,
-                        )}
-                        desc={true}
-                        emptyMessage={
-                          <DataCtxReader__>
-                            {($ctx) => (
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text__ciJ,
-                                )}
-                              >
-                                {"No matching published entries found."}
-                              </div>
-                            )}
-                          </DataCtxReader__>
-                        }
-                        forceEmptyState={false}
-                        forceLoadingState={false}
-                        limit={0}
-                        loadingMessage={
-                          <DataCtxReader__>
-                            {($ctx) => (
-                              <div
-                                className={classNames(
-                                  projectcss.all,
-                                  projectcss.__wab_text,
-                                  sty.text___1RvSt,
-                                )}
-                              >
-                                {"Loading..."}
-                              </div>
-                            )}
-                          </DataCtxReader__>
-                        }
-                        mode={"rows"}
-                        noAutoRepeat={false}
-                        noLayout={false}
-                        orderBy={"startTime"}
-                        table={"localStorageDb"}
-                        useDraft={false}
-                      />
-                    }
-                  />
-                </div>
-              }
-              onClick={async (event) => {
-                const $steps = {};
-
-                $steps["updateCalendarMode"] = true
-                  ? (() => {
-                      const actionArgs = {
-                        variable: {
-                          objRoot: $state,
-                          variablePath: ["calendar", "mode"],
-                        },
-                        operation: 0,
-                      };
-                      return (({
-                        variable,
-                        value,
-                        startIndex,
-                        deleteCount,
-                      }) => {
-                        if (!variable) {
-                          return;
-                        }
-                        const { objRoot, variablePath } = variable;
-
-                        $stateSet(objRoot, variablePath, value);
-                        return value;
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["updateCalendarMode"] != null &&
-                  typeof $steps["updateCalendarMode"] === "object" &&
-                  typeof $steps["updateCalendarMode"].then === "function"
-                ) {
-                  $steps["updateCalendarMode"] =
-                    await $steps["updateCalendarMode"];
-                }
-              }}
-              roundedFull={true}
-              start={
-                <CircleIcon
-                  className={classNames(projectcss.all, sty.svg__aXgH7)}
-                  role={"img"}
-                />
-              }
-            />
-          }
-        />
-
         <Modal
           data-plasmic-name={"addTask2"}
           data-plasmic-override={overrides.addTask2}
           className={classNames("__wab_instance", sty.addTask2, {
-            [sty.addTask2darkMode]: hasVariant($state, "darkMode", "darkMode"),
+            [sty.addTask2darkMode]: hasVariant($state, "darkMode", "darkMode")
           })}
           closeOnBackdropClick={false}
           content={
@@ -1557,8 +742,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTask2BodyHolderdarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode",
-                ),
+                  "darkMode"
+                )
               })}
             >
               <div
@@ -1572,9 +757,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.addTask2BodyTextHolderdarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode",
-                    ),
-                  },
+                      "darkMode"
+                    )
+                  }
                 )}
               >
                 <React.Fragment>
@@ -1592,9 +777,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.h5darkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode",
-                          ),
-                        },
+                            "darkMode"
+                          )
+                        }
                       )}
                     >
                       {
@@ -1628,8 +813,8 @@ function PlasmicHomepage__RenderFunc(props: {
                     sty.addTask2StartTimeSelectionHolder,
                     {
                       [sty.addTask2StartTimeSelectionHolderdarkMode]:
-                        hasVariant($state, "darkMode", "darkMode"),
-                    },
+                        hasVariant($state, "darkMode", "darkMode")
+                    }
                   )}
                 >
                   <div
@@ -1641,9 +826,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.textdarkMode__xJi8I9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
-                      },
+                          "darkMode"
+                        )
+                      }
                     )}
                   >
                     {"Start Time:"}
@@ -1656,14 +841,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty["timeHhDropdown__dropdownMenu"]
                     }
                     menuClassName={classNames({
-                      [sty["pcls_bvrglo98eD8t"]]: true,
+                      [sty["pcls_bvrglo98eD8t"]]: true
                     })}
                     menuItems={() => (
                       <React.Fragment>
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__jbSKd,
+                            sty.menuItem__jbSKd
                           )}
                           key={"menu-item-1"}
                         >
@@ -1671,7 +856,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__nGg2,
+                              sty.text__nGg2
                             )}
                           >
                             {"Menu item"}
@@ -1680,7 +865,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__w3NtS,
+                            sty.menuItem__w3NtS
                           )}
                           key={"menu-item-2"}
                         >
@@ -1688,7 +873,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__cZKn2,
+                              sty.text__cZKn2
                             )}
                           >
                             {"Menu item"}
@@ -1709,7 +894,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null },
+                        { type: "item", label: null }
                       ];
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
@@ -1737,7 +922,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__i1Dm0,
+                          sty.text__i1Dm0
                         )}
                       >
                         {"Hour"}
@@ -1756,7 +941,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__s10Ct,
+                            sty.menuItem__s10Ct
                           )}
                           key={"menu-item-1"}
                         >
@@ -1764,7 +949,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__imqvz,
+                              sty.text__imqvz
                             )}
                           >
                             {"Menu item"}
@@ -1773,7 +958,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__uruG5,
+                            sty.menuItem__uruG5
                           )}
                           key={"menu-item-2"}
                         >
@@ -1781,7 +966,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__fGvcp,
+                              sty.text__fGvcp
                             )}
                           >
                             {"Menu item"}
@@ -1850,7 +1035,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null },
+                        { type: "item", label: null }
                       ];
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
@@ -1914,7 +1099,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["59"]["label"] = "59";
                       return __composite;
                     })()}
-                    onAction={async (key) => {
+                    onAction={async key => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -1928,7 +1113,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__tyohM,
+                          sty.text__tyohM
                         )}
                       >
                         {"Minute"}
@@ -1947,7 +1132,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__sY9P,
+                            sty.menuItem__sY9P
                           )}
                           key={"menu-item-1"}
                         >
@@ -1955,7 +1140,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__kveUm,
+                              sty.text__kveUm
                             )}
                           >
                             {"Menu item"}
@@ -1964,7 +1149,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__kcPzU,
+                            sty.menuItem__kcPzU
                           )}
                           key={"menu-item-2"}
                         >
@@ -1972,7 +1157,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___1DKgm,
+                              sty.text___1DKgm
                             )}
                           >
                             {"Menu item"}
@@ -1983,13 +1168,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     menuItemsJson={(() => {
                       const __composite = [
                         { type: "item", value: "action1", label: null },
-                        { type: "item", value: "action2", label: null },
+                        { type: "item", value: "action2", label: null }
                       ];
                       __composite["0"]["label"] = "AM";
                       __composite["1"]["label"] = "PM";
                       return __composite;
                     })()}
-                    onAction={async (key) => {
+                    onAction={async key => {
                       const $steps = {};
 
                       $steps["updateStateVariable"] = true
@@ -1999,7 +1184,7 @@ function PlasmicHomepage__RenderFunc(props: {
                               variable,
                               value,
                               startIndex,
-                              deleteCount,
+                              deleteCount
                             }) => {
                               if (!variable) {
                                 return;
@@ -2016,8 +1201,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         typeof $steps["updateStateVariable"] === "object" &&
                         typeof $steps["updateStateVariable"].then === "function"
                       ) {
-                        $steps["updateStateVariable"] =
-                          await $steps["updateStateVariable"];
+                        $steps["updateStateVariable"] = await $steps[
+                          "updateStateVariable"
+                        ];
                       }
                     }}
                     trigger={"hover"}
@@ -2025,14 +1211,14 @@ function PlasmicHomepage__RenderFunc(props: {
                     <AntdButton
                       className={classNames(
                         "__wab_instance",
-                        sty.button__ovVsj,
+                        sty.button__ovVsj
                       )}
                     >
                       <div
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__hhTOf,
+                          sty.text__hhTOf
                         )}
                       >
                         {"AM/PM"}
@@ -2064,9 +1250,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       [sty.addTask2EstimateHolderdarkMode]: hasVariant(
                         $state,
                         "darkMode",
-                        "darkMode",
-                      ),
-                    },
+                        "darkMode"
+                      )
+                    }
                   )}
                 >
                   <div
@@ -2080,9 +1266,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.timeEstimatedarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
-                      },
+                          "darkMode"
+                        )
+                      }
                     )}
                   >
                     {"Time Estimate:"}
@@ -2095,14 +1281,14 @@ function PlasmicHomepage__RenderFunc(props: {
                       sty["hhDropdown2__dropdownMenu"]
                     }
                     menuClassName={classNames({
-                      [sty["pcls_nhdsZa7RUMLe"]]: true,
+                      [sty["pcls_nhdsZa7RUMLe"]]: true
                     })}
                     menuItems={() => (
                       <React.Fragment>
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__kgnfi,
+                            sty.menuItem__kgnfi
                           )}
                           key={"menu-item-1"}
                         >
@@ -2110,7 +1296,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__kceJ9,
+                              sty.text__kceJ9
                             )}
                           >
                             {"Menu item"}
@@ -2119,7 +1305,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__uFmW,
+                            sty.menuItem__uFmW
                           )}
                           key={"menu-item-2"}
                         >
@@ -2127,7 +1313,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__e4Ym5,
+                              sty.text__e4Ym5
                             )}
                           >
                             {"Menu item"}
@@ -2148,7 +1334,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null },
+                        { type: "item", label: null }
                       ];
                       __composite["0"]["label"] = "1";
                       __composite["1"]["label"] = "2";
@@ -2165,7 +1351,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["11"]["label"] = "12";
                       return __composite;
                     })()}
-                    onAction={async (key) => {
+                    onAction={async key => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -2182,7 +1368,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__oPsrB,
+                          sty.text__oPsrB
                         )}
                       >
                         {"Hour"}
@@ -2202,7 +1388,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem__tpCmC,
+                            sty.menuItem__tpCmC
                           )}
                           key={"menu-item-1"}
                         >
@@ -2210,7 +1396,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text__i8Vju,
+                              sty.text__i8Vju
                             )}
                           >
                             {"Menu item"}
@@ -2219,7 +1405,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         <AntdMenuItem
                           className={classNames(
                             "__wab_instance",
-                            sty.menuItem___2Mmjc,
+                            sty.menuItem___2Mmjc
                           )}
                           key={"menu-item-2"}
                         >
@@ -2227,7 +1413,7 @@ function PlasmicHomepage__RenderFunc(props: {
                             className={classNames(
                               projectcss.all,
                               projectcss.__wab_text,
-                              sty.text___1TdZj,
+                              sty.text___1TdZj
                             )}
                           >
                             {"Menu item"}
@@ -2296,7 +1482,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         { type: "item", label: null },
                         { type: "item", label: null },
                         { type: "item", label: null },
-                        { type: "item", label: null },
+                        { type: "item", label: null }
                       ];
                       __composite["0"]["label"] = "00";
                       __composite["1"]["label"] = "01";
@@ -2360,7 +1546,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       __composite["59"]["label"] = "59";
                       return __composite;
                     })()}
-                    onAction={async (key) => {
+                    onAction={async key => {
                       const $steps = {};
                     }}
                     trigger={"hover"}
@@ -2374,7 +1560,7 @@ function PlasmicHomepage__RenderFunc(props: {
                         className={classNames(
                           projectcss.all,
                           projectcss.__wab_text,
-                          sty.text__y7Jlw,
+                          sty.text__y7Jlw
                         )}
                       >
                         {"Minute"}
@@ -2393,8 +1579,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.addTask2ButtonsHolderdarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode",
-                ),
+                  "darkMode"
+                )
               })}
             >
               <Button
@@ -2407,9 +1593,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.addTask2CancelButtondarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode",
-                    ),
-                  },
+                      "darkMode"
+                    )
+                  }
                 )}
                 color={"muted"}
                 label={
@@ -2422,15 +1608,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.textdarkMode__lrmix9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
-                      },
+                          "darkMode"
+                        )
+                      }
                     )}
                   >
                     {"Cancel"}
                   </div>
                 }
-                onClick={async (event) => {
+                onClick={async event => {
                   const $steps = {};
 
                   $steps["updateAddTask12IsOpen"] = true
@@ -2438,15 +1624,15 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["addTask2", "isOpen"],
+                            variablePath: ["addTask2", "isOpen"]
                           },
-                          operation: 4,
+                          operation: 4
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount,
+                          deleteCount
                         }) => {
                           if (!variable) {
                             return;
@@ -2464,8 +1650,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateAddTask12IsOpen"] === "object" &&
                     typeof $steps["updateAddTask12IsOpen"].then === "function"
                   ) {
-                    $steps["updateAddTask12IsOpen"] =
-                      await $steps["updateAddTask12IsOpen"];
+                    $steps["updateAddTask12IsOpen"] = await $steps[
+                      "updateAddTask12IsOpen"
+                    ];
                   }
                 }}
               />
@@ -2475,7 +1662,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.addTask2FinishButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.addTask2FinishButton,
+                  sty.addTask2FinishButton
                 )}
                 color={"success"}
                 label={
@@ -2483,13 +1670,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text___6YJa,
+                      sty.text___6YJa
                     )}
                   >
                     {"Finish"}
                   </div>
                 }
-                onClick={async (event) => {
+                onClick={async event => {
                   const $steps = {};
                 }}
                 type={"soft"}
@@ -2506,9 +1693,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.textdarkMode__egXvl9HcnI]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode",
-                  ),
-                },
+                    "darkMode"
+                  )
+                }
               )}
             >
               <React.Fragment>
@@ -2524,9 +1711,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.h4darkMode__ihh5I9HcnI]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
-                      },
+                          "darkMode"
+                        )
+                      }
                     )}
                   >
                     {"Create Your Task: Estimate Your Start Time and Length"}
@@ -2540,7 +1727,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["addTask2", "isOpen"]).apply(
               null,
-              eventArgs,
+              eventArgs
             );
 
             if (
@@ -2551,14 +1738,945 @@ function PlasmicHomepage__RenderFunc(props: {
               return;
             }
           }}
-          trigger={null}
+          trigger={
+            <Modal
+              data-plasmic-name={"addTask2Modal"}
+              data-plasmic-override={overrides.addTask2Modal}
+              className={classNames("__wab_instance", sty.addTask2Modal)}
+              closeOnBackdropClick={false}
+              content={
+                <Stack__
+                  as={"div"}
+                  hasGap={true}
+                  className={classNames(projectcss.all, sty.freeBox__wwbHl)}
+                >
+                  <Switch
+                    data-plasmic-name={"_switch"}
+                    data-plasmic-override={overrides._switch}
+                    className={classNames("__wab_instance", sty._switch)}
+                    disabled={false}
+                    isSelected={generateStateValueProp($state, [
+                      "_switch",
+                      "isSelected"
+                    ])}
+                    label={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__ezf5S
+                        )}
+                      >
+                        {"Disable AutoSchedule"}
+                      </div>
+                    }
+                    onChange={async (...eventArgs: any) => {
+                      generateStateOnChangeProp($state, [
+                        "_switch",
+                        "isSelected"
+                      ]).apply(null, eventArgs);
+
+                      if (
+                        eventArgs.length > 1 &&
+                        eventArgs[1] &&
+                        eventArgs[1]._plasmic_state_init_
+                      ) {
+                        return;
+                      }
+
+                      (async val => {
+                        const $steps = {};
+
+                        $steps["updateVariable"] = true
+                          ? (() => {
+                              const actionArgs = {
+                                operation: 4,
+                                variable: {
+                                  objRoot: $state,
+                                  variablePath: ["autoEnabled"]
+                                }
+                              };
+                              return (({
+                                variable,
+                                value,
+                                startIndex,
+                                deleteCount
+                              }) => {
+                                if (!variable) {
+                                  return;
+                                }
+                                const { objRoot, variablePath } = variable;
+
+                                const oldValue = $stateGet(
+                                  objRoot,
+                                  variablePath
+                                );
+                                $stateSet(objRoot, variablePath, !oldValue);
+                                return !oldValue;
+                              })?.apply(null, [actionArgs]);
+                            })()
+                          : undefined;
+                        if (
+                          $steps["updateVariable"] != null &&
+                          typeof $steps["updateVariable"] === "object" &&
+                          typeof $steps["updateVariable"].then === "function"
+                        ) {
+                          $steps["updateVariable"] = await $steps[
+                            "updateVariable"
+                          ];
+                        }
+                      }).apply(null, eventArgs);
+                    }}
+                  />
+
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__ylm0S
+                    )}
+                  >
+                    <React.Fragment>
+                      <React.Fragment>{""}</React.Fragment>
+                      {
+                        <blockquote
+                          data-plasmic-name={"blockquote"}
+                          data-plasmic-override={overrides.blockquote}
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.blockquote
+                          )}
+                        >
+                          {
+                            "Can't find what you need?\nEmail us at FocusFlowADHDApp@gmail.com!"
+                          }
+                        </blockquote>
+                      }
+                      <React.Fragment>{""}</React.Fragment>
+                    </React.Fragment>
+                  </div>
+                </Stack__>
+              }
+              heading={
+                <div
+                  className={classNames(
+                    projectcss.all,
+                    projectcss.__wab_text,
+                    sty.text___5ZtO8
+                  )}
+                >
+                  <React.Fragment>
+                    <React.Fragment>{""}</React.Fragment>
+                    {
+                      <h4
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.h4,
+                          projectcss.__wab_text,
+                          sty.h4__oAyrH
+                        )}
+                      >
+                        {"Premium Options"}
+                      </h4>
+                    }
+                    <React.Fragment>{""}</React.Fragment>
+                  </React.Fragment>
+                </div>
+              }
+              isOpen={generateStateValueProp($state, [
+                "addTask2Modal",
+                "isOpen"
+              ])}
+              onOpenChange={async (...eventArgs: any) => {
+                generateStateOnChangeProp($state, [
+                  "addTask2Modal",
+                  "isOpen"
+                ]).apply(null, eventArgs);
+
+                if (
+                  eventArgs.length > 1 &&
+                  eventArgs[1] &&
+                  eventArgs[1]._plasmic_state_init_
+                ) {
+                  return;
+                }
+              }}
+              trigger={null}
+            />
+          }
+        />
+
+        <div className={classNames(projectcss.all, sty.freeBox__rfgUj)} />
+
+        <Modal
+          data-plasmic-name={"addTask1"}
+          data-plasmic-override={overrides.addTask1}
+          className={classNames("__wab_instance", sty.addTask1, {
+            [sty.addTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
+          })}
+          closeOnBackdropClick={false}
+          content={
+            <Stack__
+              as={"div"}
+              data-plasmic-name={"addTaskContentHolder"}
+              data-plasmic-override={overrides.addTaskContentHolder}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.addTaskContentHolder, {
+                [sty.addTaskContentHolderdarkMode]: hasVariant(
+                  $state,
+                  "darkMode",
+                  "darkMode"
+                )
+              })}
+            >
+              <div
+                data-plasmic-name={"basicInfoExplanation"}
+                data-plasmic-override={overrides.basicInfoExplanation}
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.basicInfoExplanation,
+                  {
+                    [sty.basicInfoExplanationdarkMode]: hasVariant(
+                      $state,
+                      "darkMode",
+                      "darkMode"
+                    )
+                  }
+                )}
+              >
+                <React.Fragment>
+                  <React.Fragment>{""}</React.Fragment>
+                  {
+                    <h6
+                      data-plasmic-name={"h6"}
+                      data-plasmic-override={overrides.h6}
+                      className={classNames(
+                        projectcss.all,
+                        projectcss.h6,
+                        projectcss.__wab_text,
+                        sty.h6,
+                        {
+                          [sty.h6darkMode]: hasVariant(
+                            $state,
+                            "darkMode",
+                            "darkMode"
+                          )
+                        }
+                      )}
+                    >
+                      {
+                        "Input the Title and Frequency of your Task here, and you'll be redirected accordingly"
+                      }
+                    </h6>
+                  }
+                  <React.Fragment>{""}</React.Fragment>
+                </React.Fragment>
+              </div>
+              <TextField
+                data-plasmic-name={"addTaskNameInputTextField"}
+                data-plasmic-override={overrides.addTaskNameInputTextField}
+                autoComplete={[]}
+                className={classNames(
+                  "__wab_instance",
+                  sty.addTaskNameInputTextField,
+                  {
+                    [sty.addTaskNameInputTextFielddarkMode]: hasVariant(
+                      $state,
+                      "darkMode",
+                      "darkMode"
+                    )
+                  }
+                )}
+                defaultValue={``}
+                description={null}
+                inputMode={"text"}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__dtf18,
+                      {
+                        [sty.textdarkMode__dtf189HcnI]: hasVariant(
+                          $state,
+                          "darkMode",
+                          "darkMode"
+                        )
+                      }
+                    )}
+                  >
+                    {"Input Task Name Here:"}
+                  </div>
+                }
+                onChange={async (...eventArgs: any) => {
+                  generateStateOnChangeProp($state, [
+                    "addTaskNameInputTextField",
+                    "value"
+                  ]).apply(null, eventArgs);
+
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+
+                  (async val => {
+                    const $steps = {};
+
+                    $steps["updateTaskIsTask"] = $state
+                      .addTaskNameInputTextField.value
+                      ? (() => {
+                          const actionArgs = {
+                            variable: {
+                              objRoot: $state,
+                              variablePath: ["taskName"]
+                            },
+                            operation: 4
+                          };
+                          return (({
+                            variable,
+                            value,
+                            startIndex,
+                            deleteCount
+                          }) => {
+                            if (!variable) {
+                              return;
+                            }
+                            const { objRoot, variablePath } = variable;
+
+                            const oldValue = $stateGet(objRoot, variablePath);
+                            $stateSet(objRoot, variablePath, !oldValue);
+                            return !oldValue;
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["updateTaskIsTask"] != null &&
+                      typeof $steps["updateTaskIsTask"] === "object" &&
+                      typeof $steps["updateTaskIsTask"].then === "function"
+                    ) {
+                      $steps["updateTaskIsTask"] = await $steps[
+                        "updateTaskIsTask"
+                      ];
+                    }
+                  }).apply(null, eventArgs);
+                }}
+                placeholder={``}
+                showLabel={true}
+              />
+
+              <RadioGroup
+                data-plasmic-name={"addTaskRadioGroup"}
+                data-plasmic-override={overrides.addTaskRadioGroup}
+                className={classNames("__wab_instance", sty.addTaskRadioGroup, {
+                  [sty.addTaskRadioGroupdarkMode]: hasVariant(
+                    $state,
+                    "darkMode",
+                    "darkMode"
+                  )
+                })}
+                defaultValue={"Once"}
+                description={null}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__f55Kt
+                    )}
+                  >
+                    {"Pick one of the Following Frequencies:"}
+                  </div>
+                }
+                onChange={async (...eventArgs: any) => {
+                  generateStateOnChangeProp($state, [
+                    "addTaskRadioGroup",
+                    "value"
+                  ]).apply(null, eventArgs);
+
+                  if (
+                    eventArgs.length > 1 &&
+                    eventArgs[1] &&
+                    eventArgs[1]._plasmic_state_init_
+                  ) {
+                    return;
+                  }
+                }}
+                options={
+                  <Stack__
+                    as={"div"}
+                    data-plasmic-name={"addTaskFrequencySelection"}
+                    data-plasmic-override={overrides.addTaskFrequencySelection}
+                    hasGap={true}
+                    className={classNames(
+                      projectcss.all,
+                      sty.addTaskFrequencySelection
+                    )}
+                  >
+                    <Radio
+                      data-plasmic-name={"onceTrigger"}
+                      data-plasmic-override={overrides.onceTrigger}
+                      className={classNames("__wab_instance", sty.onceTrigger)}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__q3L
+                          )}
+                        >
+                          {"Once"}
+                        </div>
+                      }
+                      value={"Once"}
+                    />
+
+                    <Radio
+                      data-plasmic-name={"dailyTrigger"}
+                      data-plasmic-override={overrides.dailyTrigger}
+                      className={classNames("__wab_instance", sty.dailyTrigger)}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__uj6Mb
+                          )}
+                        >
+                          {"Daily"}
+                        </div>
+                      }
+                      value={"Daily"}
+                    />
+
+                    <Radio
+                      data-plasmic-name={"weeklyTrigger"}
+                      data-plasmic-override={overrides.weeklyTrigger}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.weeklyTrigger
+                      )}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__fUa2P
+                          )}
+                        >
+                          {"Weekly"}
+                        </div>
+                      }
+                      value={"Weekly"}
+                    />
+
+                    <Radio
+                      data-plasmic-name={"monthlyTrigger"}
+                      data-plasmic-override={overrides.monthlyTrigger}
+                      className={classNames(
+                        "__wab_instance",
+                        sty.monthlyTrigger
+                      )}
+                      label={
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ddBk6
+                          )}
+                        >
+                          {"Monthly"}
+                        </div>
+                      }
+                      value={"Monthly"}
+                    />
+                  </Stack__>
+                }
+                showDescription={false}
+              />
+            </Stack__>
+          }
+          footer={
+            <React.Fragment>
+              <Button
+                data-plasmic-name={"cancelAddTaskButton"}
+                data-plasmic-override={overrides.cancelAddTaskButton}
+                className={classNames(
+                  "__wab_instance",
+                  sty.cancelAddTaskButton
+                )}
+                color={"muted"}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text___4IgH
+                    )}
+                  >
+                    {"Cancel"}
+                  </div>
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateAddTask10IsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["addTask1", "isOpen"]
+                          },
+                          operation: 4
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAddTask10IsOpen"] != null &&
+                    typeof $steps["updateAddTask10IsOpen"] === "object" &&
+                    typeof $steps["updateAddTask10IsOpen"].then === "function"
+                  ) {
+                    $steps["updateAddTask10IsOpen"] = await $steps[
+                      "updateAddTask10IsOpen"
+                    ];
+                  }
+                }}
+              />
+
+              <Button
+                data-plasmic-name={"addTaskGoToNextButton"}
+                data-plasmic-override={overrides.addTaskGoToNextButton}
+                className={classNames(
+                  "__wab_instance",
+                  sty.addTaskGoToNextButton
+                )}
+                color={"success"}
+                label={
+                  <div
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.text__zTxGw
+                    )}
+                  >
+                    {"Submit"}
+                  </div>
+                }
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["updateAddTask1IsOpen"] = true
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["addTask1", "isOpen"]
+                          },
+                          operation: 4
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAddTask1IsOpen"] != null &&
+                    typeof $steps["updateAddTask1IsOpen"] === "object" &&
+                    typeof $steps["updateAddTask1IsOpen"].then === "function"
+                  ) {
+                    $steps["updateAddTask1IsOpen"] = await $steps[
+                      "updateAddTask1IsOpen"
+                    ];
+                  }
+
+                  $steps["updateAddTask2IsOpen"] = !(
+                    $state.taskName || $state.addTaskRadioGroup.value === "Once"
+                  )
+                    ? (() => {
+                        const actionArgs = {
+                          variable: {
+                            objRoot: $state,
+                            variablePath: ["addTask2", "isOpen"]
+                          },
+                          operation: 4
+                        };
+                        return (({
+                          variable,
+                          value,
+                          startIndex,
+                          deleteCount
+                        }) => {
+                          if (!variable) {
+                            return;
+                          }
+                          const { objRoot, variablePath } = variable;
+
+                          const oldValue = $stateGet(objRoot, variablePath);
+                          $stateSet(objRoot, variablePath, !oldValue);
+                          return !oldValue;
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["updateAddTask2IsOpen"] != null &&
+                    typeof $steps["updateAddTask2IsOpen"] === "object" &&
+                    typeof $steps["updateAddTask2IsOpen"].then === "function"
+                  ) {
+                    $steps["updateAddTask2IsOpen"] = await $steps[
+                      "updateAddTask2IsOpen"
+                    ];
+                  }
+                }}
+                type={"soft"}
+              />
+            </React.Fragment>
+          }
+          heading={
+            <div
+              data-plasmic-name={"addTaskBasicInfoTitleHolder"}
+              data-plasmic-override={overrides.addTaskBasicInfoTitleHolder}
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.addTaskBasicInfoTitleHolder,
+                {
+                  [sty.addTaskBasicInfoTitleHolderdarkMode]: hasVariant(
+                    $state,
+                    "darkMode",
+                    "darkMode"
+                  )
+                }
+              )}
+            >
+              <React.Fragment>
+                <React.Fragment>{""}</React.Fragment>
+                {
+                  <h4
+                    data-plasmic-name={"addTaskBasicInfoTitle"}
+                    data-plasmic-override={overrides.addTaskBasicInfoTitle}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.h4,
+                      projectcss.__wab_text,
+                      sty.addTaskBasicInfoTitle,
+                      {
+                        [sty.addTaskBasicInfoTitledarkMode]: hasVariant(
+                          $state,
+                          "darkMode",
+                          "darkMode"
+                        )
+                      }
+                    )}
+                  >
+                    {"Create Your Task: Basic Info"}
+                  </h4>
+                }
+                <React.Fragment>{""}</React.Fragment>
+              </React.Fragment>
+            </div>
+          }
+          isOpen={generateStateValueProp($state, ["addTask1", "isOpen"])}
+          onOpenChange={async (...eventArgs: any) => {
+            generateStateOnChangeProp($state, ["addTask1", "isOpen"]).apply(
+              null,
+              eventArgs
+            );
+
+            if (
+              eventArgs.length > 1 &&
+              eventArgs[1] &&
+              eventArgs[1]._plasmic_state_init_
+            ) {
+              return;
+            }
+          }}
+          trigger={
+            <Button
+              data-plasmic-name={"addTaskButton"}
+              data-plasmic-override={overrides.addTaskButton}
+              className={classNames("__wab_instance", sty.addTaskButton, {
+                [sty.addTaskButtondarkMode]: hasVariant(
+                  $state,
+                  "darkMode",
+                  "darkMode"
+                )
+              })}
+              label={
+                <div
+                  className={classNames(projectcss.all, sty.freeBox___0Mu5P)}
+                >
+                  <div
+                    data-plasmic-name={"addTaskLabel"}
+                    data-plasmic-override={overrides.addTaskLabel}
+                    className={classNames(
+                      projectcss.all,
+                      projectcss.__wab_text,
+                      sty.addTaskLabel,
+                      {
+                        [sty.addTaskLabeldarkMode]: hasVariant(
+                          $state,
+                          "darkMode",
+                          "darkMode"
+                        )
+                      }
+                    )}
+                  >
+                    {"Add\nTask"}
+                  </div>
+                  <Modal
+                    data-plasmic-name={"editTask2"}
+                    data-plasmic-override={overrides.editTask2}
+                    className={classNames("__wab_instance", sty.editTask2, {
+                      [sty.editTask2darkMode]: hasVariant(
+                        $state,
+                        "darkMode",
+                        "darkMode"
+                      )
+                    })}
+                    content={
+                      <Stack__
+                        as={"div"}
+                        hasGap={true}
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox___3HtuU
+                        )}
+                      >
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__dwvEq
+                          )}
+                        >
+                          {"Change the parts of your task you'd like!"}
+                        </div>
+                        <div
+                          className={classNames(
+                            projectcss.all,
+                            projectcss.__wab_text,
+                            sty.text__ygcwe
+                          )}
+                        >
+                          {
+                            "You can put anything here!\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                          }
+                        </div>
+                      </Stack__>
+                    }
+                    footer={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          sty.freeBox__ykX7T
+                        )}
+                      >
+                        <Button
+                          data-plasmic-name={"continueButtonEditTask2"}
+                          data-plasmic-override={
+                            overrides.continueButtonEditTask2
+                          }
+                          className={classNames(
+                            "__wab_instance",
+                            sty.continueButtonEditTask2
+                          )}
+                          color={"success"}
+                          label={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__dPIr9
+                              )}
+                            >
+                              {"Continue"}
+                            </div>
+                          }
+                          type={"soft"}
+                        />
+
+                        <Button
+                          className={classNames(
+                            "__wab_instance",
+                            sty.button__o7EfQ
+                          )}
+                          color={"muted"}
+                          label={
+                            <div
+                              className={classNames(
+                                projectcss.all,
+                                projectcss.__wab_text,
+                                sty.text__oyf2P
+                              )}
+                            >
+                              {"Close"}
+                            </div>
+                          }
+                          onClick={async event => {
+                            const $steps = {};
+
+                            $steps["updateAriaDialogTriggerIsOpen"] = true
+                              ? (() => {
+                                  const actionArgs = {
+                                    variable: {
+                                      objRoot: $state,
+                                      variablePath: [
+                                        "ariaDialogTrigger",
+                                        "isOpen"
+                                      ]
+                                    },
+                                    operation: 0,
+                                    value: false
+                                  };
+                                  return (({
+                                    variable,
+                                    value,
+                                    startIndex,
+                                    deleteCount
+                                  }) => {
+                                    if (!variable) {
+                                      return;
+                                    }
+                                    const { objRoot, variablePath } = variable;
+
+                                    $stateSet(objRoot, variablePath, value);
+                                    return value;
+                                  })?.apply(null, [actionArgs]);
+                                })()
+                              : undefined;
+                            if (
+                              $steps["updateAriaDialogTriggerIsOpen"] != null &&
+                              typeof $steps["updateAriaDialogTriggerIsOpen"] ===
+                                "object" &&
+                              typeof $steps["updateAriaDialogTriggerIsOpen"]
+                                .then === "function"
+                            ) {
+                              $steps["updateAriaDialogTriggerIsOpen"] =
+                                await $steps["updateAriaDialogTriggerIsOpen"];
+                            }
+                          }}
+                          type={"soft"}
+                        />
+                      </div>
+                    }
+                    heading={
+                      <div
+                        className={classNames(
+                          projectcss.all,
+                          projectcss.__wab_text,
+                          sty.text__qlPPl
+                        )}
+                      >
+                        {"Edit Task Part 2"}
+                      </div>
+                    }
+                    isOpen={generateStateValueProp($state, [
+                      "editTask2",
+                      "isOpen"
+                    ])}
+                    onOpenChange={async (...eventArgs: any) => {
+                      generateStateOnChangeProp($state, [
+                        "editTask2",
+                        "isOpen"
+                      ]).apply(null, eventArgs);
+
+                      if (
+                        eventArgs.length > 1 &&
+                        eventArgs[1] &&
+                        eventArgs[1]._plasmic_state_init_
+                      ) {
+                        return;
+                      }
+                    }}
+                    trigger={null}
+                  />
+                </div>
+              }
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["updateCalendarMode"] = true
+                  ? (() => {
+                      const actionArgs = {
+                        variable: {
+                          objRoot: $state,
+                          variablePath: ["calendar", "mode"]
+                        },
+                        operation: 0
+                      };
+                      return (({
+                        variable,
+                        value,
+                        startIndex,
+                        deleteCount
+                      }) => {
+                        if (!variable) {
+                          return;
+                        }
+                        const { objRoot, variablePath } = variable;
+
+                        $stateSet(objRoot, variablePath, value);
+                        return value;
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["updateCalendarMode"] != null &&
+                  typeof $steps["updateCalendarMode"] === "object" &&
+                  typeof $steps["updateCalendarMode"].then === "function"
+                ) {
+                  $steps["updateCalendarMode"] = await $steps[
+                    "updateCalendarMode"
+                  ];
+                }
+              }}
+              roundedFull={true}
+              start={
+                <CircleIcon
+                  className={classNames(projectcss.all, sty.svg__aXgH7)}
+                  role={"img"}
+                />
+              }
+            />
+          }
         />
 
         <Modal
           data-plasmic-name={"editTask1"}
           data-plasmic-override={overrides.editTask1}
           className={classNames("__wab_instance", sty.editTask1, {
-            [sty.editTask1darkMode]: hasVariant($state, "darkMode", "darkMode"),
+            [sty.editTask1darkMode]: hasVariant($state, "darkMode", "darkMode")
           })}
           closeOnBackdropClick={false}
           content={
@@ -2572,8 +2690,8 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskInfoStackerdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode",
-                  ),
+                    "darkMode"
+                  )
                 })}
               >
                 <div
@@ -2587,9 +2705,9 @@ function PlasmicHomepage__RenderFunc(props: {
                       [sty.editTaskInfoHeredarkMode]: hasVariant(
                         $state,
                         "darkMode",
-                        "darkMode",
-                      ),
-                    },
+                        "darkMode"
+                      )
+                    }
                   )}
                 >
                   <React.Fragment>
@@ -2605,9 +2723,9 @@ function PlasmicHomepage__RenderFunc(props: {
                             [sty.h4darkMode__hamgt9HcnI]: hasVariant(
                               $state,
                               "darkMode",
-                              "darkMode",
-                            ),
-                          },
+                              "darkMode"
+                            )
+                          }
                         )}
                       >
                         {"Choose what info to change:"}
@@ -2627,9 +2745,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.editTaskCheckboxGroupdarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode",
-                    ),
-                  },
+                      "darkMode"
+                    )
+                  }
                 )}
                 description={null}
                 disabled={false}
@@ -2637,7 +2755,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 onChange={async (...eventArgs: any) => {
                   generateStateOnChangeProp($state, [
                     "editTaskCheckboxGroup",
-                    "value",
+                    "value"
                   ]).apply(null, eventArgs);
 
                   if (
@@ -2648,7 +2766,7 @@ function PlasmicHomepage__RenderFunc(props: {
                     return;
                   }
 
-                  (async (val) => {
+                  (async val => {
                     const $steps = {};
 
                     $steps["runCode"] = true
@@ -2661,18 +2779,17 @@ function PlasmicHomepage__RenderFunc(props: {
                                     title: false,
                                     startTime: false,
                                     frequency: false,
-                                    estimatedTime: false,
+                                    estimatedTime: false
                                   });
-                                const handleCheckboxChange =
-                                  (key) => (event) => {
-                                    setCheckedStates((prev) => ({
-                                      ...prev,
-                                      [key]: event.target.checked,
-                                    }));
-                                  };
+                                const handleCheckboxChange = key => event => {
+                                  setCheckedStates(prev => ({
+                                    ...prev,
+                                    [key]: event.target.checked
+                                  }));
+                                };
                                 return handleCheckboxChange;
                               })();
-                            },
+                            }
                           };
                           return (({ customFunction }) => {
                             return customFunction();
@@ -2699,9 +2816,9 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.editTaskInfoChecksHolderdarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
-                      },
+                          "darkMode"
+                        )
+                      }
                     )}
                   >
                     <Checkbox
@@ -2711,8 +2828,8 @@ function PlasmicHomepage__RenderFunc(props: {
                         [sty.titleOptiondarkMode]: hasVariant(
                           $state,
                           "darkMode",
-                          "darkMode",
-                        ),
+                          "darkMode"
+                        )
                       })}
                       label={
                         <div
@@ -2724,9 +2841,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__rc0Lp9HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode",
-                              ),
-                            },
+                                "darkMode"
+                              )
+                            }
                           )}
                         >
                           {"Title"}
@@ -2735,7 +2852,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "titleOption",
-                          "isSelected",
+                          "isSelected"
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2759,9 +2876,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.startTimeOptiondarkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode",
-                          ),
-                        },
+                            "darkMode"
+                          )
+                        }
                       )}
                       label={
                         <div
@@ -2773,9 +2890,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__yQsgm9HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode",
-                              ),
-                            },
+                                "darkMode"
+                              )
+                            }
                           )}
                         >
                           {"Start Time"}
@@ -2784,7 +2901,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "startTimeOption",
-                          "isSelected",
+                          "isSelected"
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2803,7 +2920,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       data-plasmic-override={overrides.frequencyOption}
                       className={classNames(
                         "__wab_instance",
-                        sty.frequencyOption,
+                        sty.frequencyOption
                       )}
                       label={
                         <div
@@ -2815,9 +2932,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__mnVr69HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode",
-                              ),
-                            },
+                                "darkMode"
+                              )
+                            }
                           )}
                         >
                           {"Frequency"}
@@ -2826,7 +2943,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "frequencyOption",
-                          "isSelected",
+                          "isSelected"
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2850,9 +2967,9 @@ function PlasmicHomepage__RenderFunc(props: {
                           [sty.estimatedTimeOptiondarkMode]: hasVariant(
                             $state,
                             "darkMode",
-                            "darkMode",
-                          ),
-                        },
+                            "darkMode"
+                          )
+                        }
                       )}
                       label={
                         <div
@@ -2864,9 +2981,9 @@ function PlasmicHomepage__RenderFunc(props: {
                               [sty.textdarkMode__tu9L09HcnI]: hasVariant(
                                 $state,
                                 "darkMode",
-                                "darkMode",
-                              ),
-                            },
+                                "darkMode"
+                              )
+                            }
                           )}
                         >
                           {"Estimated Time"}
@@ -2875,7 +2992,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       onChange={async (...eventArgs: any) => {
                         generateStateOnChangeProp($state, [
                           "estimatedTimeOption",
-                          "isSelected",
+                          "isSelected"
                         ]).apply(null, eventArgs);
 
                         if (
@@ -2904,9 +3021,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskCloseAndContinueButtonsdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode",
-                  ),
-                },
+                    "darkMode"
+                  )
+                }
               )}
             >
               <Button
@@ -2919,9 +3036,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     [sty.editTaskCloseButtondarkMode]: hasVariant(
                       $state,
                       "darkMode",
-                      "darkMode",
-                    ),
-                  },
+                      "darkMode"
+                    )
+                  }
                 )}
                 color={"muted"}
                 label={
@@ -2929,13 +3046,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__lg9Et,
+                      sty.text__lg9Et
                     )}
                   >
                     {"Close"}
                   </div>
                 }
-                onClick={async (event) => {
+                onClick={async event => {
                   const $steps = {};
 
                   $steps["updateEditTask1IsOpen"] = true
@@ -2943,16 +3060,16 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["editTask1", "isOpen"],
+                            variablePath: ["editTask1", "isOpen"]
                           },
                           operation: 0,
-                          value: false,
+                          value: false
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount,
+                          deleteCount
                         }) => {
                           if (!variable) {
                             return;
@@ -2969,8 +3086,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask1IsOpen"] === "object" &&
                     typeof $steps["updateEditTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask1IsOpen"] =
-                      await $steps["updateEditTask1IsOpen"];
+                    $steps["updateEditTask1IsOpen"] = await $steps[
+                      "updateEditTask1IsOpen"
+                    ];
                   }
                 }}
                 type={"soft"}
@@ -2981,7 +3099,7 @@ function PlasmicHomepage__RenderFunc(props: {
                 data-plasmic-override={overrides.editTaskContinueButton}
                 className={classNames(
                   "__wab_instance",
-                  sty.editTaskContinueButton,
+                  sty.editTaskContinueButton
                 )}
                 color={"success"}
                 label={
@@ -2989,13 +3107,13 @@ function PlasmicHomepage__RenderFunc(props: {
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__um2Zi,
+                      sty.text__um2Zi
                     )}
                   >
                     {"Continue"}
                   </div>
                 }
-                onClick={async (event) => {
+                onClick={async event => {
                   const $steps = {};
 
                   $steps["updateEditTask1IsOpen"] =
@@ -3004,16 +3122,16 @@ function PlasmicHomepage__RenderFunc(props: {
                           const actionArgs = {
                             variable: {
                               objRoot: $state,
-                              variablePath: ["editTask1", "isOpen"],
+                              variablePath: ["editTask1", "isOpen"]
                             },
                             operation: 0,
-                            value: ($state.editTask1.isOpen = false),
+                            value: ($state.editTask1.isOpen = false)
                           };
                           return (({
                             variable,
                             value,
                             startIndex,
-                            deleteCount,
+                            deleteCount
                           }) => {
                             if (!variable) {
                               return;
@@ -3030,8 +3148,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask1IsOpen"] === "object" &&
                     typeof $steps["updateEditTask1IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask1IsOpen"] =
-                      await $steps["updateEditTask1IsOpen"];
+                    $steps["updateEditTask1IsOpen"] = await $steps[
+                      "updateEditTask1IsOpen"
+                    ];
                   }
 
                   $steps["updateEditTask2IsOpen"] = true
@@ -3039,16 +3158,16 @@ function PlasmicHomepage__RenderFunc(props: {
                         const actionArgs = {
                           variable: {
                             objRoot: $state,
-                            variablePath: ["editTask2", "isOpen"],
+                            variablePath: ["editTask2", "isOpen"]
                           },
                           operation: 0,
-                          value: ($state.editTask2.isOpen = true),
+                          value: ($state.editTask2.isOpen = true)
                         };
                         return (({
                           variable,
                           value,
                           startIndex,
-                          deleteCount,
+                          deleteCount
                         }) => {
                           if (!variable) {
                             return;
@@ -3065,8 +3184,9 @@ function PlasmicHomepage__RenderFunc(props: {
                     typeof $steps["updateEditTask2IsOpen"] === "object" &&
                     typeof $steps["updateEditTask2IsOpen"].then === "function"
                   ) {
-                    $steps["updateEditTask2IsOpen"] =
-                      await $steps["updateEditTask2IsOpen"];
+                    $steps["updateEditTask2IsOpen"] = await $steps[
+                      "updateEditTask2IsOpen"
+                    ];
                   }
                 }}
                 type={"soft"}
@@ -3085,9 +3205,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   [sty.editTaskLabelHolderdarkMode]: hasVariant(
                     $state,
                     "darkMode",
-                    "darkMode",
-                  ),
-                },
+                    "darkMode"
+                  )
+                }
               )}
             >
               <React.Fragment>
@@ -3100,7 +3220,7 @@ function PlasmicHomepage__RenderFunc(props: {
                       projectcss.all,
                       projectcss.h3,
                       projectcss.__wab_text,
-                      sty.h3,
+                      sty.h3
                     )}
                   >
                     {"Edit Task"}
@@ -3114,7 +3234,7 @@ function PlasmicHomepage__RenderFunc(props: {
           onOpenChange={async (...eventArgs: any) => {
             generateStateOnChangeProp($state, ["editTask1", "isOpen"]).apply(
               null,
-              eventArgs,
+              eventArgs
             );
 
             if (
@@ -3133,8 +3253,8 @@ function PlasmicHomepage__RenderFunc(props: {
                 [sty.editTaskButtondarkMode]: hasVariant(
                   $state,
                   "darkMode",
-                  "darkMode",
-                ),
+                  "darkMode"
+                )
               })}
               iconStart={undefined}
               label={
@@ -3142,13 +3262,13 @@ function PlasmicHomepage__RenderFunc(props: {
                   className={classNames(
                     projectcss.all,
                     projectcss.__wab_text,
-                    sty.text__dsKyk,
+                    sty.text__dsKyk
                   )}
                 >
                   {"Edit\nTask"}
                 </div>
               }
-              onClick={async (event) => {
+              onClick={async event => {
                 const $steps = {};
               }}
               roundedFull={true}
@@ -3163,8 +3283,8 @@ function PlasmicHomepage__RenderFunc(props: {
             [sty.deleteTaskButtondarkMode]: hasVariant(
               $state,
               "darkMode",
-              "darkMode",
-            ),
+              "darkMode"
+            )
           })}
           label={
             <div
@@ -3173,13 +3293,13 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.deleteTaskText,
+                sty.deleteTaskText
               )}
             >
               {"Delete\nTask"}
             </div>
           }
-          onClick={async (event) => {
+          onClick={async event => {
             const $steps = {};
 
             $steps["runCode"] = true
@@ -3187,7 +3307,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     customFunction: async () => {
                       return undefined;
-                    },
+                    }
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -3215,7 +3335,7 @@ function PlasmicHomepage__RenderFunc(props: {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__hVrKf,
+                sty.text__hVrKf
               )}
             >
               <React.Fragment>
@@ -3237,7 +3357,7 @@ function PlasmicHomepage__RenderFunc(props: {
               </React.Fragment>
             </div>
           }
-          onClick={async (event) => {
+          onClick={async event => {
             const $steps = {};
 
             $steps["updateIsPremium"] = ($state.isPremium = false)
@@ -3245,9 +3365,9 @@ function PlasmicHomepage__RenderFunc(props: {
                   const actionArgs = {
                     variable: {
                       objRoot: $state,
-                      variablePath: ["isPremium"],
+                      variablePath: ["isPremium"]
                     },
-                    operation: 4,
+                    operation: 4
                   };
                   return (({ variable, value, startIndex, deleteCount }) => {
                     if (!variable) {
@@ -3273,8 +3393,8 @@ function PlasmicHomepage__RenderFunc(props: {
               ? (() => {
                   const actionArgs = {
                     customFunction: async () => {
-                      return ($state.premiumModal.isOpen = true);
-                    },
+                      return ($state.addTask2Modal.isOpen = true);
+                    }
                   };
                   return (({ customFunction }) => {
                     return customFunction();
@@ -3293,164 +3413,6 @@ function PlasmicHomepage__RenderFunc(props: {
           size={"extraLarge"}
           submitsForm={false}
         />
-
-        <Modal
-          data-plasmic-name={"premiumModal"}
-          data-plasmic-override={overrides.premiumModal}
-          className={classNames("__wab_instance", sty.premiumModal)}
-          closeOnBackdropClick={false}
-          content={
-            <Stack__
-              as={"div"}
-              hasGap={true}
-              className={classNames(projectcss.all, sty.freeBox__wwbHl)}
-            >
-              <Switch
-                data-plasmic-name={"_switch"}
-                data-plasmic-override={overrides._switch}
-                className={classNames("__wab_instance", sty._switch)}
-                disabled={false}
-                isSelected={generateStateValueProp($state, [
-                  "_switch",
-                  "isSelected",
-                ])}
-                label={
-                  <div
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.__wab_text,
-                      sty.text__ezf5S,
-                    )}
-                  >
-                    {"Disable AutoSchedule"}
-                  </div>
-                }
-                onChange={async (...eventArgs: any) => {
-                  generateStateOnChangeProp($state, [
-                    "_switch",
-                    "isSelected",
-                  ]).apply(null, eventArgs);
-
-                  if (
-                    eventArgs.length > 1 &&
-                    eventArgs[1] &&
-                    eventArgs[1]._plasmic_state_init_
-                  ) {
-                    return;
-                  }
-
-                  (async (val) => {
-                    const $steps = {};
-
-                    $steps["updateVariable"] = true
-                      ? (() => {
-                          const actionArgs = {
-                            operation: 4,
-                            variable: {
-                              objRoot: $state,
-                              variablePath: ["autoEnabled"],
-                            },
-                          };
-                          return (({
-                            variable,
-                            value,
-                            startIndex,
-                            deleteCount,
-                          }) => {
-                            if (!variable) {
-                              return;
-                            }
-                            const { objRoot, variablePath } = variable;
-
-                            const oldValue = $stateGet(objRoot, variablePath);
-                            $stateSet(objRoot, variablePath, !oldValue);
-                            return !oldValue;
-                          })?.apply(null, [actionArgs]);
-                        })()
-                      : undefined;
-                    if (
-                      $steps["updateVariable"] != null &&
-                      typeof $steps["updateVariable"] === "object" &&
-                      typeof $steps["updateVariable"].then === "function"
-                    ) {
-                      $steps["updateVariable"] = await $steps["updateVariable"];
-                    }
-                  }).apply(null, eventArgs);
-                }}
-              />
-
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__ylm0S,
-                )}
-              >
-                <React.Fragment>
-                  <React.Fragment>{""}</React.Fragment>
-                  {
-                    <blockquote
-                      data-plasmic-name={"blockquote"}
-                      data-plasmic-override={overrides.blockquote}
-                      className={classNames(
-                        projectcss.all,
-                        projectcss.__wab_text,
-                        sty.blockquote,
-                      )}
-                    >
-                      {
-                        "Can't find what you need?\nEmail us at FocusFlowADHDApp@gmail.com!"
-                      }
-                    </blockquote>
-                  }
-                  <React.Fragment>{""}</React.Fragment>
-                </React.Fragment>
-              </div>
-            </Stack__>
-          }
-          heading={
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___5ZtO8,
-              )}
-            >
-              <React.Fragment>
-                <React.Fragment>{""}</React.Fragment>
-                {
-                  <h4
-                    className={classNames(
-                      projectcss.all,
-                      projectcss.h4,
-                      projectcss.__wab_text,
-                      sty.h4__oAyrH,
-                    )}
-                  >
-                    {"Premium Options"}
-                  </h4>
-                }
-                <React.Fragment>{""}</React.Fragment>
-              </React.Fragment>
-            </div>
-          }
-          isOpen={generateStateValueProp($state, ["premiumModal", "isOpen"])}
-          onOpenChange={async (...eventArgs: any) => {
-            generateStateOnChangeProp($state, ["premiumModal", "isOpen"]).apply(
-              null,
-              eventArgs,
-            );
-
-            if (
-              eventArgs.length > 1 &&
-              eventArgs[1] &&
-              eventArgs[1]._plasmic_state_init_
-            ) {
-              return;
-            }
-          }}
-          trigger={null}
-        />
       </div>
     </React.Fragment>
   ) as React.ReactElement | null;
@@ -3464,27 +3426,10 @@ const PlasmicDescendants = {
     "ownYourScheduleTagline",
     "darkModeButton",
     "toggleMode",
-    "addTask1",
-    "addTaskButton",
-    "addTaskLabel",
-    "editTask2",
-    "cmsDataFetcher",
-    "continueButtonEditTask2",
-    "addTaskBasicInfoTitleHolder",
-    "addTaskBasicInfoTitle",
-    "addTaskContentHolder",
-    "basicInfoExplanation",
-    "h6",
-    "addTaskNameInputTextField",
-    "addTaskRadioGroup",
-    "addTaskFrequencySelection",
-    "onceTrigger",
-    "dailyTrigger",
-    "weeklyTrigger",
-    "monthlyTrigger",
-    "cancelAddTaskButton",
-    "addTaskGoToNextButton",
     "addTask2",
+    "addTask2Modal",
+    "_switch",
+    "blockquote",
     "addTask2BodyHolder",
     "addTask2BodyTextHolder",
     "h5",
@@ -3503,6 +3448,25 @@ const PlasmicDescendants = {
     "addTask2ButtonsHolder",
     "addTask2CancelButton",
     "addTask2FinishButton",
+    "addTask1",
+    "addTaskButton",
+    "addTaskLabel",
+    "editTask2",
+    "continueButtonEditTask2",
+    "addTaskBasicInfoTitleHolder",
+    "addTaskBasicInfoTitle",
+    "addTaskContentHolder",
+    "basicInfoExplanation",
+    "h6",
+    "addTaskNameInputTextField",
+    "addTaskRadioGroup",
+    "addTaskFrequencySelection",
+    "onceTrigger",
+    "dailyTrigger",
+    "weeklyTrigger",
+    "monthlyTrigger",
+    "cancelAddTaskButton",
+    "addTaskGoToNextButton",
     "editTask1",
     "editTaskButton",
     "editTaskLabelHolder",
@@ -3520,92 +3484,18 @@ const PlasmicDescendants = {
     "editTaskContinueButton",
     "deleteTaskButton",
     "deleteTaskText",
-    "premiumButton",
-    "premiumModal",
-    "_switch",
-    "blockquote",
+    "premiumButton"
   ],
   calendar: ["calendar"],
   focusFlowTitle: ["focusFlowTitle"],
   ownYourScheduleTagline: ["ownYourScheduleTagline"],
   darkModeButton: ["darkModeButton", "toggleMode"],
   toggleMode: ["toggleMode"],
-  addTask1: [
-    "addTask1",
-    "addTaskButton",
-    "addTaskLabel",
-    "editTask2",
-    "cmsDataFetcher",
-    "continueButtonEditTask2",
-    "addTaskBasicInfoTitleHolder",
-    "addTaskBasicInfoTitle",
-    "addTaskContentHolder",
-    "basicInfoExplanation",
-    "h6",
-    "addTaskNameInputTextField",
-    "addTaskRadioGroup",
-    "addTaskFrequencySelection",
-    "onceTrigger",
-    "dailyTrigger",
-    "weeklyTrigger",
-    "monthlyTrigger",
-    "cancelAddTaskButton",
-    "addTaskGoToNextButton",
-  ],
-  addTaskButton: [
-    "addTaskButton",
-    "addTaskLabel",
-    "editTask2",
-    "cmsDataFetcher",
-    "continueButtonEditTask2",
-  ],
-  addTaskLabel: ["addTaskLabel"],
-  editTask2: ["editTask2", "cmsDataFetcher", "continueButtonEditTask2"],
-  cmsDataFetcher: ["cmsDataFetcher"],
-  continueButtonEditTask2: ["continueButtonEditTask2"],
-  addTaskBasicInfoTitleHolder: [
-    "addTaskBasicInfoTitleHolder",
-    "addTaskBasicInfoTitle",
-  ],
-  addTaskBasicInfoTitle: ["addTaskBasicInfoTitle"],
-  addTaskContentHolder: [
-    "addTaskContentHolder",
-    "basicInfoExplanation",
-    "h6",
-    "addTaskNameInputTextField",
-    "addTaskRadioGroup",
-    "addTaskFrequencySelection",
-    "onceTrigger",
-    "dailyTrigger",
-    "weeklyTrigger",
-    "monthlyTrigger",
-  ],
-  basicInfoExplanation: ["basicInfoExplanation", "h6"],
-  h6: ["h6"],
-  addTaskNameInputTextField: ["addTaskNameInputTextField"],
-  addTaskRadioGroup: [
-    "addTaskRadioGroup",
-    "addTaskFrequencySelection",
-    "onceTrigger",
-    "dailyTrigger",
-    "weeklyTrigger",
-    "monthlyTrigger",
-  ],
-  addTaskFrequencySelection: [
-    "addTaskFrequencySelection",
-    "onceTrigger",
-    "dailyTrigger",
-    "weeklyTrigger",
-    "monthlyTrigger",
-  ],
-  onceTrigger: ["onceTrigger"],
-  dailyTrigger: ["dailyTrigger"],
-  weeklyTrigger: ["weeklyTrigger"],
-  monthlyTrigger: ["monthlyTrigger"],
-  cancelAddTaskButton: ["cancelAddTaskButton"],
-  addTaskGoToNextButton: ["addTaskGoToNextButton"],
   addTask2: [
     "addTask2",
+    "addTask2Modal",
+    "_switch",
+    "blockquote",
     "addTask2BodyHolder",
     "addTask2BodyTextHolder",
     "h5",
@@ -3623,8 +3513,11 @@ const PlasmicDescendants = {
     "mmButton2",
     "addTask2ButtonsHolder",
     "addTask2CancelButton",
-    "addTask2FinishButton",
+    "addTask2FinishButton"
   ],
+  addTask2Modal: ["addTask2Modal", "_switch", "blockquote"],
+  _switch: ["_switch"],
+  blockquote: ["blockquote"],
   addTask2BodyHolder: [
     "addTask2BodyHolder",
     "addTask2BodyTextHolder",
@@ -3640,7 +3533,7 @@ const PlasmicDescendants = {
     "hhDropdown2",
     "hourButton2",
     "mmDropdown2",
-    "mmButton2",
+    "mmButton2"
   ],
   addTask2BodyTextHolder: ["addTask2BodyTextHolder", "h5"],
   h5: ["h5"],
@@ -3650,7 +3543,7 @@ const PlasmicDescendants = {
     "hourButton",
     "timeMmDropdown",
     "mmButton",
-    "amPmDropdown",
+    "amPmDropdown"
   ],
   timeHhDropdown: ["timeHhDropdown", "hourButton"],
   hourButton: ["hourButton"],
@@ -3663,7 +3556,7 @@ const PlasmicDescendants = {
     "hhDropdown2",
     "hourButton2",
     "mmDropdown2",
-    "mmButton2",
+    "mmButton2"
   ],
   timeEstimate: ["timeEstimate"],
   hhDropdown2: ["hhDropdown2", "hourButton2"],
@@ -3673,10 +3566,81 @@ const PlasmicDescendants = {
   addTask2ButtonsHolder: [
     "addTask2ButtonsHolder",
     "addTask2CancelButton",
-    "addTask2FinishButton",
+    "addTask2FinishButton"
   ],
   addTask2CancelButton: ["addTask2CancelButton"],
   addTask2FinishButton: ["addTask2FinishButton"],
+  addTask1: [
+    "addTask1",
+    "addTaskButton",
+    "addTaskLabel",
+    "editTask2",
+    "continueButtonEditTask2",
+    "addTaskBasicInfoTitleHolder",
+    "addTaskBasicInfoTitle",
+    "addTaskContentHolder",
+    "basicInfoExplanation",
+    "h6",
+    "addTaskNameInputTextField",
+    "addTaskRadioGroup",
+    "addTaskFrequencySelection",
+    "onceTrigger",
+    "dailyTrigger",
+    "weeklyTrigger",
+    "monthlyTrigger",
+    "cancelAddTaskButton",
+    "addTaskGoToNextButton"
+  ],
+  addTaskButton: [
+    "addTaskButton",
+    "addTaskLabel",
+    "editTask2",
+    "continueButtonEditTask2"
+  ],
+  addTaskLabel: ["addTaskLabel"],
+  editTask2: ["editTask2", "continueButtonEditTask2"],
+  continueButtonEditTask2: ["continueButtonEditTask2"],
+  addTaskBasicInfoTitleHolder: [
+    "addTaskBasicInfoTitleHolder",
+    "addTaskBasicInfoTitle"
+  ],
+  addTaskBasicInfoTitle: ["addTaskBasicInfoTitle"],
+  addTaskContentHolder: [
+    "addTaskContentHolder",
+    "basicInfoExplanation",
+    "h6",
+    "addTaskNameInputTextField",
+    "addTaskRadioGroup",
+    "addTaskFrequencySelection",
+    "onceTrigger",
+    "dailyTrigger",
+    "weeklyTrigger",
+    "monthlyTrigger"
+  ],
+  basicInfoExplanation: ["basicInfoExplanation", "h6"],
+  h6: ["h6"],
+  addTaskNameInputTextField: ["addTaskNameInputTextField"],
+  addTaskRadioGroup: [
+    "addTaskRadioGroup",
+    "addTaskFrequencySelection",
+    "onceTrigger",
+    "dailyTrigger",
+    "weeklyTrigger",
+    "monthlyTrigger"
+  ],
+  addTaskFrequencySelection: [
+    "addTaskFrequencySelection",
+    "onceTrigger",
+    "dailyTrigger",
+    "weeklyTrigger",
+    "monthlyTrigger"
+  ],
+  onceTrigger: ["onceTrigger"],
+  dailyTrigger: ["dailyTrigger"],
+  weeklyTrigger: ["weeklyTrigger"],
+  monthlyTrigger: ["monthlyTrigger"],
+  cancelAddTaskButton: ["cancelAddTaskButton"],
+  addTaskGoToNextButton: ["addTaskGoToNextButton"],
   editTask1: [
     "editTask1",
     "editTaskButton",
@@ -3692,7 +3656,7 @@ const PlasmicDescendants = {
     "estimatedTimeOption",
     "editTaskCloseAndContinueButtons",
     "editTaskCloseButton",
-    "editTaskContinueButton",
+    "editTaskContinueButton"
   ],
   editTaskButton: ["editTaskButton"],
   editTaskLabelHolder: ["editTaskLabelHolder", "h3"],
@@ -3705,14 +3669,14 @@ const PlasmicDescendants = {
     "titleOption",
     "startTimeOption",
     "frequencyOption",
-    "estimatedTimeOption",
+    "estimatedTimeOption"
   ],
   editTaskInfoChecksHolder: [
     "editTaskInfoChecksHolder",
     "titleOption",
     "startTimeOption",
     "frequencyOption",
-    "estimatedTimeOption",
+    "estimatedTimeOption"
   ],
   titleOption: ["titleOption"],
   startTimeOption: ["startTimeOption"],
@@ -3721,16 +3685,13 @@ const PlasmicDescendants = {
   editTaskCloseAndContinueButtons: [
     "editTaskCloseAndContinueButtons",
     "editTaskCloseButton",
-    "editTaskContinueButton",
+    "editTaskContinueButton"
   ],
   editTaskCloseButton: ["editTaskCloseButton"],
   editTaskContinueButton: ["editTaskContinueButton"],
   deleteTaskButton: ["deleteTaskButton", "deleteTaskText"],
   deleteTaskText: ["deleteTaskText"],
-  premiumButton: ["premiumButton"],
-  premiumModal: ["premiumModal", "_switch", "blockquote"],
-  _switch: ["_switch"],
-  blockquote: ["blockquote"],
+  premiumButton: ["premiumButton"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -3742,27 +3703,10 @@ type NodeDefaultElementType = {
   ownYourScheduleTagline: "h2";
   darkModeButton: typeof Button;
   toggleMode: "div";
-  addTask1: typeof Modal;
-  addTaskButton: typeof Button;
-  addTaskLabel: "div";
-  editTask2: typeof Modal;
-  cmsDataFetcher: typeof CmsQueryRepeater;
-  continueButtonEditTask2: typeof Button;
-  addTaskBasicInfoTitleHolder: "div";
-  addTaskBasicInfoTitle: "h4";
-  addTaskContentHolder: "div";
-  basicInfoExplanation: "div";
-  h6: "h6";
-  addTaskNameInputTextField: typeof TextField;
-  addTaskRadioGroup: typeof RadioGroup;
-  addTaskFrequencySelection: "div";
-  onceTrigger: typeof Radio;
-  dailyTrigger: typeof Radio;
-  weeklyTrigger: typeof Radio;
-  monthlyTrigger: typeof Radio;
-  cancelAddTaskButton: typeof Button;
-  addTaskGoToNextButton: typeof Button;
   addTask2: typeof Modal;
+  addTask2Modal: typeof Modal;
+  _switch: typeof Switch;
+  blockquote: "blockquote";
   addTask2BodyHolder: "div";
   addTask2BodyTextHolder: "div";
   h5: "h5";
@@ -3781,6 +3725,25 @@ type NodeDefaultElementType = {
   addTask2ButtonsHolder: "div";
   addTask2CancelButton: typeof Button;
   addTask2FinishButton: typeof Button;
+  addTask1: typeof Modal;
+  addTaskButton: typeof Button;
+  addTaskLabel: "div";
+  editTask2: typeof Modal;
+  continueButtonEditTask2: typeof Button;
+  addTaskBasicInfoTitleHolder: "div";
+  addTaskBasicInfoTitle: "h4";
+  addTaskContentHolder: "div";
+  basicInfoExplanation: "div";
+  h6: "h6";
+  addTaskNameInputTextField: typeof TextField;
+  addTaskRadioGroup: typeof RadioGroup;
+  addTaskFrequencySelection: "div";
+  onceTrigger: typeof Radio;
+  dailyTrigger: typeof Radio;
+  weeklyTrigger: typeof Radio;
+  monthlyTrigger: typeof Radio;
+  cancelAddTaskButton: typeof Button;
+  addTaskGoToNextButton: typeof Button;
   editTask1: typeof Modal;
   editTaskButton: typeof Button;
   editTaskLabelHolder: "div";
@@ -3799,9 +3762,6 @@ type NodeDefaultElementType = {
   deleteTaskButton: typeof Button;
   deleteTaskText: "div";
   premiumButton: typeof Button;
-  premiumModal: typeof Modal;
-  _switch: typeof Switch;
-  blockquote: "blockquote";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -3832,7 +3792,7 @@ type NodeComponentProps<T extends NodeNameType> =
 function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
   type PropsType = NodeComponentProps<NodeName> & { key?: React.Key };
   const func = function <T extends PropsType>(
-    props: T & StrictProps<T, PropsType>,
+    props: T & StrictProps<T, PropsType>
   ) {
     const { variants, args, overrides } = React.useMemo(
       () =>
@@ -3840,15 +3800,15 @@ function makeNodeComponent<NodeName extends NodeNameType>(nodeName: NodeName) {
           name: nodeName,
           descendantNames: PlasmicDescendants[nodeName],
           internalArgPropNames: PlasmicHomepage__ArgProps,
-          internalVariantPropNames: PlasmicHomepage__VariantProps,
+          internalVariantPropNames: PlasmicHomepage__VariantProps
         }),
-      [props, nodeName],
+      [props, nodeName]
     );
     return PlasmicHomepage__RenderFunc({
       variants,
       args,
       overrides,
-      forNode: nodeName,
+      forNode: nodeName
     });
   };
   if (nodeName === "lightMode") {
@@ -3869,34 +3829,15 @@ export const PlasmicHomepage = Object.assign(
     ownYourScheduleTagline: makeNodeComponent("ownYourScheduleTagline"),
     darkModeButton: makeNodeComponent("darkModeButton"),
     toggleMode: makeNodeComponent("toggleMode"),
-    addTask1: makeNodeComponent("addTask1"),
-    addTaskButton: makeNodeComponent("addTaskButton"),
-    addTaskLabel: makeNodeComponent("addTaskLabel"),
-    editTask2: makeNodeComponent("editTask2"),
-    cmsDataFetcher: makeNodeComponent("cmsDataFetcher"),
-    continueButtonEditTask2: makeNodeComponent("continueButtonEditTask2"),
-    addTaskBasicInfoTitleHolder: makeNodeComponent(
-      "addTaskBasicInfoTitleHolder",
-    ),
-    addTaskBasicInfoTitle: makeNodeComponent("addTaskBasicInfoTitle"),
-    addTaskContentHolder: makeNodeComponent("addTaskContentHolder"),
-    basicInfoExplanation: makeNodeComponent("basicInfoExplanation"),
-    h6: makeNodeComponent("h6"),
-    addTaskNameInputTextField: makeNodeComponent("addTaskNameInputTextField"),
-    addTaskRadioGroup: makeNodeComponent("addTaskRadioGroup"),
-    addTaskFrequencySelection: makeNodeComponent("addTaskFrequencySelection"),
-    onceTrigger: makeNodeComponent("onceTrigger"),
-    dailyTrigger: makeNodeComponent("dailyTrigger"),
-    weeklyTrigger: makeNodeComponent("weeklyTrigger"),
-    monthlyTrigger: makeNodeComponent("monthlyTrigger"),
-    cancelAddTaskButton: makeNodeComponent("cancelAddTaskButton"),
-    addTaskGoToNextButton: makeNodeComponent("addTaskGoToNextButton"),
     addTask2: makeNodeComponent("addTask2"),
+    addTask2Modal: makeNodeComponent("addTask2Modal"),
+    _switch: makeNodeComponent("_switch"),
+    blockquote: makeNodeComponent("blockquote"),
     addTask2BodyHolder: makeNodeComponent("addTask2BodyHolder"),
     addTask2BodyTextHolder: makeNodeComponent("addTask2BodyTextHolder"),
     h5: makeNodeComponent("h5"),
     addTask2StartTimeSelectionHolder: makeNodeComponent(
-      "addTask2StartTimeSelectionHolder",
+      "addTask2StartTimeSelectionHolder"
     ),
     timeHhDropdown: makeNodeComponent("timeHhDropdown"),
     hourButton: makeNodeComponent("hourButton"),
@@ -3912,6 +3853,27 @@ export const PlasmicHomepage = Object.assign(
     addTask2ButtonsHolder: makeNodeComponent("addTask2ButtonsHolder"),
     addTask2CancelButton: makeNodeComponent("addTask2CancelButton"),
     addTask2FinishButton: makeNodeComponent("addTask2FinishButton"),
+    addTask1: makeNodeComponent("addTask1"),
+    addTaskButton: makeNodeComponent("addTaskButton"),
+    addTaskLabel: makeNodeComponent("addTaskLabel"),
+    editTask2: makeNodeComponent("editTask2"),
+    continueButtonEditTask2: makeNodeComponent("continueButtonEditTask2"),
+    addTaskBasicInfoTitleHolder: makeNodeComponent(
+      "addTaskBasicInfoTitleHolder"
+    ),
+    addTaskBasicInfoTitle: makeNodeComponent("addTaskBasicInfoTitle"),
+    addTaskContentHolder: makeNodeComponent("addTaskContentHolder"),
+    basicInfoExplanation: makeNodeComponent("basicInfoExplanation"),
+    h6: makeNodeComponent("h6"),
+    addTaskNameInputTextField: makeNodeComponent("addTaskNameInputTextField"),
+    addTaskRadioGroup: makeNodeComponent("addTaskRadioGroup"),
+    addTaskFrequencySelection: makeNodeComponent("addTaskFrequencySelection"),
+    onceTrigger: makeNodeComponent("onceTrigger"),
+    dailyTrigger: makeNodeComponent("dailyTrigger"),
+    weeklyTrigger: makeNodeComponent("weeklyTrigger"),
+    monthlyTrigger: makeNodeComponent("monthlyTrigger"),
+    cancelAddTaskButton: makeNodeComponent("cancelAddTaskButton"),
+    addTaskGoToNextButton: makeNodeComponent("addTaskGoToNextButton"),
     editTask1: makeNodeComponent("editTask1"),
     editTaskButton: makeNodeComponent("editTaskButton"),
     editTaskLabelHolder: makeNodeComponent("editTaskLabelHolder"),
@@ -3925,16 +3887,13 @@ export const PlasmicHomepage = Object.assign(
     frequencyOption: makeNodeComponent("frequencyOption"),
     estimatedTimeOption: makeNodeComponent("estimatedTimeOption"),
     editTaskCloseAndContinueButtons: makeNodeComponent(
-      "editTaskCloseAndContinueButtons",
+      "editTaskCloseAndContinueButtons"
     ),
     editTaskCloseButton: makeNodeComponent("editTaskCloseButton"),
     editTaskContinueButton: makeNodeComponent("editTaskContinueButton"),
     deleteTaskButton: makeNodeComponent("deleteTaskButton"),
     deleteTaskText: makeNodeComponent("deleteTaskText"),
     premiumButton: makeNodeComponent("premiumButton"),
-    premiumModal: makeNodeComponent("premiumModal"),
-    _switch: makeNodeComponent("_switch"),
-    blockquote: makeNodeComponent("blockquote"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
@@ -3945,9 +3904,9 @@ export const PlasmicHomepage = Object.assign(
       title: "FocusFlow",
       description: "",
       ogImageSrc: "",
-      canonical: "http://localhost3000/focusflow.mysite.com",
-    },
-  },
+      canonical: "http://localhost3000/focusflow.mysite.com"
+    }
+  }
 );
 
 export default PlasmicHomepage;
